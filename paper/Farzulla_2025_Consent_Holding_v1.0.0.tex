@@ -105,9 +105,9 @@
 % ============================================================================
 
 % Version number and date
-\newcommand{\paperver}{1.0.0}
+\newcommand{\paperver}{1.0.1}
 \newcommand{\paperdate}{November 2025}
-\newcommand{\paperdoi}{10.5281/zenodo.17684151}
+\newcommand{\paperdoi}{10.5281/zenodo.17626763}
 
 % ORCID icon (clickable green circle with iD mark) - adjustable size
 \newcommand{\orcidicon}{\scalerel*{
@@ -270,9 +270,9 @@ $x_d(t)$ & Realized action/outcome in domain $d$ at time $t$ \\
 
 This paper presents a conceptual framework for analyzing legitimacy in adversarial environments. While we formalize core relationships mathematically—consent alignment $\alpha(d,t)$, friction $F(d,t)$, and legitimacy $L(d,t)$—complete operational measurement remains ongoing empirical work. Our contribution is providing analytical architecture that makes legitimacy comparable across governance domains, enabling systematic analysis previously confined to domain-specific theories.
 
-We demonstrate proof-of-concept through computational validation via agent-based simulation and qualitative validation across seven historical domains (suffrage, abolition, labor rights, civil rights, LGBT inclusion, platform governance, climate policy). \textbf{Methodological note}: The computational models assume agents learn from outcomes (Bayesian updating), which by construction reduces friction as preferences converge—this is not testing whether friction \textit{can} reduce (that follows definitionally) but comparing which consent mechanisms produce superior alignment given plausible behavioral assumptions. The framework's measurement challenges—particularly stakes quantification and effective voice operationalization—are acknowledged explicitly in Section~\ref{sec:operationalization} as requiring domain-specific protocols.
+We demonstrate proof-of-concept through computational validation via agent-based simulation and qualitative validation across seven historical domains (suffrage, abolition, labor rights, civil rights, LGBT inclusion, platform governance, climate policy). \textbf{Methodological note}: The computational models assume agents learn from outcomes (Bayesian updating), which by construction reduces friction as preferences converge—this compares which consent mechanisms produce superior alignment given plausible behavioral assumptions, not whether friction \textit{can} reduce (that follows definitionally). Measurement challenges are acknowledged in Section~\ref{sec:operationalization}.
 
-Future releases will expand empirical validation with fully quantified historical cases (women's suffrage 1890-1920 in progress for v2.0.0), refine measurement protocols through additional case studies, and extend applications to algorithmic governance, climate negotiations, and multi-agent AI systems. This v1.0.0 preprint establishes the theoretical foundations and demonstrates implementability; subsequent versions will strengthen empirical grounding through systematic quantitative testing.
+This v1.0.0 preprint establishes theoretical foundations and demonstrates implementability; subsequent versions will expand empirical validation with fully quantified historical cases, refine measurement protocols, and extend applications to algorithmic governance, climate negotiations, and multi-agent AI systems.
 
 % ============================================================================
 % TABLE OF CONTENTS
@@ -380,7 +380,7 @@ These insights directly inform consent-holding operationalization. Naive approac
 
 The framework integrates power indices into legitimacy measurement: $\alpha(d,t) = \frac{\sum_i s_i(d) \cdot \text{PowerIndex}_i(d,t)}{\sum_i s_i(d)}$, where $\text{PowerIndex}_i$ represents Banzhaf, Shapley-Shubik, or domain-appropriate measures. This refinement matters most when vote concentration enables blocking coalitions. Consider corporate governance: a minority shareholder with 20\% equity plus veto rights over major transactions wields power far exceeding their ownership share. Measuring $C_i = 0.20$ understates influence; calculating Banzhaf index accounting for veto power provides accurate assessment.
 
-Recent extensions analyze endogenous coalition formation \citep{aumann1988endogenous}, showing how equilibrium structures emerge from bargaining. This connects to consent-holding's dynamic aspect: $H_t(d)$ evolves as agents form alliances, shifting power distributions. Nash bargaining solutions \citep{nash1950bargaining} maximize products of utility gains subject to Pareto efficiency—structurally similar to stakes-weighted consent maximization. \citet{kalai1975other} propose alternative axiomatizations highlighting trade-offs between equality (proportional gain-sharing) and efficiency (Pareto optimality), demonstrating solution multiplicity absent unique normative commitments—precisely what Theorem 5 predicts.
+Recent extensions analyze endogenous coalition formation \citep{aumann1988endogenous}, showing how equilibrium structures emerge from bargaining. This connects to consent-holding's dynamic aspect: $H_t(d)$ evolves as agents form alliances, shifting power distributions. Nash bargaining solutions \citep{nash1950bargaining} maximize products of utility gains subject to Pareto efficiency—structurally similar to stakes-weighted consent maximization. \citet{kalai1975other} propose alternative axiomatizations highlighting trade-offs between equality (proportional gain-sharing) and efficiency (Pareto optimality), demonstrating solution multiplicity absent unique normative commitments—precisely what Theorem 3 predicts.
 
 \subsection{Relational Autonomy and Consent Capacity}
 
@@ -818,7 +818,7 @@ We address seven major objections to the framework.
 
 \textit{``Different cultures weight consent versus competence differently—this undermines universal applicability.''}
 
-\textbf{Reply}: Theorem 5 addresses this. Content-level value relativism (different cultures prefer different $w_1/w_2$ weights) doesn't undermine structural analysis. The framework doesn't prescribe universal weights—it provides measurement tools applicable regardless of normative commitments. Cross-cultural variation in legitimacy functions becomes empirically testable rather than philosophically irresolvable.
+\textbf{Reply}: Theorem 3 addresses this. Content-level value relativism (different cultures prefer different $w_1/w_2$ weights) doesn't undermine structural analysis. The framework doesn't prescribe universal weights—it provides measurement tools applicable regardless of normative commitments. Cross-cultural variation in legitimacy functions becomes empirically testable rather than philosophically irresolvable.
 
 \section{Conclusion}
 \label{sec:conclusion}
