@@ -1,11 +1,12 @@
 # Doctrine of Consensual Sovereignty (DoCS)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17626763.svg)](https://doi.org/10.5281/zenodo.17626763)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17684679.svg)](https://doi.org/10.5281/zenodo.17684679)
 
 **Version**: 1.0.1
 **Date**: November 2025
 **Author**: Murad Farzulla
-**DOI**: [10.5281/zenodo.17626763](https://doi.org/10.5281/zenodo.17626763)
+**Paper DOI**: [10.5281/zenodo.17684676](https://doi.org/10.5281/zenodo.17684676)
+**Code DOI**: [10.5281/zenodo.17684679](https://doi.org/10.5281/zenodo.17684679)
 **Website**: https://farzulla.org
 
 ## Overview
@@ -98,8 +99,8 @@ consent-theory/
   title     = {The Doctrine of Consensual Sovereignty: Quantifying Legitimacy in Adversarial Environments},
   year      = {2025},
   journal   = {Zenodo Preprint},
-  doi       = {10.5281/zenodo.17626763},
-  url       = {https://doi.org/10.5281/zenodo.17626763}
+  doi       = {10.5281/zenodo.17684676},
+  url       = {https://doi.org/10.5281/zenodo.17684676}
 }
 ```
 
