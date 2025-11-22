@@ -79,7 +79,7 @@ consent-theory/
 
 **Bayesian Learning Dynamics**:
 - Agents update preferences via Bayesian inference: `x*ᵢ(t+1) = (τ₀·x*ᵢ(t) + τ_obs,i·y(t)) / (τ₀ + τ_obs,i)`
-- Stakes-weighted observation precision: `τ_obs,i = 10 × s*ᵢ`
+- Stakes-weighted observation precision: `τ_obs,i = s*ᵢ`
 - Noise: `y(t) = d(t) + ε`, `ε ~ N(0, 0.1)`
 
 **Alternative Dynamics Implemented**:
