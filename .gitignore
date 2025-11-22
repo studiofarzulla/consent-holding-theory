@@ -57,6 +57,7 @@ tmp/
 # Local working files and archives
 archive/
 docs/
+consent_holding_additional_citations.csv
 
 # Don't ignore the PDF output
 !*.pdf
