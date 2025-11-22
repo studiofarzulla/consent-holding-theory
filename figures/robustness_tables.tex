@@ -1,0 +1,38 @@
+\begin{table}[h]
+\centering
+\caption{Robustness Check: Parameter Sensitivity}
+\label{tab:robustness_parameters}
+\begin{tabular}{ccccccc}
+\toprule
+N & T & Equal Voice & Stakes-Weighted & Plutocracy & Random & Expert \\
+\midrule
+50 & 25 & 0.579 & 0.609 & 0.570 & 0.487 & 0.575 \\
+50 & 50 & 0.582 & 0.620 & 0.563 & 0.477 & 0.560 \\
+50 & 100 & 0.582 & 0.623 & 0.584 & 0.483 & 0.563 \\
+100 & 25 & 0.601 & 0.622 & 0.604 & 0.493 & 0.584 \\
+100 & 50 & 0.602 & 0.639 & 0.604 & 0.492 & 0.612 \\
+100 & 100 & 0.611 & 0.615 & 0.607 & 0.519 & 0.622 \\
+200 & 25 & 0.619 & 0.622 & 0.619 & 0.528 & 0.622 \\
+200 & 50 & 0.637 & 0.636 & 0.614 & 0.551 & 0.611 \\
+200 & 100 & 0.624 & 0.629 & 0.625 & 0.507 & 0.617 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Robustness Check: Stakes Distribution Heterogeneity}
+\label{tab:robustness_distributions}
+\begin{tabular}{lcccccc}
+\toprule
+Distribution (Gini) & Equal Voice & Stakes-Weighted & Plutocracy & Random & Expert \\
+\midrule
+High Gini (0.78) & 0.618 & 0.644 & 0.617 & 0.522 & 0.618 \\
+Low Gini (0.03) & 0.573 & 0.589 & 0.572 & 0.461 & 0.570 \\
+Medium Gini (0.26) & 0.584 & 0.596 & 0.585 & 0.486 & 0.556 \\
+Pareto α=1.2 (0.85) & 0.619 & 0.658 & 0.613 & 0.514 & 0.608 \\
+Pareto α=2.0 (0.53) & 0.610 & 0.605 & 0.596 & 0.480 & 0.596 \\
+Pareto α=4.0 (0.42) & 0.594 & 0.584 & 0.581 & 0.487 & 0.582 \\
+\bottomrule
+\end{tabular}
+\end{table}

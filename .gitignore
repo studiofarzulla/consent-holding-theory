@@ -1,0 +1,58 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+
+# LaTeX temporary files
+*~
+*.backup
+*.swp
+*.swo
+*-blx.bib
+*.run.xml
+*.bcf
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+.directory
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary/scratch files
+scratch/
+temp/
+tmp/
+*.tmp
+
+# Don't ignore the PDF output
+!*.pdf
