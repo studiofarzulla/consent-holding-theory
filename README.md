@@ -31,22 +31,18 @@ consent-theory/
 │   ├── dynamics_results_social_*.csv    # Social learning mode
 │   ├── dynamics_results_stakes_*.csv    # Stakes evolution mode
 │   └── dynamics_results_static_*.csv    # Static baseline
-├── docs/                           # Documentation and reports
-│   ├── DYNAMICS_INTEGRATION_SUMMARY.md
-│   ├── dynamics_comparison_report.md
-│   ├── CRITICISM_RESPONSE_WITH_DYNAMICS.md
-│   ├── PAPER_REVISION_SUMMARY.md
-│   ├── suggested_citations_consent_holding_paper.csv
-│   └── QUICK_STATS.txt
 ├── figures/                        # Standalone figures
 │   ├── alpha_historical_trajectories.png
 │   ├── friction_trajectories.png
-│   ├── legitimacy_frontier.png
-│   └── robustness_parameter_heatmap.pdf
+│   └── legitimacy_frontier.png
 ├── tables/                         # Data tables
 ├── consent-theory-models/          # Model implementations
-├── dashboard/                      # Interactive visualization (if deployed)
-├── references.bib                  # Complete bibliography (64 entries)
+├── dashboard/                      # Interactive visualization
+├── archive/                        # Historical development artifacts
+├── references.bib                  # Complete bibliography (89 entries)
+├── CITATION.cff                    # Citation metadata
+├── VERSION                         # Version tracking
+├── QUICK_STATS.txt                 # Summary statistics
 └── README.md                       # This file
 ```
 
@@ -64,19 +60,21 @@ consent-theory/
 
 ## Theoretical Framework
 
-**Five Axioms** (minimal assumptions):
+**Seven Axioms** (minimal assumptions):
 - A1: Collective decision necessity
 - A2: Outcome constraints (scarcity)
 - A3: Shared reality
 - A4: Preference heterogeneity
 - A5: Stakes heterogeneity
+- A6: Non-zero consent capacity
+- A7: Value frame-dependence
 
 **Five Core Results**:
 - Theorem 1: Consent-holding necessity
 - Theorem 2: Inevitable friction
-- Definition 3: Legitimacy as consent alignment
-- Postulate 4: Competence-consent trade-off
-- Theorem 5: Minimal absolutism from relativism
+- Definition 1: Legitimacy as consent alignment
+- Postulate 1: Competence-consent trade-off
+- Theorem 3: Minimal absolutism from relativism
 
 ## Computational Methods
 
@@ -93,6 +91,7 @@ consent-theory/
 
 ## Citation
 
+**For the paper:**
 ```bibtex
 @article{farzulla2025docs,
   author    = {Murad Farzulla},
@@ -101,6 +100,18 @@ consent-theory/
   journal   = {Zenodo Preprint},
   doi       = {10.5281/zenodo.17684676},
   url       = {https://doi.org/10.5281/zenodo.17684676}
+}
+```
+
+**For the code:**
+```bibtex
+@software{farzulla2025docs_code,
+  author    = {Murad Farzulla},
+  title     = {Consent-Holding Theory: Computational Implementation},
+  year      = {2025},
+  version   = {1.0.1},
+  doi       = {10.5281/zenodo.17684679},
+  url       = {https://doi.org/10.5281/zenodo.17684679}
 }
 ```
 
