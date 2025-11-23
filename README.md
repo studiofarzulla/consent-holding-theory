@@ -20,8 +20,8 @@ The framework operationalizes political legitimacy through stakes-weighted conse
 ```
 consent-theory/
 ├── paper/                          # LaTeX source and compiled PDF
-│   ├── Farzulla_2025_Consent_Holding_v1.0.0.tex
-│   ├── Farzulla_2025_Consent_Holding_v1.0.0.pdf
+│   ├── Farzulla_2025_Consent_Holding_v1.0.1.tex
+│   ├── Farzulla_2025_Consent_Holding_v1.0.1.pdf
 │   └── figures/                    # Paper figures (learning dynamics, etc.)
 ├── code/                           # Simulation code
 │   ├── dynamics_examples.py        # Example usage of dynamic models
@@ -128,10 +128,10 @@ To compile the paper:
 
 ```bash
 cd paper/
-pdflatex Farzulla_2025_Consent_Holding_v1.0.0.tex
-bibtex Farzulla_2025_Consent_Holding_v1.0.0
-pdflatex Farzulla_2025_Consent_Holding_v1.0.0.tex
-pdflatex Farzulla_2025_Consent_Holding_v1.0.0.tex
+pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
+bibtex Farzulla_2025_Consent_Holding_v1.0.1
+pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
+pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
 ```
 
 ## Research Context
