@@ -219,7 +219,7 @@
 \vspace{1em}
 
 % Metadata box
-\metadatabox{10.5281/zenodo.17626763}
+\metadatabox{\paperdoi}
 
 \vspace{0.5em}
 
@@ -303,7 +303,7 @@ Second, the framework resolves the apparent tension between consent and competen
 
 Third, this approach enables systematic historical and comparative analysis. By operationalizing legitimacy as $\alpha(d,t)$ and friction as $F(d,t)$, we can trace institutional evolution quantitatively. Franchise expansion emerges not as discrete events but as gradual increases in $\alpha(d)$ driven by the accumulating friction $F(d)$ from excluding high-stakes populations. Women's suffrage movements, abolition struggles, labor organizing, and contemporary platform governance rebellions all exhibit the same underlying dynamic: groups with high stakes $s_i(d)$ but zero consent power $C_i$ generate sustained friction until incorporation or suppression occurs. This pattern, predicted by the framework's core theorems, provides empirical validation across centuries and continents.
 
-The framework proceeds from seven minimal axioms to five core results establishing structural necessities (Section~\ref{sec:framework}). Theorem 1 demonstrates consent-holding necessity: wherever decisions occur, some mapping $H_t(d)$ must exist. Theorem 2 establishes inevitable friction: plural preferences guarantee that someone's interests will be compromised unless perfect alignment obtains. Definition 3 operationalizes legitimacy as stakes-weighted consent alignment, providing an empirical metric. Postulate 4 formalizes the competence-consent trade-off, showing legitimacy as a weighted combination $L = w_1 \cdot \alpha + w_2 \cdot P$. Theorem 3 derives a minimal absolutism from value relativism: even if content-level values are frame-dependent, the existence of consent-holding structures remains invariant.
+The framework proceeds from seven minimal axioms to five core results establishing structural necessities (Section~\ref{sec:framework}). Theorem 1 demonstrates consent-holding necessity: wherever decisions occur, some mapping $H_t(d)$ must exist. Theorem 2 establishes inevitable friction: plural preferences guarantee that someone's interests will be compromised unless perfect alignment obtains. Definition 1 operationalizes legitimacy as stakes-weighted consent alignment, providing an empirical metric. Postulate 1 formalizes the competence-consent trade-off, showing legitimacy as a weighted combination $L = w_1 \cdot \alpha + w_2 \cdot P$. Theorem 3 derives a minimal absolutism from value relativism: even if content-level values are frame-dependent, the existence of consent-holding structures remains invariant.
 
 Section~\ref{sec:literature} situates this framework within nine research traditions—constitutional political economy \citep{buchanan1962}, social choice theory \citep{arrow1951,sen2017collective}, stakeholder theory \citep{freeman1984}, common-pool resource governance \citep{ostrom1990}, deliberative democracy \citep{fishkin2018,habermas1990}, algorithmic governance \citep{barocas2019fairness}, epistemic democracy \citep{estlund2008,landemore2013}, relational autonomy \citep{mackenzie2014}, and legitimacy theory \citep{scharpf1999governing,schmidt2013democracy}. Rather than competing with these approaches, consent-holding theory provides a unifying analytical architecture: each tradition contributes insights about how consent should be allocated or what constitutes legitimate use of authority, while our framework offers measurement tools applicable regardless of normative commitments.
 
@@ -457,7 +457,7 @@ F_\tau(d,t) = \sum_i s_i(d) \cdot \max(0, \delta(x_d, x^*_{i,d}) - \tau_i)
 \label{eq:friction-tolerance}
 \end{equation}
 
-\subsection{Definition 3: Legitimacy as Consent Alignment}
+\subsection{Definition 1: Legitimacy as Consent Alignment}
 
 We operationalize legitimacy through stakes-weighted consent alignment. Define the \textbf{affected set} $S_d = \{i | s_i(d) > 0\}$. \textbf{Consent alignment} is:
 \begin{equation}
@@ -470,7 +470,7 @@ where $\text{eff\_voice}_i$ represents agent $i$'s effective decision power in $
 
 A minimal procedural legitimacy condition requires $\alpha(d,t) \geq \tau$ for society-specific threshold $\tau$. Persistent $\alpha < \tau$ predicts observable friction through unrest, exit, sabotage, or normative decay.
 
-\subsection{Postulate 4: Competence-Consent Trade-Off}
+\subsection{Postulate 1: Competence-Consent Trade-Off}
 
 We model overall legitimacy as combining consent alignment and performance:
 \begin{equation}
@@ -714,7 +714,7 @@ Under Bayesian preference updating, all mechanisms exhibit genuine temporal evol
 
 Figure \ref{fig:alpha-trajectories-sim} shows consent alignment trajectories under learning dynamics. Stakes-weighted mechanisms converge monotonically to highest equilibrium $\alpha$, while random assignment exhibits high variance and low mean throughout. Equal voice converges to near-DoCS levels, but slower initial alignment produces higher friction during transition periods. Plutocracy and expert rule converge to similar moderate levels, both eventually tracking stakeholder preferences through Bayesian updating despite opposing initial logics (wealth versus competence).
 
-Cross-mechanism comparisons validate Postulate 4's legitimacy function $L = w_1 \cdot \alpha + w_2 \cdot P$: optimal mechanism depends on domain-specific weights. Technical domains with objective performance metrics (infrastructure engineering, public health interventions) rationally assign high $w_2$, favoring expert mechanisms despite consent costs. Value-laden domains (immigration policy, cultural regulations, distributive justice) assign high $w_1$, favoring stakes-weighted or equal voice mechanisms where stakeholder alignment outweighs technical optimization. The framework provides tools for domain-appropriate matching rather than universal prescriptions—no single mechanism dominates across all contexts, but stakes-weighting achieves superior consent alignment when heterogeneous stakes are empirically measured.
+Cross-mechanism comparisons validate Postulate 1's legitimacy function $L = w_1 \cdot \alpha + w_2 \cdot P$: optimal mechanism depends on domain-specific weights. Technical domains with objective performance metrics (infrastructure engineering, public health interventions) rationally assign high $w_2$, favoring expert mechanisms despite consent costs. Value-laden domains (immigration policy, cultural regulations, distributive justice) assign high $w_1$, favoring stakes-weighted or equal voice mechanisms where stakeholder alignment outweighs technical optimization. The framework provides tools for domain-appropriate matching rather than universal prescriptions—no single mechanism dominates across all contexts, but stakes-weighting achieves superior consent alignment when heterogeneous stakes are empirically measured.
 
 These results establish computational validity for the framework's core claim: consent power allocation should track stakes distribution to minimize friction and maximize legitimacy. When high-stakes minorities exist (environmental justice communities facing pollution, workers facing automation, indigenous groups facing resource extraction), equal voice systematically under-represents their interests. Stakes-weighting corrects this democratic deficit not through paternalism but through preference-weighted aggregation—those who bear consequences gain proportional voice in decisions.
 
@@ -794,7 +794,7 @@ We address seven major objections to the framework.
 
 \textit{``Giving voice to high-stakes populations sacrifices expert competence on technical domains.''}
 
-\textbf{Reply}: Postulate 4 addresses this directly through the legitimacy function $L = w_1 \cdot \alpha + w_2 \cdot P$. Different domains rationally weight these differently. Nuclear safety may set $w_2 >> w_1$ (prioritize competence); constitutional values set $w_1 >> w_2$ (prioritize consent). The framework doesn't prescribe universal voice maximization—it provides tools for domain-appropriate balance.
+\textbf{Reply}: Postulate 1 addresses this directly through the legitimacy function $L = w_1 \cdot \alpha + w_2 \cdot P$. Different domains rationally weight these differently. Nuclear safety may set $w_2 >> w_1$ (prioritize competence); constitutional values set $w_1 >> w_2$ (prioritize consent). The framework doesn't prescribe universal voice maximization—it provides tools for domain-appropriate balance.
 
 \subsection{Objection 4: Unresponsive Minorities}
 
@@ -830,6 +830,8 @@ Historical validation across seven cases spanning two centuries demonstrates the
 The framework enables three research agendas. \textbf{First}, cross-national legitimacy measurement through panel data linking $\alpha(d,t)$ to friction outcomes $F(d,t)$ can test the theory's predictions econometrically. Instrumental variable strategies exploiting franchise expansions, codetermination mandates, and participatory governance reforms provide quasi-experimental variation. \textbf{Second}, institutional experimentation varying consent allocation mechanisms systematically (A/B testing for governance) can identify domain-appropriate balances between alignment and performance. Citizens' assemblies, liquid democracy platforms, and quadratic voting trials represent early steps; rigorous evaluation frameworks can accelerate learning. \textbf{Third}, applications to emerging domains—AI governance, climate policy, platform regulation—where consent structures remain contested can inform institutional design before path dependencies calcify.
 
 The framework's limitations warrant acknowledgment. Stakes measurement remains conceptually contested and practically difficult—material exposure, capability impact, and existential threat often diverge. Effective voice measurement requires rich capacity data often unavailable cross-nationally. Temporal dynamics and institutional memory complicate longitudinal analysis. Aggregation across domains raises normative questions about weighting. These challenges suggest complementary methodologies: qualitative case studies illuminating causal mechanisms, experimental studies isolating specific dynamics, and computational modeling exploring parameter spaces.
+
+\textbf{Code and Data Availability}: All simulation code, Monte Carlo experiment implementations, and computational validation scripts are archived on Zenodo (\href{https://doi.org/10.5281/zenodo.17684679}{10.5281/zenodo.17684679}) and available via GitHub (\url{https://github.com/studiofarzulla/consent-holding-theory}). Complete replication materials include Python implementations of all four dynamic mechanisms (Bayesian learning, Thompson sampling, Q-learning, gradient descent), convergence analysis scripts, and figure generation code.
 
 \subsection{Weight Determination as Endogenous Constitutional Problem}
 \label{sec:weight-determination}
