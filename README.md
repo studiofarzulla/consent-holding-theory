@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17684679.svg)](https://doi.org/10.5281/zenodo.17684679)
 
-**Version**: 1.0.1
+**Version**: 1.0.2
 **Date**: November 2025
 **Author**: Murad Farzulla
 **Paper DOI**: [10.5281/zenodo.17684676](https://doi.org/10.5281/zenodo.17684676)
@@ -20,8 +20,8 @@ The framework operationalizes political legitimacy through stakes-weighted conse
 ```
 consent-theory/
 ├── paper/                          # LaTeX source and compiled PDF
-│   ├── Farzulla_2025_Consent_Holding_v1.0.1.tex
-│   ├── Farzulla_2025_Consent_Holding_v1.0.1.pdf
+│   ├── Farzulla_2025_Consent_Holding_v1.0.2.tex
+│   ├── Farzulla_2025_Consent_Holding_v1.0.2.pdf
 │   └── figures/                    # Paper figures (learning dynamics, etc.)
 ├── code/                           # Simulation code
 │   ├── dynamics_examples.py        # Example usage of dynamic models
@@ -49,9 +49,9 @@ consent-theory/
 ## Key Results
 
 **Computational Mechanism Comparison** (1000 Monte Carlo runs, 50 periods):
-- **Stakes-Weighted DoCS**: α = 0.872 (final), F = 1.6 (98.5% friction reduction)
-- **Equal Voice**: α = 0.870 (final), F = 1.8 (98.4% reduction)
-- **Plutocracy**: α = 0.860 (final), F = 2.1 (98.2% reduction)
+- **Stakes-Weighted DoCS**: α = 0.872 (final), F = 1.5 (94.9% friction reduction)
+- **Equal Voice**: α = 0.870 (final), F = 1.8 (94.2% reduction)
+- **Plutocracy**: α = 0.860 (final), F = 2.1 (93.5% reduction)
 
 **Convergence Properties**:
 - Monotonic α increase in 87.1% of DoCS runs
@@ -109,7 +109,7 @@ consent-theory/
   author    = {Murad Farzulla},
   title     = {Consent-Holding Theory: Computational Implementation},
   year      = {2025},
-  version   = {1.0.1},
+  version   = {1.0.2},
   doi       = {10.5281/zenodo.17684679},
   url       = {https://doi.org/10.5281/zenodo.17684679}
 }
@@ -128,10 +128,10 @@ To compile the paper:
 
 ```bash
 cd paper/
-pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
-bibtex Farzulla_2025_Consent_Holding_v1.0.1
-pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
-pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
+pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
+bibtex Farzulla_2025_Consent_Holding_v1.0.2
+pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
+pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
 ```
 
 ## Research Context

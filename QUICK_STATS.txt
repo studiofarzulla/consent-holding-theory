@@ -122,10 +122,10 @@ Co-option isn't legitimacy."
 COMPILATION COMMAND:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 cd ~/Resurrexi/projects/published/consent-theory/paper/
-pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
-bibtex Farzulla_2025_Consent_Holding_v1.0.1
-pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
-pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
+pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
+bibtex Farzulla_2025_Consent_Holding_v1.0.2
+pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
+pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
 
 STATUS: ✅ READY FOR COMPILATION (corrected friction values from v1.0.0)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
