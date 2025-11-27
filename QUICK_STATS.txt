@@ -5,11 +5,11 @@
 
 MAIN RESULT (DoCS Stakes-Weighted):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  Static baseline:  α = 0.627,  F = 105.5
-  Learning final:   α = 0.872,  F = 1.6
+  Static baseline:  α = 0.627,  F = 30.3
+  Learning final:   α = 0.872,  F = 1.5
 
   Improvement:      +39.0%  (consent alignment)
-  Friction drop:    -98.5%  (stakes-weighted deviation)
+  Friction drop:    -94.9%  (stakes-weighted deviation)
   Convergence:      18 periods to 90% final α
   Monotonic runs:   87.1%  (genuine convergence)
 
@@ -31,11 +31,11 @@ CONVERGENCE SPEED (Periods to 90% Final α):
 
 FRICTION REDUCTION (Initial → Final):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  DoCS:             105.5 → 1.6    (-98.5%)  ★ LOWEST FRICTION
-  Equal Voice:      113.8 → 1.8    (-98.4%)
-  Plutocracy:       115.9 → 2.1    (-98.2%)
-  Expert Rule:      117.5 → 3.7    (-96.8%)
-  Random:           146.9 → 8.3    (-94.3%)
+  DoCS:             30.3 → 1.5    (-94.9%)  ★ LOWEST FRICTION
+  Equal Voice:      30.2 → 1.8    (-94.2%)
+  Plutocracy:       32.0 → 2.1    (-93.5%)
+  Expert Rule:      31.7 → 3.7    (-88.2%)
+  Random:           41.7 → 8.3    (-80.0%)
 
 STATISTICAL VALIDATION:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -70,6 +70,7 @@ PLUTOCRACY VS DoCS (Learning Mode):
   Final α:          0.860 vs 0.872  (1.4% gap)
   Convergence:      22 vs 18 periods  (22% slower)
   Initial α:        0.811 vs 0.823  (misalignment at start)
+  Transition F:     3.8-4.4 vs 3.1-3.7  (~20% higher friction)
 
   Interpretation:   CO-OPTION vs IMMEDIATE LEGITIMACY
                     (Learning to mimic ≠ structural consent)
@@ -105,7 +106,7 @@ FIGURES GENERATED:
 
   2. friction_reduction_learning.pdf
      - Dramatic collapse visualization
-     - DoCS: 105.5 → 1.6 over 50 periods
+     - DoCS: 30.3 → 1.5 over 50 periods
 
   3. convergence_speed_learning.pdf
      - Bar chart: time to 90% final α
@@ -114,17 +115,17 @@ FIGURES GENERATED:
 ONE-LINER FOR TALKS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 "Under Bayesian learning with stakes-weighted attention, consent alignment
-converges monotonically (0.627 → 0.872, +39%) while friction collapses 98.5%.
+converges monotonically (0.627 → 0.872, +39%) while friction collapses 94.9%.
 DoCS achieves this in 18 periods; plutocracy takes 22.
 Co-option isn't legitimacy."
 
 COMPILATION COMMAND:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-cd ~/Resurrexi/projects/need-work/consent-theory/paper/
-pdflatex Farzulla_2025_Consent_Holding_v1.0.0.tex
-bibtex Farzulla_2025_Consent_Holding_v1.0.0
-pdflatex Farzulla_2025_Consent_Holding_v1.0.0.tex
-pdflatex Farzulla_2025_Consent_Holding_v1.0.0.tex
+cd ~/Resurrexi/projects/published/consent-theory/paper/
+pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
+bibtex Farzulla_2025_Consent_Holding_v1.0.1
+pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
+pdflatex Farzulla_2025_Consent_Holding_v1.0.1.tex
 
-STATUS: ✅ READY FOR COMPILATION
+STATUS: ✅ READY FOR COMPILATION (corrected friction values from v1.0.0)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
