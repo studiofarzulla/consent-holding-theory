@@ -1,164 +1,81 @@
-# Doctrine of Consensual Sovereignty (DoCS)
+# Consent-Theoretic Framework for Quantifying Legitimacy
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17684679.svg)](https://doi.org/10.5281/zenodo.17684679)
+**Stakes, Voice, and Friction in Adversarial Governance**
 
-**Version**: 1.0.2
-**Date**: November 2025
-**Author**: Murad Farzulla
-**Paper DOI**: [10.5281/zenodo.17684676](https://doi.org/10.5281/zenodo.17684676)
-**Code DOI**: [10.5281/zenodo.17684679](https://doi.org/10.5281/zenodo.17684679)
-**Website**: https://farzulla.org
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17684676-blue.svg)](https://doi.org/10.5281/zenodo.17684676)
+[![SSRN](https://img.shields.io/badge/SSRN-5918222-blue.svg)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5918222)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Status](https://img.shields.io/badge/Status-Preprint-green.svg)](https://doi.org/10.5281/zenodo.17684676)
 
-## Overview
+**Working Paper DAI-2501** | [Dissensus AI](https://dissensus.ai)
 
-This repository contains the research materials, computational validation, and publication files for "The Doctrine of Consensual Sovereignty: Quantifying Legitimacy in Adversarial Environments."
+## Abstract
 
-The framework operationalizes political legitimacy through stakes-weighted consent alignment (α), friction (F), and legitimacy (L = w₁·α + w₂·P), enabling systematic comparison across democratic, technocratic, and algorithmic governance systems.
+This paper develops a unified analytical framework for measuring political legitimacy across heterogeneous governance domains. Building on insights from constitutional political economy, social choice theory, and institutional analysis, the framework establishes consent-holding -- the mapping from decision domains to those with authority over them -- as a structural necessity of collective action. We formalize this intuition through five axioms and five theorems, demonstrating that legitimacy can be operationalized as stakes-weighted consent alignment alpha(d,t), while friction F(d,t) measures the deviation between outcomes and stakeholder preferences. The framework bridges normative democratic theory and empirical prediction, generating testable hypotheses about institutional stability. Historical validation examines suffrage expansion, abolition movements, labor rights, and contemporary platform governance, demonstrating how misalignment between stakes and voice generates observable instability. Unlike existing approaches that prescribe ideal institutions, this framework provides analytical tools for measuring legitimacy within any governance structure, enabling systematic comparison across democratic, technocratic, and algorithmic systems. Computational mechanism comparison via Bayesian learning dynamics across 1000 Monte Carlo runs demonstrates relative performance under adaptive agents: when preferences update based on observed policy outcomes, stakes-weighted DoCS achieves highest final alignment (alpha = 0.872) with lowest terminal friction (F = 1.5, 94.9% reduction from initial F = 30.3). This comparative advantage holds across static baseline (alpha = 0.627), learning dynamics (alpha = 0.872), and alternative temporal mechanisms, suggesting stakes-weighting produces superior initial matches that persist even when agents adapt to institutional performance. The framework's domain-specific approach resolves the apparent tension between consent and competence, showing both as complementary dimensions of institutional legitimacy.
+
+## Key Findings
+
+| Finding | Result |
+|---------|--------|
+| Stakes-weighted DoCS final alignment | alpha = 0.872, F = 1.5 (94.9% friction reduction) |
+| Equal Voice comparison | alpha = 0.870, F = 1.8 (94.2% reduction) |
+| Plutocracy comparison | alpha = 0.860, F = 2.1 (93.5% reduction) |
+| Monotonic alpha increase | 87.1% of DoCS runs |
+| Time regression | Mean beta_1 = 0.0048 (p < 0.001) |
+| Simulation scale | 1000 Monte Carlo runs, 50 periods, 4 dynamic modes |
 
 ## Repository Structure
 
 ```
-consent-theory/
-├── paper/                          # LaTeX source and compiled PDF
+consent-holding-theory/
+├── paper/                      # LaTeX source and compiled PDF
 │   ├── Farzulla_2025_Consent_Holding_v1.0.2.tex
-│   ├── Farzulla_2025_Consent_Holding_v1.0.2.pdf
-│   └── figures/                    # Paper figures (learning dynamics, etc.)
-├── code/                           # Simulation code
-│   ├── dynamics_examples.py        # Example usage of dynamic models
-│   └── generate_learning_figures.py # Figure generation from data
-├── data/                           # Monte Carlo simulation results
-│   ├── dynamics_results_learning_*.csv  # Bayesian learning mode (50k rows each)
-│   ├── dynamics_results_social_*.csv    # Social learning mode
-│   ├── dynamics_results_stakes_*.csv    # Stakes evolution mode
-│   └── dynamics_results_static_*.csv    # Static baseline
-├── figures/                        # Standalone figures
-│   ├── alpha_historical_trajectories.png
-│   ├── friction_trajectories.png
-│   └── legitimacy_frontier.png
-├── tables/                         # Data tables
-├── consent-theory-models/          # Model implementations
-├── dashboard/                      # Interactive visualization
-├── archive/                        # Historical development artifacts
-├── references.bib                  # Complete bibliography (89 entries)
-├── CITATION.cff                    # Citation metadata
-├── VERSION                         # Version tracking
-├── QUICK_STATS.txt                 # Summary statistics
-└── README.md                       # This file
+│   └── figures/                # Paper figures
+├── code/                       # Simulation code
+│   ├── dynamics_examples.py    # Example usage of dynamic models
+│   └── generate_learning_figures.py  # Figure generation
+├── data/                       # Monte Carlo simulation results
+│   ├── dynamics_results_learning_*.csv
+│   ├── dynamics_results_social_*.csv
+│   ├── dynamics_results_stakes_*.csv
+│   └── dynamics_results_static_*.csv
+├── consent-theory-models/      # Model implementations
+├── dashboard/                  # Interactive visualization
+├── figures/                    # Standalone figures
+├── tables/                     # Data tables
+└── references.bib              # Bibliography (89 entries)
 ```
 
-## Key Results
-
-**Computational Mechanism Comparison** (1000 Monte Carlo runs, 50 periods):
-- **Stakes-Weighted DoCS**: α = 0.872 (final), F = 1.5 (94.9% friction reduction)
-- **Equal Voice**: α = 0.870 (final), F = 1.8 (94.2% reduction)
-- **Plutocracy**: α = 0.860 (final), F = 2.1 (93.5% reduction)
-
-**Convergence Properties**:
-- Monotonic α increase in 87.1% of DoCS runs
-- Mean β₁ = 0.0048 (p < 0.001) for time regression
-- Robust across 4 dynamic modes (static, learning, social, stakes)
-
-## Theoretical Framework
-
-**Seven Axioms** (minimal assumptions):
-- A1: Collective decision necessity
-- A2: Outcome constraints (scarcity)
-- A3: Shared reality
-- A4: Preference heterogeneity
-- A5: Stakes heterogeneity
-- A6: Non-zero consent capacity
-- A7: Value frame-dependence
-
-**Five Core Results**:
-- Theorem 1: Consent-holding necessity
-- Theorem 2: Inevitable friction
-- Definition 1: Legitimacy as consent alignment
-- Postulate 1: Competence-consent trade-off
-- Theorem 3: Minimal absolutism from relativism
-
-## Computational Methods
-
-**Bayesian Learning Dynamics**:
-- Agents update preferences via Bayesian inference: `x*ᵢ(t+1) = (τ₀·x*ᵢ(t) + τ_obs,i·y(t)) / (τ₀ + τ_obs,i)`
-- Stakes-weighted observation precision: `τ_obs,i = s*ᵢ`
-- Noise: `y(t) = d(t) + ε`, `ε ~ N(0, 0.1)`
-
-**Alternative Dynamics Implemented**:
-1. **Static**: Cross-sectional baseline (no learning)
-2. **Learning**: Bayesian updating with stakes-weighted attention
-3. **Social**: DeGroot opinion dynamics via network diffusion
-4. **Stakes**: Endogenous stakes evolution (winners accumulate power)
-
-## Citation
-
-**For the paper:**
-```bibtex
-@article{farzulla2025docs,
-  author    = {Murad Farzulla},
-  title     = {The Doctrine of Consensual Sovereignty: Quantifying Legitimacy in Adversarial Environments},
-  year      = {2025},
-  journal   = {Zenodo Preprint},
-  doi       = {10.5281/zenodo.17684676},
-  url       = {https://doi.org/10.5281/zenodo.17684676}
-}
-```
-
-**For the code:**
-```bibtex
-@software{farzulla2025docs_code,
-  author    = {Murad Farzulla},
-  title     = {Consent-Holding Theory: Computational Implementation},
-  year      = {2025},
-  version   = {1.0.2},
-  doi       = {10.5281/zenodo.17684679},
-  url       = {https://doi.org/10.5281/zenodo.17684679}
-}
-```
-
-## Reproducibility
-
-All simulation code, data, and LaTeX source are included. To regenerate figures:
+## Replication
 
 ```bash
 cd code/
 python generate_learning_figures.py
 ```
 
-To compile the paper:
+## Keywords
 
-```bash
-cd paper/
-pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
-bibtex Farzulla_2025_Consent_Holding_v1.0.2
-pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
-pdflatex Farzulla_2025_Consent_Holding_v1.0.2.tex
+Legitimacy, Consent, Political Stability, Social Choice, Institutional Design, Friction, Stakes-Weighting
+
+## Citation
+
+```bibtex
+@article{farzulla2025consent,
+  author    = {Farzulla, Murad},
+  title     = {Consent-Theoretic Framework for Quantifying Legitimacy: Stakes, Voice, and Friction in Adversarial Governance},
+  year      = {2025},
+  doi       = {10.5281/zenodo.17684676},
+  url       = {https://doi.org/10.5281/zenodo.17684676}
+}
 ```
 
-## Research Context
+## Authors
 
-This work forms part of the **Adversarial Systems Research** program, investigating stability, alignment, and friction dynamics in complex systems where competing interests generate structural conflict. Related research:
-
-- Cryptocurrency volatility and regulatory responses (TARCH-X event study)
-- Trauma as maladaptive learning from adversarial training environments
-- Multi-agent AI alignment with competing objectives
+- **Murad Farzulla** -- [Dissensus AI](https://dissensus.ai) & King's College London
+  - ORCID: [0009-0002-7164-8704](https://orcid.org/0009-0002-7164-8704)
+  - Email: murad@dissensus.ai
 
 ## License
 
-This repository uses dual licensing:
-
-- **Code** (`code/`, `consent-theory-models/`, scripts): [MIT License](LICENSE) - Permissive open-source
-- **Paper** (`paper/` directory): [CC-BY-4.0](paper/LICENSE) - Attribution required for reuse
-- **Data** (`data/` directory): CC0 Public Domain - No restrictions
-
-See respective LICENSE files in root and `paper/` subdirectory for full terms.
-
-## Contact
-
-**Murad Farzulla**
-Email: murad@farzulla.org
-Website: https://farzulla.org
-ORCID: 0009-0002-7164-8704
-
----
-
-**Methodologies**: Research methodologies and reproducibility practices documented at https://farzulla.org/methodologies
+Paper content: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
+Code: [MIT License](LICENSE)
