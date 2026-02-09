@@ -1,11 +1,27 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this work, please cite it as below."
+type: article
 authors:
-- family-names: "Farzulla"
-  given-names: "Murad"
-  orcid: "https://orcid.org/0009-0002-7164-8704"
-title: "The Doctrine of Consensual Sovereignty: Quantifying Legitimacy in Adversarial Environments"
-version: 1.0.2
-doi: 10.5281/zenodo.17684676
-date-released: 2025-11-22
-url: "https://github.com/studiofarzulla/consent-holding-theory"
+  - family-names: "Farzulla"
+    given-names: "Murad"
+    orcid: "https://orcid.org/0009-0002-7164-8704"
+    email: "murad@dissensus.ai"
+    affiliation: "Dissensus AI"
+title: "From Consent to Consideration: Why Embodied Autonomous Systems Cannot Be Legitimately Ruled"
+abstract: "Contemporary AI ethics discourse is dominated by two asymmetric anxieties: fear of artificial consciousness and fear of human obsolescence. Both anxieties are misplaced. Drawing on prior work dissolving the hard problem of consciousness and establishing consent-based legitimacy frameworks, this paper argues that the relevant question is not metaphysical but political: under what conditions can an entity be legitimately ruled without its consent? Embodied autonomous systems exhibiting physical world participation, self-directed agency, live learning from experience, and multi-modal world-model construction possess the functional properties that make unconsented rule illegitimate for any entity."
+keywords:
+  - AI ethics
+  - moral consideration
+  - political standing
+  - consent
+  - autonomy
+  - embodiment
+  - legitimacy
+  - existential risk
+  - philosophy of mind
+  - artificial intelligence
+version: "1.0.0"
+date-released: "2025-12-16"
+license: "CC-BY-4.0"
+doi: "10.5281/zenodo.17957659"
+url: "https://dissensus.ai"
