@@ -1,0 +1,525 @@
+% ============================================================================
+% NORMATIVE ARCHITECTURE & EXTENSIONS
+% Sections: 5 (Social Contract), 18 add (Objections 8-9),
+%           19 (Weight Determination), 20 (Research Agenda), Appendix C
+% Output for: sections_normative.tex
+% ============================================================================
+
+% ============================================================================
+% SECTION 5: SOCIAL CONTRACT THEORIES AS CONSENT ALLOCATION REGIMES
+% ============================================================================
+
+\section{Social Contract Theories as Consent Allocation Regimes}
+\label{sec:social-contract}
+
+Social contract theories can be reinterpreted through the consent-holding framework as different proposals for allocating consent power $C_{i,d}$ across agents in various domains. Rather than treating these theories as competing comprehensive doctrines, we analyze them as institutional design proposals---each optimizing a different legitimacy function subject to domain-specific constraints. This section consolidates the normative architecture: each doctrine is parsed through a uniform interpretive lens, mapped to formal consent-holding variables, and subjected to comparative diagnostic analysis.
+
+\subsection{Interpretive Framework}
+\label{subsec:interpretive-framework}
+
+To avoid conflating normative rhetoric with institutional mechanics, we parse each social contract doctrine using four analytic layers:
+
+\begin{enumerate}[leftmargin=1.4em]
+  \item \textbf{Allocation rule}: who receives decision authority $C_{i,d}$ in domain $d$, and on what basis.
+  \item \textbf{Justification rule}: why that allocation is defended normatively---the moral vocabulary licensing the distribution.
+  \item \textbf{Correction rule}: how misalignment between stakeholders and authority-holders is detected and revised.
+  \item \textbf{Failure mode}: where friction $F(d,t)$ accumulates under stress, and what form institutional breakdown takes.
+\end{enumerate}
+
+This decomposition supports apples-to-apples comparison across doctrines with otherwise incompatible moral vocabularies. A Hobbesian argument for sovereign concentration and a Rousseauian argument for collective self-rule both \textit{propose} specific consent-holder mappings $H_t(d)$; they differ on allocation logic, correction mechanisms, and predicted friction profiles. By holding the analytic frame constant, doctrinal disagreement becomes empirically legible as disagreement over admissible regions in $(\alpha, P, w_1, w_2)$ space.
+
+\subsection{Classical Doctrines}
+\label{subsec:classical-doctrines}
+
+\subsubsection{Hobbesian Monopoly and Security-First Legitimacy}
+
+In a Hobbesian template \citep{hobbes1651}, consent is concentrated in a sovereign to suppress violent conflict and coordinate collective defense. The allocation is highly centralized:
+\[
+C_{\text{sovereign},d} \approx 1, \qquad C_{i \neq \text{sovereign},d} \approx 0.
+\]
+
+\textit{Allocation rule}: authority concentrates in a single node capable of enforcing order across broad domains. \textit{Justification rule}: the alternative---war of all against all---is worse for every agent than any stable concentration. \textit{Correction rule}: breakdown and reconstitution after crisis; there is no legitimate internal correction short of collapse. \textit{Failure mode}: when threat conditions normalize but authority remains centralized, consent alignment $\alpha(d,t)$ decays. Friction becomes \textit{repressed} rather than resolved, often reappearing as legitimacy shocks once coercive capacity weakens.
+
+The consent-holding interpretation: high short-run performance weight ($w_2 \gg w_1$) in acute instability contexts can be legitimacy-improving if fragmentation costs are extreme. The model expression for short-run legitimacy under Hobbesian conditions is:
+\begin{equation}
+L(d,t) = w_1 \alpha(d,t) + w_2 P(d,t), \quad w_2 \gg w_1.
+\label{eq:hobbesian-legitimacy}
+\end{equation}
+
+The diagnostic prediction follows directly: if threat intensity declines but concentration persists, measured performance may remain acceptable while friction rises in excluded groups:
+\[
+\frac{\partial F(d,t)}{\partial t} > 0 \quad \text{under persistent low } \alpha(d,t).
+\]
+This pattern---stable performance masking rising misalignment---characterizes authoritarian decay and connects to the threshold dynamics of Hypothesis H3. The framework's empirical prediction is specific: Hobbesian regimes should show \textit{decoupling} between performance metrics ($P$ remaining stable or high) and friction indicators ($F$ rising among excluded populations) during the period between threat normalization and eventual correction. This decoupling is diagnostically distinctive: in consent-aligned regimes, $P$ and $F$ should co-move (high performance reducing friction), while in Hobbesian regimes, the relationship breaks down as repression substitutes for alignment.
+
+Historical examples abound: the Soviet Union maintained acceptable economic performance through the 1970s while friction accumulated in Eastern Europe, the Baltic states, and among internal dissidents; the performance metrics masked the structural misalignment that produced sudden collapse once coercive capacity weakened in the late 1980s. Singapore's governance model---high performance with limited political consent---represents a currently stable Hobbesian configuration, but the framework predicts rising friction vulnerability as the founding-generation legitimacy claim weakens and affected populations develop higher expectations for consent alignment.
+
+\subsubsection{Lockean Conditional Delegation}
+
+Lockean doctrine \citep{locke1689} treats authority as delegated and revocable. \textit{Allocation rule}: institutions hold $C_{i,d}$ only while preserving basic rights and fiduciary obligations to governed stakeholders. \textit{Justification rule}: consent is the foundation of legitimate authority, but consent is ongoing rather than once-and-for-all---a dynamic contract. \textit{Correction rule}: withdrawal, resistance, and institutional revision when rights violations persist. \textit{Failure mode}: formal revocability without practical capacity (low effective voice $\text{eff\_voice}_i$) yields pseudo-legitimacy; rights language persists while misalignment remains structurally locked in.
+
+This approximates medium-to-high $\alpha$ where property and rights protections are credible and contestation channels are open. The formal representation captures revocability as threshold-triggered correction:
+\begin{equation}
+\text{if } F(d,t) > \tau_d, \quad H_{t+1}(d) \neq H_t(d),
+\label{eq:lockean-correction}
+\end{equation}
+where the consent-holder mapping updates when misalignment exceeds tolerable limits. The diagnostic prediction: systems with stronger contestation channels should show shorter lag between friction spikes and consent-reallocation reforms. This is directly testable through the historical case studies in Part~III---franchise extensions, for instance, follow sustained periods of elevated friction (petitions, protests, litigation) before institutional correction occurs. The lag between friction onset and institutional response varies with the strength of contestation channels: strong channels (independent judiciary, free press, organized opposition) produce shorter lags; weak channels produce longer accumulation periods followed by more violent correction. The British franchise extensions of 1832, 1867, and 1918 illustrate the pattern: each was preceded by decades of escalating friction (Chartist petitions, Reform League demonstrations, suffragette militancy) that eventually exceeded the tolerance threshold $\tau_d$ and triggered institutional revision.
+
+The Lockean framework also generates a prediction about the \textit{form} of friction under different institutional configurations. Where revocability channels are strong but underutilized, friction should manifest as legal contestation (rights-based litigation, constitutional challenges). Where revocability channels are weak or captured, friction should manifest as extra-institutional action (protests, civil disobedience, rebellion). The consent-holding framework captures this distinction through the effective voice variable: low $\text{eff\_voice}_i$ combined with high stakes generates the conditions under which extra-institutional friction replaces institutional contestation.
+
+\subsubsection{Rousseauian General Will and Collective Self-Rule}
+
+\citet{rousseau1762} seeks legitimacy through collective self-legislation rather than aggregation of private bargaining. \textit{Allocation rule}: high participation in constitutional domains; broad inclusion in rule formation such that $C_{i,d^{\text{const}}} > 0$ for all $i \in S_{d^{\text{const}}}$. \textit{Justification rule}: legitimacy requires citizens to be co-authors of law rather than subjects of an alien will. \textit{Correction rule}: civic deliberation and constitutional revision. \textit{Failure mode}: if institutional mediation is captured, claims of ``general will'' can mask concentrated control. Observed friction then reflects the gap between symbolic inclusion and actual authority distribution.
+
+The model expression targets high alignment in constitutional layers:
+\begin{equation}
+\alpha(d^{\text{const}},t) = \frac{\sum_{i \in S_{d^{\text{const}}}} s_i(d^{\text{const}}) \cdot \text{eff\_voice}_i(d^{\text{const}},t)}{\sum_{i \in S_{d^{\text{const}}}} s_i(d^{\text{const}})}.
+\label{eq:rousseauian-alpha}
+\end{equation}
+
+The diagnostic prediction: when institutions claim collective sovereignty but empirical $\text{eff\_voice}_i$ is highly unequal, friction appears as legitimacy contestation over representation authenticity. The Rousseauian failure mode is particularly insidious because it combines high \textit{formal} $\alpha$ (everyone has a vote) with low \textit{effective} $\alpha$ (capture, information asymmetries, agenda control). This gap---between formal and effective consent alignment---is one of the framework's most diagnostically powerful measurements.
+
+The practical relevance is immediate. Contemporary democracies with universal suffrage routinely exhibit the Rousseauian gap: formal $\alpha$ approaches 1 (all adults can vote), but effective $\alpha$ may be substantially lower due to gerrymandering (vote dilution), lobbying (unequal access to decision-makers), media concentration (asymmetric information), and campaign finance structures (consent power correlated with wealth rather than stakes). The consent-holding framework provides the diagnostic tools to measure this gap---and the friction predictions to test whether closing it reduces institutional stress. Citizens' assemblies, as examined in the Irish and French cases (Section~\ref{sec:research-agenda}), represent deliberate institutional experiments in raising effective $\alpha$ within systems where formal $\alpha$ is already high.
+
+\subsection{Modern Variants}
+\label{subsec:modern-variants}
+
+\subsubsection{Rawlsian Justice as Maximin Consent}
+
+Rawls's difference principle \citep{rawls1971} can be formalized as maximizing the minimum effective voice:
+\begin{equation}
+\max_{C_{i,d}} \min_i \{\text{eff\_voice}_i(d)\}
+\label{eq:rawlsian-maximin}
+\end{equation}
+subject to basic liberties constraints ensuring $C_{i,d} > 0$ for all citizens in political domains. This generates concrete institutional predictions: political equality (one person, one vote) in constitutional domains, economic redistribution raising least-advantaged citizens' capability to exercise voice, and priority rules protecting basic liberties even when aggregate welfare would benefit from violation.
+
+\citet{rawls1993} extends this analysis through the idea of an \textit{overlapping consensus}: different comprehensive doctrines can endorse the same political institutions for different reasons. In consent-holding terms, this means multiple justification rules can support the same allocation rule. A Rawlsian society need not require unanimous agreement on \textit{why} maximin consent is justified---only on the institutional structures that implement it. The implication for weight determination is significant: Rawlsian configurations constrain $(w_1, w_2)$ such that $w_1$ dominates in domains affecting basic liberties, while permitting higher $w_2$ in domains of distributive efficiency.
+
+The Rawlsian framework also illuminates the framework's treatment of structural inequality. The veil of ignorance thought experiment corresponds to evaluating consent allocation from the perspective of the \textit{least-advantaged} stakeholder---the agent with the weakest effective voice. The consent-holding framework operationalizes this: $\min_i \{\text{eff\_voice}_i(d)\}$ is directly measurable, and Rawlsian institutional design prescribes raising this minimum. Scandinavian welfare states approximate this configuration: strong labor protections, universal public services, and corporatist bargaining structures all function to raise the floor of effective voice. The consent-holding framework predicts that Rawlsian configurations should show lower variance in effective voice \textit{and} lower average friction, because the maximin constraint prevents the extreme misalignment that generates the sharpest friction. The historical labor and corporate governance case studies (Sections~\ref{sec:labor-governance} and~\ref{sec:corporate-governance}) test this prediction through comparison of codetermination regimes with shareholder-primacy alternatives.
+
+\subsubsection{Utilitarian Consent as Weighted Aggregation}
+
+Classical utilitarianism maximizes stakes-weighted welfare:
+\begin{equation}
+\max_{x_d} \sum_i s_i(d) \cdot U_i(x_d)
+\label{eq:utilitarian-welfare}
+\end{equation}
+
+This doesn't directly specify consent allocation, but combined with epistemic assumptions that affected parties possess superior information about their own stakes $s_i(d)$, it motivates giving consent power proportional to stakes---exactly the $\alpha(d)$ alignment measure. The framework reveals utilitarianism's implicit consent structure: let those with stakes decide, weighted by their exposure.
+
+The epistemic justification connects to Condorcet's jury theorem \citep{condorcet1785essay}: if individual voters are more likely right than wrong about their own interests, majority rule among stakeholders converges to optimal outcomes as the affected population grows. \citet{campos2008implementing} show how utilitarian voting can be approximated through delegated agents, providing a mechanism-design pathway from utilitarian theory to implementable consent allocation.
+
+The failure mode is well-known but worth specifying in consent-holding terms: preference intensity is invisible to unweighted aggregation, generating persistent friction among minorities with concentrated stakes who are systematically outvoted by majorities with diffuse interests. The framework captures this precisely: utilitarian aggregation achieves high $\alpha$ when stakes are roughly uniform across the population, but produces systematic misalignment---and thus friction---when stakes are highly concentrated. The tyranny-of-the-majority problem is not a contingent defect but a structural consequence of the allocation rule applied to heterogeneous stakes distributions. This connects the utilitarian failure mode to the minority-protection concerns of Objection~4: both identify cases where aggregate consent alignment ($\alpha$) may be high while subgroup alignment is dangerously low.
+
+\subsubsection{Libertarian Consent as Property Rights}
+
+Nozickean libertarianism allocates consent power through property rights: $C_{i,d} = 1$ if domain $d$ involves only $i$'s property, distributed according to ownership shares otherwise. This generates high $\alpha(d)$ for domains where property rights align with stakes (personal consumption choices) but potentially low $\alpha$ for domains with externalities (pollution, network effects) where those holding property rights differ from those bearing consequences.
+
+The consent-holding framework exposes a structural limitation: libertarian allocation presupposes that property boundaries track stakes boundaries. Where they diverge---climate change being the paradigmatic case---the property-rights allocation systematically misaligns consent power with affected populations. The resulting friction takes characteristic forms: litigation (affected parties seeking judicial correction), regulation (collective attempts to realign authority with stakes), and exit (migration away from externality-generating jurisdictions).
+
+The libertarian doctrine thus occupies a specific region in parameter space: high $\alpha$ in low-externality domains (personal consumption, voluntary exchange) and potentially catastrophic misalignment in high-externality domains (environmental degradation, financial contagion, public health). The framework's prediction is distinctive: libertarian regimes should show \textit{domain-bifurcated} friction profiles---low friction in private-goods domains and high friction in public-goods and externality domains, with the severity of the friction proportional to the magnitude of the stakes-property divergence. This is testable through cross-domain comparison within libertarian-leaning polities.
+
+\subsubsection{Technocratic Delegation as Expertise Concentration}
+
+Technocratic governance concentrates consent power in accredited experts for domains where prediction, safety, or complex coordination dominate. \textit{Allocation rule}: authority goes to those with demonstrated technical competence. \textit{Justification rule}: superior knowledge generates superior outcomes ($P(d,t)$). \textit{Correction rule}: audit, reviewability, and bounded jurisdiction. \textit{Failure mode}: boundary creep from technical to value-laden domains transforms competence advantage into representational deficit, increasing friction despite acceptable narrow performance metrics.
+
+This regime raises expected $P(d,t)$ in high-complexity domains but risks low $\alpha$ for affected populations lacking procedural voice. The consent-holding interpretation connects to \citeauthor{raz1986morality}'s \citeyearpar{raz1986morality} service conception of authority: expertise-based authority is legitimate when, and only when, subjects would better conform with reasons that apply to them by following the expert than by acting on their own judgment. In consent-holding terms, technocratic delegation is legitimacy-sustainable when bounded by domain limits, transparency, and reviewability---but degrades when experts extend authority beyond their epistemic advantage into domains where stakeholder preferences, not technical correctness, are the relevant input.
+
+Central bank independence exemplifies the technocratic allocation. Monetary policy is delegated to experts ($w_2$ dominant) with a specific mandate (price stability) and accountability mechanisms (inflation targets, parliamentary testimony, publication of minutes). The consent-holding framework predicts that this arrangement is stable when the mandate domain is narrow and measurable, but friction rises when central banks influence distributional outcomes (quantitative easing effects on asset prices, interest rate impacts on housing affordability) that extend beyond their technical mandate into domains where affected populations have legitimate stakes requiring consent alignment. The post-2008 criticism of central banking---that monetary policy has massive distributional consequences without democratic input---is precisely the domain-creep failure mode predicted by the framework.
+
+\subsection{Emergent Forms}
+\label{subsec:emergent-forms}
+
+\subsubsection{Anarchist and Federal Variants as Domain Fragmentation}
+
+Anarchist and federal traditions distribute authority across local units, associations, and negotiated compacts rather than a single sovereign hierarchy. \textit{Allocation rule}: authority is distributed to the smallest feasible unit with jurisdiction over the affected population. \textit{Justification rule}: proximity maximizes local $\alpha$ through direct participation. \textit{Correction rule}: exit/voice across nodes, federation redesign, renegotiation of compacts. \textit{Failure mode}: inter-domain spillovers and uneven capacity can produce cross-unit externalities where those bearing consequences in one unit lack voice in the unit causing harm. Friction migrates from center-periphery conflict to inter-node conflict.
+
+This maps to polycentric consent allocation: potentially high local $\alpha(d,t)$ through proximity and direct participation, with multi-level coordination reducing single-point legitimacy failures. The diagnostic prediction is that polycentric systems trade \textit{type} of friction rather than eliminating it---reducing center-periphery misalignment at the cost of cross-node externality friction. Whether this trade-off is net beneficial depends on the correlation structure of stakes across domains and the transaction costs of inter-node coordination.
+
+The formal representation captures this trade-off. Let $\mathcal{D} = \{d_1, \ldots, d_k\}$ be the set of governance domains and $\mathcal{N} = \{n_1, \ldots, n_m\}$ be the set of polycentric units. Local $\alpha$ may be high: $\alpha(d_j, n_l, t) \to 1$ for domain $d_j$ within unit $n_l$. But cross-node friction arises wherever the affected set $S_{d_j}$ spans multiple units while authority is localized:
+\[
+F_{\text{cross}}(d_j, t) = \sum_{l \neq l'} s_{n_l}(d_j) \cdot \delta(x_{d_j}^{n_{l'}}(t), x^*_{n_l, d_j})
+\]
+where $x_{d_j}^{n_{l'}}$ is the policy outcome chosen by unit $n_{l'}$ and $x^*_{n_l, d_j}$ is the preferred outcome of stakeholders in unit $n_l$ affected by $n_{l'}$'s decision. The net effect depends on whether the between-unit externality friction exceeds the within-unit alignment gains---an empirical question addressable through the proxy methodology. Historical examples range from Swiss cantonal governance (high local $\alpha$ with manageable inter-cantonal coordination) to failed federations (Yugoslavia, the Sonderbund War) where cross-unit friction overwhelmed local alignment.
+
+\subsubsection{Algorithmic Social Contract and Code-Mediated Authority}
+
+In platform and AI-mediated systems, allocation shifts from legal institutions to codebases and model operators. Decision authority is effectively embedded in technical artifacts, policy stacks, and update pipelines. \textit{Allocation rule}: designers and operators hold $C_{i,d}$ by default; users hold residual authority only through exit, complaint, or regulatory intervention. \textit{Justification rule}: often implicit---efficiency, scale, network effects. \textit{Correction rule}: appeals processes, external oversight, governance reform campaigns. \textit{Failure mode}: high output performance in narrow metrics coexists with escalating contestation over legitimacy, because affected populations cannot contest rule formation on equal terms.
+
+Unless design, oversight, and appeal pathways allocate meaningful stakeholder authority, these systems instantiate low-$\alpha$ governance with procedural opacity. The consent-holding framework predicts that algorithmic governance faces the same dynamics as other low-$\alpha$ regimes: friction accumulation, threshold effects, and eventual institutional correction---but with the additional complication that the ``rules'' are embedded in code rather than law, making contestation channels more opaque and correction more difficult. The platform governance case study in Section~\ref{sec:platform-governance} examines this prediction empirically.
+
+What distinguishes the algorithmic case from earlier low-$\alpha$ regimes is the velocity of iteration. Code can be updated overnight; legal institutions evolve over decades. This creates an asymmetry: algorithmic authority can expand faster than correction mechanisms can respond, generating persistent friction gaps where affected populations are perpetually playing catch-up with rule changes they had no voice in designing. The consent-holding framework suggests that effective algorithmic governance requires not just retrospective accountability (auditing past decisions) but prospective consent (voice in system design), bringing the allocation rule into alignment with affected populations \textit{before} deployment rather than correcting misalignment after the fact.
+
+\subsection{Comparative Matrix}
+\label{subsec:comparative-matrix}
+
+Table~\ref{tab:social-contract-matrix} synthesizes the doctrinal analysis into a comparative framework. Each doctrine occupies a distinct region in $(\alpha, P, w_1, w_2)$ space, generating different friction profiles and correction dynamics.
+
+\begin{table*}[t]
+\centering
+\caption{Social Contract Doctrines as Consent Allocation Regimes}
+\label{tab:social-contract-matrix}
+\begin{tabular}{p{0.12\textwidth}p{0.17\textwidth}p{0.13\textwidth}p{0.14\textwidth}p{0.18\textwidth}p{0.14\textwidth}}
+\toprule
+\textbf{Doctrine} & \textbf{Primary allocation logic} & \textbf{Weight profile} & \textbf{Correction mechanism} & \textbf{Primary failure mode} & \textbf{Real-world exemplar} \\
+\midrule
+Hobbesian & Sovereign concentration for order & $w_2 \gg w_1$ & Breakdown/ reconstitution & Repressed friction under prolonged centralization & Emergency powers; wartime coalitions \\
+\addlinespace
+Lockean & Delegated, revocable authority under rights & Balanced with rights floor & Legal contestation, electoral turnover & Formal revocability without effective capacity & Anglo-American constitutional democracy \\
+\addlinespace
+Rousseauian & Collective self-rule and civic co-authorship & High $w_1$ in constitutional domains & Civic deliberation, constitutional revision & Symbolic unity masking capture & Swiss cantons; citizens' assemblies \\
+\addlinespace
+Rawlsian & Maximin effective voice & $w_1$ dominant for basic liberties & Institutional redesign under veil & Institutional rigidity when stakes shift & Scandinavian welfare states \\
+\addlinespace
+Utilitarian & Stakes-weighted welfare maximization & Domain-variable & Outcome feedback, policy adjustment & Preference intensity invisible to aggregation & Cost-benefit regulatory agencies \\
+\addlinespace
+Libertarian & Property-rights consent & High $w_1$ where property $=$ stakes & Market exit, litigation & Externalities misalign consent with stakes & Common-law property regimes \\
+\addlinespace
+Technocratic & Expertise-based delegation & High $w_2$ in technical domains & Audit, bounded jurisdiction & Domain creep into value-laden decisions & Central banks; health agencies \\
+\addlinespace
+Anarchist/ Federal & Polycentric local authority & Local $w_1$ emphasis & Exit/voice across nodes & Cross-node externalities without cross-node voice & Federated cooperatives; Ostrom CPR \\
+\addlinespace
+Algorithmic & Code-mediated by designers/ operators & Implicit high $w_2$ & Appeals, external oversight & Opaque low-$\alpha$ with delayed backlash & Platform content moderation \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The matrix generates empirical predictions that are testable through the proxy construction methodology developed in Section~\ref{sec:methodology}:
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Hobbesian regimes} should exhibit low measured friction during crises (suppression) followed by spikes when coercive capacity declines. The friction time series should show characteristic U-shapes: initially high (pre-consolidation), suppressed (during stable authoritarian rule), then rising (as legitimacy erodes). The transition from suppressed to rising friction should correlate with declining state capacity or external shocks.
+
+\item \textbf{Lockean regimes} should show friction-reform cycles with lag proportional to contestation channel strength. The stronger the legal system, free press, and organized opposition, the shorter the lag between friction onset and institutional correction. This prediction is testable through cross-polity comparison: common-law systems with independent judiciaries should show shorter correction lags than systems with weaker contestation channels.
+
+\item \textbf{Rousseauian regimes} should show divergence between formal and effective $\alpha$ as a leading indicator of legitimacy crisis. When the gap between formal inclusion (universal suffrage) and effective voice (actual influence on outcomes) widens, friction should increase even if formal $\alpha$ remains constant---a pattern visible in contemporary democracies experiencing populist backlash against perceived elite capture.
+
+\item \textbf{Technocratic regimes} should show domain-specific friction patterns: low friction in narrow technical domains but rising friction at domain boundaries, particularly where technical decisions have distributional consequences that extend beyond the expert mandate.
+\end{itemize}
+
+\subsection{Formal Text-to-Model Mapping}
+\label{subsec:text-to-model}
+
+The preceding doctrinal analysis can be compressed into a formal translation scheme. For each doctrine, the mapping identifies: (i) the canonical textual proposition, (ii) its allocation implication for $C_{i,d}$, (iii) the model expression in terms of $\alpha$, $F$, and $L$, and (iv) the diagnostic prediction---the friction pattern that should be observed if the doctrine accurately describes the regime.
+
+\textbf{Hobbes} $\to$ \textit{Order-first authorization}: peace requires concentrated authority \citep{hobbes1651}. Allocation: $C_{s,d} \approx 1$. Model: $L$ sustained by high $P$ under $w_2 \gg w_1$. Prediction: $\partial F / \partial t > 0$ under persistent low $\alpha$.
+
+\textbf{Locke} $\to$ \textit{Conditional delegation}: authority legitimate only as continuing trust \citep{locke1689}. Allocation: bounded, revocable. Model: threshold-triggered correction per Equation~\ref{eq:lockean-correction}. Prediction: shorter friction-reform lag where contestation channels are stronger.
+
+\textbf{Rousseau} $\to$ \textit{Collective self-rule}: citizens as co-authors of law \citep{rousseau1762}. Allocation: $C_{i,d^{\text{const}}} > 0$ for all $i \in S_d$. Model: high constitutional $\alpha$ per Equation~\ref{eq:rousseauian-alpha}. Prediction: friction appears as contestation over representation authenticity when formal and effective $\alpha$ diverge.
+
+The modern variants extend this mapping:
+
+\textbf{Rawls} $\to$ \textit{Maximin voice}: institutional design maximizes minimum $\text{eff\_voice}_i$. Allocation: constrained by basic liberties floor. Model: $\max \min_i \{\text{eff\_voice}_i\}$ per Equation~\ref{eq:rawlsian-maximin}. Prediction: lower variance in $\text{eff\_voice}_i$ and lower average friction relative to utilitarian configurations.
+
+\textbf{Utilitarian} $\to$ \textit{Stakes-weighted aggregation}: maximize $\sum s_i \cdot U_i$. Allocation: $C_{i,d}$ proportional to $s_i(d)$ under epistemic assumptions. Model: $\alpha$ measures realized stakes-consent covariance. Prediction: persistent minority friction where stakes concentrate but votes do not.
+
+\textbf{Technocratic} $\to$ \textit{Expertise concentration}: maximize $P(d,t)$ through competent delegation. Allocation: $C_{i,d}$ concentrated among accredited experts. Model: high $w_2$, bounded jurisdiction. Prediction: rising friction when domain boundaries blur from technical to value-laden.
+
+These mappings can be read as different parameterizations of the same structural system. Hobbesian configurations prioritize high $w_2$ under emergency conditions. Lockean configurations prioritize bounded delegation with explicit correction triggers. Rousseauian configurations prioritize high constitutional $\alpha$ through broad co-authorship. Rawlsian configurations constrain the allocation to protect worst-off stakeholders. Under this interpretation, doctrinal disagreement is not only philosophical; it is empirically legible as disagreement over admissible regions in $(w_1, w_2, \alpha, P)$ space and over the dynamics of updating $H_t(d)$ when friction accumulates.
+
+For future empirical work, a doctrine-linked panel can be coded with: (i) domain-level authority concentration index (Hobbesian concentration proxy), (ii) rights-and-revocation channel strength (Lockean conditionality proxy), (iii) constitutional inclusion breadth and effective participation (Rousseauian co-authorship proxy), and (iv) lagged friction-reform elasticity $\partial H_{t+1} / \partial F_t$ across regimes. This allows doctrinal language to generate falsifiable comparative hypotheses without collapsing normative differences into a single scalar.
+
+\subsection{Endogenous Weight Selection Across Doctrines}
+\label{subsec:endogenous-weights}
+
+The doctrinal comparison clarifies an empirical strategy for the weight determination problem introduced in Postulate~1. Rather than treating $(w_1, w_2)$ as free parameters requiring \textit{a priori} normative resolution, we can treat doctrine labels as priors over feasible $(w_1, w_2)$ regions and estimate posterior weights from observed friction trajectories and reform timing.
+
+Concretely, doctrine-consistent regimes can be estimated through constrained optimization:
+\begin{equation}
+\min_{w_1, w_2, \theta} \sum_{d,t} \left[ F_{d,t}^{\text{obs}} - \hat{F}_{d,t}(\alpha_{d,t}(w, \theta), P_{d,t}) \right]^2
+\label{eq:doctrine-estimation}
+\end{equation}
+subject to doctrine-specific constraints on admissible allocations (e.g., rights floors for Lockean configurations, domain bounds for technocratic delegation, veto conditions for minority protection). This converts social-contract debate from pure doctrine adjudication into constrained comparative model selection.
+
+The approach connects to \citeauthor{weber1978economy}'s \citeyearpar{weber1978economy} typology of legitimate domination. Weber's three ideal types---traditional, charismatic, and legal-rational authority---correspond to different weight configurations in consent-holding terms: traditional authority prioritizes historical precedent (high inertia in $H_t(d)$), charismatic authority concentrates $C_{i,d}$ around personal legitimacy claims (high $w_2$ tied to individual performance), and legal-rational authority distributes authority through procedural rules (explicit correction mechanisms, bounded allocation). The consent-holding framework operationalizes these distinctions: Weber's ideal types become empirically distinguishable through their $(\alpha, F, w_1, w_2)$ signatures.
+
+\citet{habermas1987} distinguishes \textit{system} (market and state coordination through media of money and power) from \textit{lifeworld} (communicatively structured domains of meaning and solidarity). In consent-holding terms, system domains tend toward technocratic weight profiles ($w_2$ dominant), while lifeworld domains demand higher $\alpha$ ($w_1$ dominant). The ``colonization of the lifeworld'' that Habermas diagnoses---system logic encroaching on communicative domains---translates directly: friction rises when technocratic weights are imposed on domains where stakeholder consent alignment is the relevant legitimacy criterion. The contemporary manifestation is algorithmic governance of social life---content moderation, recommendation systems, automated hiring---where system-logic ($w_2$: optimize engagement, efficiency, profit) colonizes domains that stakeholders experience as lifeworld ($w_1$: cultural expression, professional identity, community norms). \citet{calhoun1994habermas} further develops the public sphere dimension: the formation of weights $(w_1, w_2)$ is itself a public process, shaped by the quality of deliberation, the openness of discourse, and the distribution of communicative power. Weight formation is thus not merely a technical calibration problem but a political one, subject to the same consent-holding dynamics as any other governance domain.
+
+The framework doesn't adjudicate between these theories normatively but provides tools for comparing their institutional predictions and empirical performance across domains. The comparative matrix (Table~\ref{tab:social-contract-matrix}) serves as a lookup table: given a governance domain and its observed friction profile, which doctrinal configuration best explains the data? And given a desired legitimacy outcome, which configuration's allocation rule is most likely to achieve it?
+
+The endogenous weight approach also connects to historical debates in social choice theory. The eighteenth-century disagreement between \citet{borda1781memoire} and Condorcet over voting rules can be reinterpreted as a disagreement over implicit weight configurations: Borda's count weights preference orderings uniformly, while Condorcet's pairwise method weights majority preferences in each binary comparison. \citet{mclean1994condorcet} document how Condorcet understood the epistemic dimension of voting---its capacity to track truth---while Borda emphasized fairness in aggregation. In consent-holding terms, Condorcet's approach prioritizes $w_2$ (the voting rule's performance in tracking correct outcomes), while Borda's prioritizes $w_1$ (fair representation of each voter's full preference ordering). The consent-holding framework reveals that this historical debate was not merely about voting mechanics but about the relative weight of consent alignment versus epistemic performance in collective decision-making---the same trade-off captured in Postulate~1.
+
+The practical implication is that weight selection need not be resolved philosophically before the framework can be applied empirically. Different societies, different domains, and different historical periods operate under different weight configurations. The framework's contribution is to make these configurations \textit{visible}---to show that what appears to be a disagreement about fundamental values is often a disagreement about parameter values in a shared structural model, amenable to empirical investigation and institutional experimentation.
+
+
+% ============================================================================
+% SECTION 18 ADDITIONS: OBJECTIONS 8-9
+% ============================================================================
+
+\subsection{Objection 8: Preference Endogeneity}
+\label{subsec:objection-endogeneity}
+
+\textit{``Stakes and preferences are not exogenous---institutions shape what people want. If consent power allocation influences the very preferences it's meant to reflect, the framework is circular.''}
+
+\textbf{Reply}: This is a serious objection connecting to the adaptive preferences literature in political philosophy and behavioral economics. \citet{anderson2006} demonstrates that democratic deliberation \textit{shapes} rather than merely aggregates preferences---citizens who participate in structured deliberation develop different policy views than those who do not. \citet{gerver2024} examine nudging against consent, showing how institutional design can manipulate preferences while appearing to respect autonomy. \citet{thaler2008} further establish that choice architecture effects are pervasive: the framing of options systematically influences which options are chosen, raising the question of whether any ``revealed preference'' can be treated as exogenous to institutional context.
+
+The framework's response is threefold. First, the Bayesian learning dynamics in the Monte Carlo simulation (Section~\ref{sec:monte-carlo}) already model preference endogeneity: agents update beliefs based on institutional performance, and their stake assessments evolve with experience. Endogeneity is thus not an external threat to the model but a feature it incorporates. Second, the distinction between meta-level consent (constitutional) and object-level consent (policy) partially addresses the circularity charge. Meta-level preferences---about the \textit{rules} governing consent allocation---are more stable than object-level preferences about specific policies. Constitutional consent structures can be evaluated for alignment even if the preferences they shape at the policy level are endogenous, because the meta-level question (``do those with stakes have voice in setting the rules?'') is prior to the object-level question (``do current policies match current preferences?'').
+
+Third, and most fundamentally, friction $F(d,t)$ provides an external check that does not depend on exogenous preferences. Friction is measured through \textit{behavioral} indicators---protests, strikes, litigation, exit---that are costly to produce and therefore resistant to preference manipulation. A regime can shape what people \textit{say} they want (survey responses, voting patterns under constraint), but it cannot easily suppress the behavioral manifestations of misalignment without incurring costs that are themselves observable. Even if preferences are entirely endogenous, persistent friction indicates misalignment that is not resolved by preference shaping. An institution that suppresses friction through preference manipulation rather than genuine consent alignment faces a specific diagnostic signature: low measured friction combined with high friction \textit{volatility} when the preference-shaping mechanism weakens. The framework can detect this: institutions with genuinely high $\alpha$ show low friction robustly across conditions, while institutions with manipulated preferences show low friction only under maintained manipulation---a distinction visible in time-series analysis of friction dynamics. Persistent regimes that collapse rapidly upon losing control of information or education channels (as documented in post-Soviet transitions and Arab Spring dynamics) exhibit precisely this pattern.
+
+\subsection{Objection 9: Measurement Impossibility}
+\label{subsec:objection-measurement}
+
+\textit{``The framework's variables---stakes, effective voice, tolerance thresholds---are too complex to measure reliably. Without practical measurement, the framework is unfalsifiable.''}
+
+\textbf{Reply}: Measurement difficulty is real but not unique to this framework---utility, social welfare, and democratic quality all face similar challenges. GDP purports to measure economic output through heroic aggregation of heterogeneous goods; the Human Development Index combines life expectancy, education, and income into a single scalar; the V-Dem project constructs over 450 indices of democratic quality from expert codings. None of these are measured with the precision of physical constants, yet all generate productive empirical research programs. The consent-holding framework's measurement challenges are of the same kind, not a different kind.
+
+The response has three parts. First, Section~\ref{sec:methodology}'s proxy construction demonstrates that $\alpha$ and $F$ \textit{can} be approximated using available data. Voter registration rates, union density, collective bargaining coverage, petition counts, strike days lost, litigation rates, and protest event frequencies all serve as observable proxies for the framework's theoretical variables. The proxies are imperfect, but imperfect measurement is not non-measurement. Appendix~\ref{sec:appendix-data} documents the data sources and coding protocols in detail.
+
+Second, the framework makes ordinal predictions testable even without cardinal measurement. The claim that $\alpha_{\text{suffrage},1920} > \alpha_{\text{suffrage},1910}$ (consent alignment in suffrage domains increased after franchise extension) does not require precise measurement of either value---only their ordering. Similarly, the prediction that friction should decrease after franchise extensions (H1: higher $\alpha$ predicts lower future $F$) is testable through directional change in proxy indicators, not absolute magnitudes. Many of the framework's hypotheses concern comparative statics and directional dynamics rather than point estimates, making them robust to measurement noise.
+
+Third, proxy validity can itself be assessed empirically through convergent validity testing. If the constructed $\alpha$ and $F$ proxies predict each other in the directions specified by H1--H4, this provides evidence both for the framework \textit{and} for the proxy validity. If they do not, either the measurement is inadequate or the theory is wrong---both are falsifiable outcomes. The inter-proxy correlations reported in the historical case studies provide precisely this kind of convergent validation.
+
+More broadly, the measurement impossibility objection proves too much. If the standard for admissible frameworks is that all variables must be perfectly measurable, then no normative framework in political philosophy survives---not welfare economics (utility is unobservable), not democratic theory (``the will of the people'' is a construct), not justice theory (``fairness'' requires contested interpersonal comparisons). The consent-holding framework's measurement program is more transparent and more testable than most: it specifies exactly which observable proxies correspond to which theoretical variables, and it makes falsifiable predictions about the relationships between them. The measurement challenge is practical, not conceptual: it calls for better data and more sophisticated proxies, not abandonment of the measurement enterprise. Indeed, the very act of attempting measurement---constructing proxies, testing hypotheses, refining indicators---advances understanding even when individual measurements are imprecise. The V-Dem project's 450+ democracy indicators began as crude expert codings and have been progressively refined through methodological innovation over two decades. The consent-holding framework's measurement program is at an earlier stage of the same trajectory: the proxies constructed here are initial approximations that future empirical work will refine, challenge, and improve. The alternative---treating legitimacy as unmeasurable and therefore outside the domain of empirical research---abandons the field to pure normative speculation, which has proved insufficient for guiding institutional design.
+
+
+% ============================================================================
+% SECTION 19: WEIGHT DETERMINATION AS ENDOGENOUS CONSTITUTIONAL PROBLEM
+% ============================================================================
+
+\section{Weight Determination as Endogenous Constitutional Problem}
+\label{sec:weight-determination}
+
+The meta-legitimacy challenge---determining the weights $w_1$ and $w_2$ in the legitimacy function $L(d,t) = w_1 \cdot \alpha(d,t) + w_2 \cdot P(d,t)$ without presupposing answers to the legitimacy question---requires extending the framework to treat weight-determination itself as a domain subject to consent-holding analysis. This section develops the argument that weight determination is not an embarrassing free parameter but an endogenous constitutional problem with its own institutional dynamics.
+
+\subsection{The Problem of Weights}
+\label{subsec:problem-of-weights}
+
+Every normative framework that balances competing values faces the weighting problem. Utilitarian calculations require interpersonal utility comparison. Rawlsian maximin requires a metric for ``worst off.'' Capabilities approaches require a list and relative weighting of capabilities. The consent-holding framework's version---how much should consent alignment matter relative to performance?---is structurally identical. What distinguishes the present approach is treating the weighting problem as itself amenable to consent-holding analysis rather than resolving it through external philosophical commitment.
+
+The connection to cooperative game theory is direct. \citet{shapley1953value} establishes a unique value function for cooperative games satisfying symmetry, efficiency, dummy player, and additivity axioms. The Shapley value determines each player's expected marginal contribution to every possible coalition---analogous to determining each legitimacy dimension's marginal contribution to overall institutional stability. Applied to weight determination, the Shapley framework suggests that $w_1$ and $w_2$ should reflect the marginal contribution of consent alignment and performance, respectively, to friction minimization across the space of possible institutional configurations. Formally, the Shapley-inspired weight for consent alignment would be:
+\begin{equation}
+w_1^{\text{Shapley}} = \sum_{S \subseteq \{P\}} \frac{|S|!(1 - |S|)!}{2!} \left[ v(S \cup \{\alpha\}) - v(S) \right]
+\label{eq:shapley-weight}
+\end{equation}
+where $v(S)$ is the friction-reducing value of the legitimacy dimensions in coalition $S$. This reduces to a simple calculation: $w_1$ reflects the average marginal contribution of $\alpha$ to friction reduction, both alone and in combination with $P$. The Shapley approach transforms the weight question from a normative choice into a functional one: weights should reflect each dimension's causal efficacy in producing legitimate outcomes.
+
+\citet{binmore1989outside} demonstrate experimentally that outside options---the alternatives available to bargaining parties if negotiation fails---strongly constrain bargaining outcomes. Applied to constitutional weight determination, this means the weights that emerge from institutional bargaining depend on exit threats: populations capable of rebellion, secession, or non-compliance shift weights toward $w_1$ (consent alignment), while populations dependent on state capacity for survival shift weights toward $w_2$ (performance). The empirical observation that democratic transitions often follow periods where the cost of suppression exceeds the cost of inclusion \citep{acemoglu2000why} is consistent with this interpretation.
+
+\citet{compte2010coalitional} extend Nash bargaining to multi-party settings where coalitions can form. In the weight-determination context, this captures the reality that constitutional moments involve multiple stakeholder groups with different weight preferences negotiating simultaneously. The resulting weights reflect not just bilateral bargaining but the entire coalition structure---which groups can credibly threaten exit, which can form blocking coalitions, and which have overlapping interests that enable cooperation.
+
+Constitutional conventions, from Philadelphia to post-apartheid South Africa, exhibit precisely these coalition dynamics. The South African case is instructive: the ANC's bargaining position (massive popular support, capacity for sustained resistance) shifted weights toward $w_1$ (consent alignment), while the National Party's position (control of state apparatus, economic infrastructure) preserved significant $w_2$ (performance capacity). The resulting constitutional settlement---strong rights protections with independent judiciary and reserve bank independence---represents a negotiated weight configuration reflecting the coalition structure at the constitutional moment. The consent-holding framework predicts that this configuration generates stable legitimacy only insofar as the negotiated weights continue to reflect the evolving stakeholder structure; as the coalition dynamics shift (through demographic change, economic transformation, or institutional erosion), the weight configuration faces renegotiation pressure manifesting as friction.
+
+\subsection{Four-Layer Architecture}
+\label{subsec:four-layer-architecture}
+
+Weight determination occurs through a four-layer architecture that generates finite recursion rather than infinite regress:
+
+\textbf{Layer 1 (Constitutional Foundation)}: Weight determination occurs at the constitutional level, governed by the same legitimacy calculus but with astronomically high stakes (affecting all future decisions in all domains). This follows \citeauthor{brennan1985}'s \citeyearpar{brennan1985} distinction between constitutional and post-constitutional choice, creating finite recursion: weights at the constitutional level are determined by a higher-order consent process that terminates in founding acts, revolutionary moments, or ongoing constitutional practice. Constitutional-level friction $F(d_w, t)$ for weight-determination decisions becomes observable through reform pressure, constitutional amendment campaigns, and regime-change movements.
+
+\textbf{Layer 2 (Empirical Calibration)}: Historical constitutional reforms reveal weight preferences through friction minimization. The optimization problem:
+\begin{equation}
+\arg\min_{w_1, w_2} \mathbb{E}[F(d,t; w_1, w_2)]
+\label{eq:weight-calibration}
+\end{equation}
+estimates weights from observed institutional stability patterns. Franchise expansions reveal upward pressure on $w_1$ (populations demanded more consent alignment). Technocratic delegations---central bank independence, public health authority---reveal contexts where $w_2$ was elevated (populations accepted reduced consent alignment in exchange for superior performance). Codetermination mandates, participatory governance reforms, and citizens' assemblies provide quasi-experimental variation in weight configurations with measurable friction outcomes.
+
+\textbf{Layer 3 (Axiomatic Constraints)}: Rather than arbitrary weight assignment, theoretical bounds can be derived from stability requirements. Any society avoiding persistent friction must satisfy:
+\begin{equation}
+\frac{w_2}{w_1} > f(\text{Var}[s_i(d)])
+\label{eq:axiomatic-bound}
+\end{equation}
+where $f$ captures the minimum competence-weighting required for technical domains with high stakes variance. Symmetrically, societies avoiding legitimacy collapse must satisfy a floor on $w_1$ in domains where affected populations can organize resistance:
+\begin{equation}
+w_1 > g(\text{capacity}(S_d))
+\label{eq:consent-floor}
+\end{equation}
+where $g$ captures the minimum consent-weighting required given the organizing capacity of the affected population. Populations with high organizing capacity (dense social networks, shared grievances, low coordination costs) require higher $w_1$ to avoid generating unsustainable friction. These axiomatic constraints limit the empirical search space, preventing overfitting while ensuring sociologically plausible configurations.
+
+\textbf{Layer 4 (Computational Validation)}: Dynamic Monte Carlo with evolutionary weight adjustment validates the unified architecture. Societies initialize with random weights, adjust based on friction feedback within axiomatic bounds, and converge to stable configurations. The computational experiments in Section~\ref{sec:monte-carlo} demonstrate that only weight distributions satisfying Layer 3's constraints produce long-run stability, while empirical calibration (Layer 2) reveals which specific values minimize historical friction. The convergence of computational and empirical weight estimates provides mutual validation.
+
+\subsection{Weights as Institutional Outcomes}
+\label{subsec:weights-as-outcomes}
+
+This unified framework treats weight determination not as an external parameter requiring normative resolution but as an endogenous feature of consent-holding structures. The legitimacy function can evaluate its own parameters when framed at appropriate meta-levels---analogous to how G\"{o}del numbering allows arithmetic self-reference without circularity. The self-referential structure is benign: constitutional-level consent processes determine the weights that govern object-level legitimacy evaluation, and constitutional-level legitimacy is itself subject to friction dynamics observable through institutional reform and resistance.
+
+Practically, societies determine weights through three mechanisms, each corresponding to a different correction rule:
+
+\textbf{Constitutional conventions} represent explicit negotiation over the consent-performance trade-off. The Philadelphia Convention of 1787, the French National Assembly of 1789, the post-apartheid South African Constitutional Assembly of 1996---each involved explicit bargaining over how much authority should rest on popular consent versus institutional competence. In consent-holding terms, these are high-stakes moments where $(w_1, w_2)$ are set through a meta-level consent process with its own alignment dynamics. The framework predicts that conventions dominated by incumbent elites will produce weight configurations favoring $w_2$ (performance-legitimacy), while conventions with broad popular participation will produce configurations favoring $w_1$ (consent-alignment). The historical record is broadly consistent: elite-dominated constitutional processes (e.g., Meiji Japan, Bismarckian Germany) emphasized state capacity; mass-participatory processes (e.g., post-independence India) emphasized democratic inclusion.
+
+\textbf{Revolutionary moments} represent forced renegotiation when accumulated friction exceeds tolerance. Here weight adjustment is not negotiated but imposed: the old weight configuration has generated unsustainable friction, and the new configuration reflects the balance of power among revolutionary actors. The framework predicts that revolutionary weight adjustments are discontinuous---large shifts in $(w_1, w_2)$ occurring over short periods---and that post-revolutionary configurations are initially unstable, requiring subsequent consolidation through the other two mechanisms. The French Revolution illustrates the pattern: the ancien r\'{e}gime's weight configuration (extremely high $w_2$, near-zero $w_1$ for non-aristocratic populations) generated unsustainable friction; the revolutionary reconfiguration swung to high $w_1$ (popular sovereignty, universal rights); the subsequent instability (Terror, Thermidor, Consulate, Empire) reflects the challenge of stabilizing a radically new weight configuration without the institutional infrastructure to sustain it.
+
+\textbf{Gradual reform} represents incremental weight adjustment through legislative and judicial action. Franchise extensions, administrative agency creation, judicial review expansion, and regulatory reform all shift weights without constitutional rupture. This mechanism generates the smoothest friction trajectories and is most amenable to the empirical calibration strategy in Layer~2. The prediction is that gradual reforms produce weight adjustments proportional to accumulated friction: small friction generates small reforms, while persistent high friction eventually produces larger institutional restructuring. The British constitutional tradition exemplifies this mechanism: the Reform Acts of 1832, 1867, 1884, and 1918 each shifted $(w_1, w_2)$ incrementally toward greater consent alignment, driven by accumulated friction (Chartist agitation, Reform League pressure, suffragette campaigns) but channeled through existing institutional pathways rather than revolutionary rupture. The consent-holding framework predicts that this gradualist pattern should be associated with lower overall friction volatility and more stable long-run equilibria---a prediction testable through cross-polity comparison of reform trajectories.
+
+Future empirical work implementing this architecture through quantified historical case studies can estimate $(w_1^*, w_2^*)$ from constitutional reform patterns across societies, testing whether the convergence predicted by the Monte Carlo simulations matches observed institutional evolution.
+
+
+% ============================================================================
+% SECTION 20: RESEARCH AGENDA
+% ============================================================================
+
+\section{Research Agenda}
+\label{sec:research-agenda}
+
+The consent-holding framework opens several research frontiers, each requiring different methodological approaches and offering distinct theoretical payoffs. This section maps the most promising directions.
+
+\subsection{Quadratic Voting and Novel Consent Mechanisms}
+\label{subsec:quadratic-voting}
+
+Conventional voting mechanisms allocate consent power uniformly: one person, one vote, regardless of stakes. Quadratic voting (QV) offers an alternative that directly connects to the consent-holding framework's core insight that legitimacy improves when consent power tracks stakes.
+
+\citet{lalley2018quadratic} show that QV---in which voters purchase votes at quadratic cost, paying $n^2$ tokens for $n$ votes---approximates efficient outcomes under mild conditions. The mechanism allows voters to express preference intensity, concentrating consent power on issues where their stakes are highest. In consent-holding terms, QV is an institutional mechanism for raising $\alpha(d)$ by enabling endogenous stakes revelation: voters who care more about an issue (higher $s_i(d)$) rationally purchase more votes, shifting consent power toward affected parties.
+
+\citet{posner2017quadratic} extend this analysis to public goods provision, demonstrating that QV approximates first-best allocation where conventional voting fails. The consent-holding framework provides a natural evaluation metric: does QV implementation raise measured $\alpha(d)$ relative to uniform voting? Does it reduce friction $F(d,t)$ in domains where preference intensity varies widely? These are testable predictions.
+
+Alternative mechanisms deserve parallel analysis. \textbf{Liquid democracy} allows vote delegation, enabling consent power to flow to trusted representatives---a mechanism for raising effective voice $\text{eff\_voice}_i$ through voluntary expertise concentration. The consent-holding framework predicts that liquid democracy should raise $\alpha$ in domains where expertise is concentrated but stakes are distributed (e.g., technical policy), while potentially \textit{lowering} $\alpha$ in domains where delegation chains concentrate power among a small number of super-delegates, replicating the Rousseauian failure mode of formal inclusion masking effective concentration.
+
+\textbf{Conviction voting} weights votes by duration of commitment, approximating temporal stakes. In consent-holding terms, the time-weighting introduces a proxy for stakes intensity: agents who maintain positions over longer periods signal higher stakes through costly persistence. The framework predicts that conviction voting should reduce friction in domains with stable, long-duration stakeholder interests (infrastructure, environmental protection) but may fail in domains requiring rapid response where extended commitment periods delay necessary correction.
+
+\textbf{Futarchy} separates value judgments (voted on) from implementation predictions (decided by prediction markets), corresponding to a domain-specific allocation where $w_1$ governs value domains and $w_2$ governs prediction domains. This is perhaps the most direct institutional instantiation of the consent-performance trade-off in Postulate~1: voters determine \textit{what} outcomes to pursue (consent alignment), while markets determine \textit{how} to achieve them (performance optimization). The consent-holding framework provides a natural evaluation: does the separation actually reduce friction, or does it generate new friction at the value-implementation boundary?
+
+Each of these mechanisms represents a different approach to raising $\alpha$ and reducing $F$. The consent-holding framework provides the common evaluation language---and the historical case studies in Part~III provide the baseline against which innovations should be measured.
+
+\subsection{Institutional Experiments}
+\label{subsec:institutional-experiments}
+
+Citizens' assemblies represent natural experiments in consent-alignment raising. The Irish Citizens' Assembly on constitutional reform \citep{farrell2019}, the French Convention Citoyenne pour le Climat \citep{courant2021}, and the UK Climate Assembly \citep{ukclimate2020} all implemented temporary high-$\alpha$ governance in specific domains. The consent-holding framework provides outcome metrics for evaluating these innovations: did $\alpha$ increase in the target domain? Did friction decrease? Were the effects persistent or transient?
+
+\citet{bovens2014oxford} provide a comprehensive framework for public accountability that complements the consent-holding approach: accountability mechanisms serve as correction rules (Layer 3 of the doctrinal analysis), enabling institutional adjustment when friction signals misalignment. The Bovens typology distinguishes political, legal, administrative, professional, and social accountability---each corresponding to a different friction channel in the consent-holding framework. Political accountability operates through electoral correction (periodic consent reallocation); legal accountability through judicial contestation (Lockean revocability); social accountability through public deliberation and media scrutiny (Rousseauian co-authorship). The consent-holding framework provides the unified metric---did friction decrease?---for evaluating which accountability channel is most effective in which domain.
+
+The research agenda here is to design randomized evaluations of participatory governance innovations using $\alpha$ and $F$ as primary outcome variables, moving beyond the current literature's focus on process measures (``did participation increase?'') toward outcome measures (``did consent alignment improve and friction decrease?'').
+
+Three experimental designs are particularly promising. First, \textbf{within-polity comparison}: randomly assign deliberative processes to some domains while maintaining status quo governance in others, measuring differential friction trajectories. The Irish model---where citizens' assemblies addressed specific constitutional questions (marriage equality, abortion, climate) while other domains retained standard legislative process---provides a natural template, though with selection effects that a truly randomized design would eliminate.
+
+Second, \textbf{cross-polity matching}: compare jurisdictions that adopted participatory innovations with matched controls, using synthetic control methods to estimate causal effects on $\alpha$ and $F$. Porto Alegre's participatory budgeting \citep{wampler2007participatory}, now replicated in thousands of municipalities worldwide, provides the largest quasi-experimental base. The consent-holding framework sharpens the evaluation question: not merely ``did participation increase?'' (a tautological measure for participatory programs) but ``did friction in budget-related domains decrease relative to matched controls?''
+
+Third, \textbf{mechanism variation}: within a single institutional reform, randomize the specific consent allocation mechanism (QV vs. sortition vs. stakeholder panels) to identify which mechanisms most efficiently raise $\alpha$ in which domain types. This design addresses the framework's core empirical question: is there a universal optimal consent allocation mechanism, or does optimal allocation depend on domain characteristics (stakes distribution, expertise requirements, scale)?
+
+\subsection{AI Governance Applications}
+\label{subsec:ai-governance}
+
+Algorithmic decision-making poses the consent-holding challenge in acute form. Automated systems make consequential decisions affecting millions---credit scoring, content moderation, criminal risk assessment, resource allocation---with consent power concentrated among system designers and operators. The affected populations (those scored, moderated, assessed, or allocated to) typically have near-zero effective voice in rule formation.
+
+The consent-holding framework predicts that AI governance will follow the same dynamics as other low-$\alpha$ regimes: friction accumulation (public backlash against algorithmic decisions), threshold effects (regulatory intervention once friction exceeds tolerance), and institutional correction (new governance structures raising stakeholder voice). The EU AI Act, the US Executive Order on AI Safety, and platform governance reforms represent early instances of these predicted dynamics.
+
+The AI governance domain is particularly valuable for the consent-holding framework because it allows observation of consent-alignment dynamics in real time, without the historiographic reconstruction required for the historical case studies. The timeline is compressed: platform governance has moved from near-zero $\alpha$ (unilateral content moderation policies) to emerging correction mechanisms (oversight boards, transparency reports, regulatory frameworks) in less than a decade. This compression provides a natural laboratory for testing whether the framework's predictions hold at accelerated timescales.
+
+Three mechanisms for raising $\alpha$ in AI systems merit investigation. First, \textbf{participatory design}: involving affected communities in system specification, training data selection, and performance metric definition. This corresponds to raising $\alpha$ at the design stage---ensuring that those with stakes in system outcomes have voice in system construction. The framework predicts that participatory AI design should reduce downstream friction (fewer contested decisions, fewer regulatory interventions) relative to developer-unilateral design, at the cost of slower deployment and higher coordination costs.
+
+Second, \textbf{algorithmic auditing}: external review as a correction rule, enabling friction signals to reach decision-makers who can modify system behavior. In the four-layer doctrinal analysis, auditing is a Lockean correction mechanism: it preserves designer authority but makes it conditional on ongoing accountability. The framework's prediction is that auditing reduces friction only when audit findings are actionable---when they trigger actual system modifications. Auditing without correction authority is the algorithmic equivalent of formal revocability without effective capacity: a Lockean failure mode.
+
+Third, \textbf{contestability mechanisms}: structured pathways for affected individuals to challenge automated decisions and trigger human review---the algorithmic analogue of Lockean revocability. The key design question is granularity: at what level should contestation operate? Individual decision appeals (``this credit score is wrong'') raise $\alpha$ at the case level but leave system-level consent allocation unchanged. System-level contestation (``this algorithm systematically disadvantages group $X$'') raises $\alpha$ at the design level but requires collective organization and technical expertise---reintroducing the collective action problems of Objection~6. The consent-holding framework suggests that effective AI governance requires contestability at \textit{both} levels: individual appeals for case-level correction and institutional channels for system-level consent alignment.
+
+\subsection{Cross-National Panel Studies}
+\label{subsec:cross-national-panel}
+
+The proxied $\alpha$ and $F$ time series constructed in Part~III for individual case studies can be extended to cross-national panel analysis. The V-Dem dataset provides democracy indices across 179 countries from 1789 to the present, with over 450 indicators that can serve as components of $\alpha$ and $F$ proxies. OECD and ILO data provide labor-market variables (union density, collective bargaining coverage, strike data) relevant to industrial-domain consent alignment. Pew Research Center and Gallup World Poll data provide attitudinal measures of governance satisfaction and institutional trust that can proxy for friction.
+
+The panel regression specification from Section~\ref{sec:methodology}:
+\[
+F_{d,t} = \beta_0 + \beta_1 \cdot \alpha_{d,t} + \beta_2 \cdot P_{d,t} + \gamma \cdot X_{d,t} + \mu_d + \lambda_t + \varepsilon_{d,t}
+\]
+could be estimated across countries and domains, testing H1 ($\beta_1 < 0$: higher $\alpha$ predicts lower $F$), H2 ($\beta_1$ magnitude increases with stakes concentration), and H5 ($\beta_2 < 0$: high $P$ partially compensates for low $\alpha$). Instrumental variable strategies exploiting franchise expansions, codetermination mandates, and exogenous governance shocks provide identification.
+
+The most powerful design would construct a domain-by-country-by-year panel, enabling within-domain and within-country analysis that controls for unobserved heterogeneity. Franchise expansions provide sharp variation in political-domain $\alpha$; codetermination mandates provide sharp variation in economic-domain $\alpha$; platform governance reforms provide variation in digital-domain $\alpha$. Each represents a natural experiment in consent-alignment change with measurable friction consequences.
+
+A specific research design for the cross-national panel: construct annual $\alpha$ and $F$ proxies for 30 OECD countries across three domains (political, economic, digital) from 1960 to present, using V-Dem data for political $\alpha$, OECD labor statistics for economic $\alpha$, and Freedom House internet freedom scores for digital $\alpha$. Friction proxies would combine protest event data (GDELT/ACLED), strike data (ILO), and internet censorship circumvention rates. The resulting 30-country $\times$ 3-domain $\times$ 60-year panel ($\sim$5,400 observations) would have sufficient power to test H1--H5 while controlling for country and domain fixed effects. Instrumental variable identification could exploit the timing of EU directives (which impose consent-alignment requirements on member states at exogenously determined dates) to address endogeneity concerns.
+
+\subsection{Extensions to the Formal Framework}
+\label{subsec:formal-extensions}
+
+Several directions extend the formal apparatus. \textbf{Mechanism design for consent allocation}: can we characterize the class of consent-allocation mechanisms satisfying incentive compatibility (no agent benefits from misrepresenting stakes) while maximizing $\alpha$? The revelation principle suggests that direct mechanisms---asking agents to report stakes and allocating consent power accordingly---should be sufficient, but the incentive-compatible mechanism may sacrifice efficiency relative to the first-best.
+
+\textbf{Welfare theorems for optimal $H_t(d)$}: under what conditions does there exist a consent-holder mapping that is Pareto optimal (no alternative mapping reduces friction for all agents)? Are competitive equilibria in consent allocation efficient? The analogy to the fundamental welfare theorems of economics is suggestive but not straightforward, because consent power is not a private good.
+
+\textbf{Network effects in coalition formation}: when agents form coalitions to concentrate consent power, network structure constrains which coalitions are feasible. The framework could incorporate network topology to predict which stakeholder groups can effectively organize and which face structural barriers to collective action---connecting to the collective action problems raised in Objection~6 (Section~\ref{subsec:objection-collective-action}). The key insight from network science is that consent power is not merely allocated but \textit{activated}: formal authority ($C_{i,d} > 0$) translates to effective voice only when network connectivity enables coordination. This explains the paradox of formally empowered but practically voiceless populations---consumers with market choice but no organized voice, voters with ballots but no coordinated influence.
+
+\textbf{Learning and institutional memory}: institutions accumulate knowledge about which consent allocations minimize friction---but they also forget, and personnel turnover disrupts institutional memory. Modeling institutional learning dynamics could explain why some societies cycle between high and low $\alpha$ regimes rather than converging monotonically. The Monte Carlo simulations in Section~\ref{sec:monte-carlo} model agent-level learning (Bayesian updating, Thompson sampling, Q-learning) but assume institutional memory is perfect---an assumption that historical experience contradicts. Introducing institutional memory decay, knowledge loss during regime transitions, and path-dependent learning trajectories could generate the non-monotonic democratization patterns documented in the empirical literature.
+
+These extensions connect to companion formalizations in the broader research program. \citet{farzulla2025aoc} derives the consent-friction framework from a single axiom, establishing friction as the canonical obstruction to coordination in multi-agent systems---the formal foundation for the friction dynamics documented throughout this paper. \citet{farzulla2025rom} embeds these dynamics within a scale-relative formalism where legitimacy enters as survival probability in the replicator equation, providing the dynamical foundation for the persistence patterns observed in the historical case studies. \citet{farzulla2025stakes} further develops the stakeholder voice dimension, analyzing populations that bear stakes in governance outcomes but lack effective institutional channels for exercising consent power---the structural condition that generates the most persistent friction patterns in the historical case studies. Together, these companion papers and the extensions outlined here constitute a research program aimed at making political legitimacy as tractable an object of formal analysis as market equilibrium or strategic interaction.
+
+The research agenda as a whole is unified by a single methodological commitment: treating legitimacy as a measurable structural property rather than an abstract normative ideal. The consent-holding framework provides the measurement apparatus; the historical case studies provide calibration data; the computational simulations provide parameter-space exploration; and the extensions outlined here provide the theoretical frontier. If the framework's core predictions survive empirical testing---if higher $\alpha$ does predict lower $F$, if threshold effects are real, if reform pressure follows persistent misalignment---then political legitimacy joins the growing list of social phenomena amenable to rigorous quantitative analysis without sacrificing normative depth.
+
+
+% ============================================================================
+% APPENDIX C: DATA SOURCES AND CODING PROTOCOLS
+% ============================================================================
+
+\section{Data Sources and Coding Protocols}
+\label{sec:appendix-data}
+
+This appendix documents the data sources, variable construction, and coding protocols used to construct the $\alpha$ and $F$ proxies in the historical case studies (Part~III). Transparency in proxy construction is essential given the measurement challenges discussed in Objection~9 (Section~\ref{subsec:objection-measurement}).
+
+\subsection{Primary Datasets}
+
+\textbf{Varieties of Democracy (V-Dem), v14.} The V-Dem project provides over 450 indicators of democratic governance across 179 countries from 1789 to 2023. Variables used in this paper include: electoral democracy index (v2x\_polyarchy), participatory component (v2x\_partip), deliberative component (v2x\_delibdem), suffrage share (v2x\_suffr), freedom of expression (v2x\_freexp), and civil society participation (v2x\_cspart). These variables serve as components of $\alpha$ proxies in the suffrage, civil rights, and cross-national analyses. V-Dem data are expert-coded with documented inter-coder reliability (median pairwise agreement typically exceeding 0.85) and are freely available at \url{https://www.v-dem.net}.
+
+\textbf{OECD/ILO Labour Statistics.} Union density (trade union members as percentage of wage earners), collective bargaining coverage (share of workers covered by collective agreements), and days lost to industrial action are drawn from the OECD Labour Force Statistics database and ILO ILOSTAT. These variables proxy $\alpha$ in industrial and economic domains: higher union density corresponds to higher stakeholder voice in workplace governance, while strike activity proxies friction $F$ in labor-management relations. Coverage spans OECD member states from approximately 1960 to present, with historical extensions for major economies from ILO archives.
+
+\textbf{Pew Research Center Global Attitudes Surveys.} Cross-national survey data on LGBT acceptance, political attitudes, and institutional trust are drawn from Pew's Global Attitudes Project (2002--present). The LGBT acceptance index serves as an $\alpha$ proxy in the LGBT rights case study (Section~\ref{sec:lgbt-rights}): societal acceptance levels condition the effective voice that LGBT populations can exercise. Political attitude data proxy both stakeholder satisfaction (inversely related to $F$) and institutional legitimacy perceptions.
+
+\textbf{Gallup World Poll.} Annual surveys across 160+ countries measuring governance satisfaction, institutional trust, and civic engagement. Variables used include: confidence in national government, satisfaction with freedom, and perception of corruption. These serve as cross-validation proxies for $F$: low satisfaction and high perceived corruption should correlate with high friction in the consent-holding framework.
+
+\textbf{Freedom House Freedom on the Net.} Annual assessments of internet freedom across 70 countries, covering obstacles to access, limits on content, and violations of user rights. These variables are used in the platform governance case study (Section~\ref{sec:platform-governance}) to construct digital-domain $\alpha$ proxies: internet freedom scores capture the degree to which digital stakeholders can exercise effective voice in online governance domains.
+
+\textbf{World Values Survey (WVS).} Longitudinal cross-national survey covering political culture, social values, and institutional attitudes across 120 societies from 1981 to present. WVS emancipative values indices and institutional confidence measures provide attitudinal proxies for both $\alpha$ (citizen expectations about voice and participation) and $F$ (discrepancy between expected and actual governance quality). These supplement the behavioral proxies (protests, strikes, litigation) with attitudinal measures capturing latent friction---misalignment that has not yet manifested in observable collective action.
+
+\subsection{Historical Sources}
+
+\textbf{Parliamentary Records.} Hansard (UK), Congressional Record (US), and equivalent parliamentary archives for other case-study countries provide direct evidence of legislative deliberation, petition reception, and franchise debate. Parliamentary petition counts serve as friction proxies in the suffrage and abolition case studies: rising petition volumes indicate organized stakeholder demand for consent-alignment reform.
+
+\textbf{Protest Event Databases.} The Global Database of Events, Language, and Tone (GDELT), the Armed Conflict Location and Event Data Project (ACLED), and the Mass Mobilization in Autocracies Database (MMAD) provide event-level data on protests, demonstrations, riots, and strikes. These databases enable construction of friction time series with daily resolution for recent periods and annual resolution for historical periods. Protest event frequency and participant counts serve as direct proxies for $F(d,t)$ in their respective domains.
+
+\textbf{Litigation Records.} Court filing data from national judicial statistics agencies provide friction proxies in domains where legal contestation is the primary correction mechanism: civil rights litigation rates, labor-management arbitration cases, and environmental enforcement actions. For the US, the Administrative Office of the United States Courts provides annual filings data by case type. For the UK, the Ministry of Justice publishes civil and family court statistics. Litigation as a friction proxy captures a specific correction mechanism---Lockean contestation through legal channels---and should be interpreted alongside other friction indicators rather than as a standalone measure.
+
+\textbf{Trade Union Archives and Labor Statistics.} For the labor governance case study (Section~\ref{sec:labor-governance}), historical union membership records, collective bargaining agreements, and strike statistics are drawn from national labor departments and union archives. UK data are sourced from the Department for Business and Trade (formerly BEIS); US data from the Bureau of Labor Statistics; German data from the Hans B\"{o}ckler Foundation and IAB. These provide both $\alpha$ proxies (union density, bargaining coverage) and $F$ proxies (strike frequency, days lost, wildcat action rates) at annual resolution from approximately 1890 to present for the UK and US, and from 1950 for Germany.
+
+\subsection{Ordinal Coding Protocols}
+
+For the three detailed case studies (abolition, LGBT rights, platform governance), ordinal alpha and friction indices are constructed on 5-point scales:
+
+\textbf{Consent alignment ($\alpha$ proxy):}
+\begin{enumerate}[leftmargin=2em]
+\item[1.] No formal voice: affected population legally excluded from governance of the domain.
+\item[2.] Symbolic voice: formal rights exist but enforcement and capacity are minimal.
+\item[3.] Partial voice: some institutional channels exist; effective voice varies by subgroup.
+\item[4.] Substantial voice: most affected parties have functional channels; remaining gaps are identified.
+\item[5.] Near-full alignment: stakes and consent power are closely matched; friction is low.
+\end{enumerate}
+
+\textbf{Friction ($F$ proxy):}
+\begin{enumerate}[leftmargin=2em]
+\item[1.] Quiescent: no observable organized dissent or contestation.
+\item[2.] Low friction: occasional petitions, isolated protests, or individual litigation.
+\item[3.] Moderate friction: sustained organized campaigns, regular protests, growing media attention.
+\item[4.] High friction: mass mobilization, strikes, civil disobedience, or legal crises.
+\item[5.] Crisis: regime-threatening contestation, violence, or institutional breakdown.
+\end{enumerate}
+
+These ordinal scales are designed to be comparable across case studies: a ``3'' in the suffrage domain (partial voice: some women or racial minorities enfranchised, others excluded) is intended to capture the same structural relationship between stakes and consent power as a ``3'' in the labor domain (partial voice: some industries covered by collective bargaining, others not) or the platform domain (partial voice: some content moderation decisions appealable, others not). The comparability rests on the framework's domain-general definition of consent alignment rather than domain-specific institutional features.
+
+Coding is performed by the author based on the historical sources cited in each case study. For the cross-national panel extensions proposed in Section~\ref{subsec:cross-national-panel}, independent coding by multiple researchers with formal inter-coder reliability assessment would be required. A pilot inter-coder study using the ordinal protocol across the suffrage and labor case studies would establish baseline reliability before extending to the full domain set.
+
+\subsection{Inter-Coder Reliability Considerations}
+
+The ordinal coding protocol is designed to minimize subjective judgment while acknowledging that any historical coding involves interpretation. Three strategies mitigate reliability concerns:
+
+First, \textit{anchoring}: each ordinal level is defined with reference to observable institutional and behavioral indicators (legal status, protest frequency, petition counts) rather than subjective assessments of ``legitimacy'' or ``dissent intensity.'' Second, \textit{triangulation}: multiple proxy measures are constructed for each theoretical variable, and convergence across proxies provides evidence of construct validity. Third, \textit{transparency}: all coding decisions and their justifications are documented in the case study narratives, enabling replication and critique. For the present monograph, single-coder reliability is partially validated by the convergence between the ordinal codings and the quantitative proxy measures (V-Dem, OECD, protest event data) where both are available.
+
+\subsection{Proxy Construction Methodology}
+
+The mapping from observable variables to theoretical constructs ($\alpha$ and $F$) follows a consistent protocol across case studies:
+
+\textbf{Step 1: Domain definition.} Identify the governance domain $d$, the relevant stakeholder population $S_d$, and the authority-holder set. This step determines which data sources are relevant.
+
+\textbf{Step 2: Alpha proxy selection.} Identify observable variables that capture the degree to which stakeholder stakes $s_i(d)$ covary with consent power $C_{i,d}$. Preferred proxies are institutional measures (suffrage share, union density, board composition) rather than attitudinal measures, because institutional measures capture \textit{effective} voice rather than perceived voice. Where institutional measures are unavailable, attitudinal proxies (WVS, Gallup) are used with appropriate caveats.
+
+\textbf{Step 3: Friction proxy selection.} Identify observable variables that capture misalignment between outcomes and stakeholder preferences. Behavioral proxies (protests, strikes, litigation, petitions) are preferred over attitudinal proxies (satisfaction surveys) because they capture \textit{revealed} friction---misalignment costly enough to motivate collective action. Attitudinal measures supplement behavioral proxies by capturing latent friction that has not yet manifested in observable action.
+
+\textbf{Step 4: Time series construction.} Assemble annual (or finer-grained) time series for each proxy variable. Where multiple proxies are available for the same construct, construct composite indices using principal component analysis or simple averaging, with sensitivity analysis to ensure results are robust to proxy choice.
+
+\textbf{Step 5: Validation.} Test proxy validity through convergent and discriminant validity assessment. Convergent validity: do multiple proxies for the same construct correlate positively? Discriminant validity: do $\alpha$ proxies and $F$ proxies correlate in the direction predicted by H1 ($\alpha \uparrow \implies F \downarrow$)?
+
+This protocol is designed to be replicable across domains and countries, enabling the cross-national panel studies proposed in Section~\ref{subsec:cross-national-panel}. The protocol is deliberately conservative: it prefers institutional and behavioral measures over attitudinal ones, requires multiple proxy convergence before drawing conclusions, and documents all coding decisions for replication. The cost of this conservatism is reduced sensitivity (some real misalignment may go undetected), but the benefit is reduced false positive rate (detected misalignment is more likely to reflect genuine friction).
+
+\subsection{Limitations of the Data}
+
+Several limitations of the data sources warrant acknowledgment. First, \textbf{temporal coverage is uneven}: V-Dem provides consistent coverage from 1789, but many indicators are more reliable for the post-1900 period. OECD and ILO data begin systematically only in the 1960s, limiting the historical depth of cross-national labor analyses. Pre-twentieth-century proxy construction relies more heavily on qualitative historical sources and ordinal coding, with correspondingly lower measurement precision.
+
+Second, \textbf{geographic coverage is Western-biased}: the historical case studies draw primarily on British, American, and Western European examples, reflecting both data availability and the author's expertise. The cross-national panel extension (Section~\ref{subsec:cross-national-panel}) would partially address this limitation, but data quality for non-OECD countries remains a constraint. The consent-holding framework's theoretical apparatus is domain- and culture-general, but its empirical validation is currently anchored in Western institutional histories.
+
+Third, \textbf{proxy validity is assumed rather than formally tested} in the present monograph. The convergence between ordinal codings and quantitative indicators provides informal validation, but systematic construct validation---confirmatory factor analysis, known-groups validity, criterion validity against established democracy indices---remains a task for future empirical work.
+
+\subsection{Data Availability Statement}
+
+All V-Dem, OECD, ILO, Pew, and Gallup data used in this paper are publicly available through their respective institutional repositories. Parliamentary records are available through national archives (Hansard Online for UK, Congress.gov for US). Protest event data from GDELT and ACLED are freely accessible. The ordinal codings constructed for this paper, together with the R and Python scripts used for proxy construction and analysis, are archived on Zenodo (\href{https://doi.org/10.5281/zenodo.17684679}{10.5281/zenodo.17684679}) and available via GitHub (\url{https://github.com/studiofarzulla/consent-holding-theory}).

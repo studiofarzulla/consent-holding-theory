@@ -59,5 +59,8 @@ archive/
 docs/
 consent_holding_additional_citations.csv
 
+# Large datasets (re-downloadable from V-Dem)
+data/V-Dem-CY-Core-v15.csv
+
 # Don't ignore the PDF output
 !*.pdf

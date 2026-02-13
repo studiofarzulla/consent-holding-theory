@@ -1,18 +1,17 @@
 % ============================================================================
-% FARZULLA RESEARCH PREPRINT TEMPLATE
+% DISSENSUS AI PREPRINT TEMPLATE v3.0.0
 % ============================================================================
-% Custom academic preprint template with branding, version control, and logos
-% Author: Murad Farzulla
-% Organization: Farzulla Research
-% Template Version: 1.0.0
-% Last Updated: November 2025
+% Springer Nature-inspired academic preprint with minimal personal branding.
+% Derived from ROM paper (arXiv:2601.06363) — the proven, compiled reference.
 %
-% PAPER: The Doctrine of Consensual Sovereignty
-% VERSION: 1.0.0
-% DATE: November 2025
+% Author: Murad Farzulla | Dissensus AI
+% Last Updated: February 2026
+%
+% PAPER: Consent-Theoretic Framework for Quantifying Legitimacy
+% VERSION: 1.1.0
 % ============================================================================
 
-\documentclass[11pt,twocolumn]{article}
+\documentclass[11pt]{article}
 
 % ============================================================================
 % PACKAGE IMPORTS
@@ -24,7 +23,7 @@
 
 % Fonts and typography
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{mathptmx}                    % Times (most universal academic font)
 
 % Graphics and figures
 \usepackage{graphicx}
@@ -34,12 +33,15 @@
 % Tables
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{multirow}
 \usepackage{longtable}
 
 % Math packages
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\renewcommand{\qedsymbol}{$\blacksquare$}  % Filled QED squares (Springer style)
+\usepackage{mathtools}
 
 % Theorem environments
 \newtheorem{theorem}{Theorem}[section]
@@ -48,20 +50,11 @@
 
 % Bibliography
 \usepackage[round,authoryear]{natbib}
-\bibliographystyle{abbrvnat}
+\bibliographystyle{plainnat}
 
-% Colors
+% Colors — burgundy is the only branding touch
 \usepackage{xcolor}
-\definecolor{farzullaburgundy}{RGB}{128,0,32}      % Farzulla Research brand color
-\definecolor{zenodoblue}{RGB}{0,123,255}            % Zenodo blue
-\definecolor{orcidgreen}{RGB}{166,206,57}           % ORCID green
-
-% Colored boxes
-\usepackage{tcolorbox}
-
-% TikZ for custom graphics
-\usepackage{tikz}
-\usepackage{scalerel}
+\definecolor{brandburgundy}{RGB}{128,0,32}
 
 % Lists
 \usepackage{enumitem}
@@ -69,11 +62,11 @@
 % Hyperlinks and PDF metadata
 \usepackage{url}  % Better URL formatting and line breaking
 \usepackage[colorlinks=true,
-            linkcolor=farzullaburgundy,
-            citecolor=farzullaburgundy,
-            urlcolor=farzullaburgundy,
+            linkcolor=brandburgundy,
+            citecolor=brandburgundy,
+            urlcolor=brandburgundy,
             breaklinks=true,
-            pdftitle={The Doctrine of Consensual Sovereignty: Quantifying Legitimacy in Adversarial Environments},
+            pdftitle={Consent-Theoretic Framework for Quantifying Legitimacy},
             pdfauthor={Murad Farzulla},
             pdfkeywords={legitimacy, consent, political stability, social choice, institutional design, friction, stakes-weighting}]{hyperref}
 
@@ -81,99 +74,43 @@
 \def\UrlBreaks{\do\/\do-\do_}
 \expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z}
 
-% Section spacing and formatting
+% Section formatting — burgundy headings with proper spacing
 \usepackage{titlesec}
-\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{1ex plus 0.2ex}
-\titlespacing*{\subsection}{0pt}{1.2ex plus 0.4ex minus 0.2ex}{0.8ex plus 0.2ex}
-
-% Burgundy section headings (justified for traditional block look, scaled down)
-\titleformat{\section}{\normalfont\large\bfseries\color{farzullaburgundy}}{\thesection}{0.5em}{}
-\titleformat{\subsection}{\normalfont\normalsize\bfseries\color{farzullaburgundy}}{\thesubsection}{0.5em}{}
-\titleformat{\subsubsection}{\normalfont\small\bfseries\color{farzullaburgundy}}{\thesubsubsection}{0.5em}{}
+\titleformat{\section}{\normalfont\large\bfseries\color{brandburgundy}}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries\color{brandburgundy}}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\small\bfseries\color{brandburgundy}}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{2ex plus 0.8ex minus 0.2ex}{1ex plus 0.3ex}
+\titlespacing*{\subsection}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.2ex}
+\titlespacing*{\subsubsection}{0pt}{1.2ex plus 0.4ex minus 0.2ex}{0.6ex plus 0.2ex}
 
 % Footer customization
 \usepackage{fancyhdr}
 
-% Absolute positioning for corner logos
-\usepackage{eso-pic}
-
-% Column separation
-\setlength{\columnsep}{0.5in}
-
 % ============================================================================
-% VERSION AND DOI METADATA
+% PAPER METADATA
 % ============================================================================
 
-% Version number and date
-\newcommand{\paperver}{1.0.1}
-\newcommand{\paperdate}{November 2025}
+\newcommand{\papernum}{DAI-2501}              % Working paper number
+\newcommand{\paperver}{1.1.0}
+\newcommand{\paperdate}{February 2026}
 \newcommand{\paperdoi}{10.5281/zenodo.17684676}
-
-% ORCID icon (clickable green circle with iD mark) - adjustable size
-\newcommand{\orcidicon}{\scalerel*{
-    \begin{tikzpicture}[x=3ex,y=3ex]
-    \draw[fill=orcidgreen] (0,0) circle (0.5);
-    \draw[white,line width=0.08ex] (0,0.15) -- (0,0.3);
-    \draw[white,line width=0.08ex] (-0.15,0) -- (-0.3,0);
-    \end{tikzpicture}
-}{\textrm{I}}}
+\newcommand{\paperurl}{https://systems.ac/1/DAI-2501}  % ASCRI page
 
 % ============================================================================
-% METADATA BOX (appears after abstract on first page)
+% HEADER AND FOOTER CONFIGURATION (minimal)
 % ============================================================================
-
-\newcommand{\metadatabox}[1]{%
-\begin{tcolorbox}[
-    colback=gray!5,
-    colframe=farzullaburgundy,
-    title=Publication Metadata,
-    fonttitle=\bfseries,
-    coltitle=white,
-    colbacktitle=farzullaburgundy,
-    width=\columnwidth,
-    arc=2mm,
-    boxrule=0.8pt
-]
-\small
-\textbf{DOI:} \href{https://doi.org/#1}{\texttt{#1}}\\
-\textbf{Version:} \paperver\\
-\textbf{Date:} \paperdate\\
-\textbf{License:} CC-BY-4.0
-\end{tcolorbox}
-}
-
-% ============================================================================
-% HEADER AND FOOTER CONFIGURATION
-% ============================================================================
-
-% Short title for running header
-\newcommand{\shorttitle}{Consensual Sovereignty}
 
 \pagestyle{fancy}
-\fancyhf{} % Clear default
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% Running headers (all pages including first)
-\fancyhead[L]{\small\href{https://farzulla.org}{farzulla.org}}                           % Left: farzulla.org (clickable)
-\fancyhead[R]{\small\href{https://doi.org/\paperdoi}{\paperdoi}}                        % Right: DOI (clickable)
-
-% Footers (all pages including first)
-\fancyfoot[L]{\small Murad Farzulla}                                                     % Left: Author name
-\fancyfoot[C]{\small\thepage}                                                             % Center: Page number
-\fancyfoot[R]{\small v\paperver\ | \paperdate}                                           % Right: Version and date
-
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-
-% First page uses same style (headers now included)
 \fancypagestyle{firstpage}{
   \fancyhf{}
-  \fancyhead[L]{\small\href{https://farzulla.org}{farzulla.org}}
-  \fancyhead[R]{\small\href{https://doi.org/\paperdoi}{\paperdoi}}
-  \fancyfoot[L]{\small Murad Farzulla}
   \fancyfoot[C]{\small\thepage}
-  \fancyfoot[R]{\small v\paperver\ | \paperdate}
-  \renewcommand{\headrulewidth}{0.4pt}
-  \renewcommand{\footrulewidth}{0.4pt}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
 }
 
 % ============================================================================
@@ -182,28 +119,42 @@
 
 \begin{document}
 
-% Single-column frontmatter
-\onecolumn
-\setstretch{1.5}
+\setstretch{1.15}
 
-% Apply first page style (now with headers)
 \thispagestyle{firstpage}
 
-% Preprint status centered above title
+% Working paper series header
 \begin{center}
-{\small\color{farzullaburgundy}\textbf{PREPRINT v\paperver} | \color{gray}Not peer-reviewed}
+{\small\textsc{Dissensus AI Working Paper Series}}\\[0.2em]
+{\small \href{\paperurl}{\papernum}}
 \end{center}
-\vspace{0.5em}
 
-% Manual title construction
+\vspace{1.5em}
+
+% Title block
 \begin{center}
-{\Large\bfseries The Doctrine of Consensual Sovereignty: Quantifying Legitimacy in Adversarial Environments}\\[0.5em]
-{\large\itshape The Axiom of Consent}\\[1em]
-{\bfseries Murad Farzulla}\textsuperscript{1} \href{https://orcid.org/0009-0002-7164-8704}{\orcidicon\ \texttt{0009-0002-7164-8704}}\\[0.5em]
-{\small\itshape \textsuperscript{1}\href{https://farzulla.org}{Farzulla Research}}\\[0.3em]
-{\small \paperdate}\\[0.5em]
-{\small Correspondence: \href{mailto:murad@farzulla.org}{murad@farzulla.org}}
+{\LARGE\bfseries Consent-Theoretic Framework for Quantifying Legitimacy}\\[0.5em]
+{\large\itshape Stakes, Voice, and Friction in Adversarial Governance}\\[1.5em]
+
+% Author
+{\large Murad Farzulla}\textsuperscript{1,2,*}\\[0.8em]
+
+% Affiliations — inline, slightly smaller
+{\small
+  \textsuperscript{1}\href{https://dissensus.ai}{Dissensus AI}, London, UK \quad
+  \textsuperscript{2}King's College London, London, UK%
+}\\[0.5em]
+
+% Correspondence + ORCID (footnote style)
+{\footnotesize
+  \textsuperscript{*}Correspondence: \href{mailto:murad@dissensus.ai}{murad@dissensus.ai}
+  \quad
+  ORCID: \href{https://orcid.org/0009-0002-7164-8704}{0009-0002-7164-8704}%
+}\\[0.3em]
+{\footnotesize \paperdate}
 \end{center}
+
+\vspace{0.5em}
 
 % Abstract
 \begin{abstract}
@@ -216,26 +167,9 @@
 \noindent\textbf{JEL Codes:} D70 (Social Choice), D71 (Social Choice; Clubs; Committees; Associations), P16 (Political Economy)
 \end{abstract}
 
-\vspace{1em}
-
-% Metadata box
-\metadatabox{\paperdoi}
-
-\vspace{0.5em}
-
-\noindent\textit{Interactive Visualizations}: \url{https://farzulla.org/research/consent-theory/dashboard.html}
-
-\noindent\textit{Methodologies}: Research methodologies and reproducibility practices are documented at \url{https://farzulla.org/methodologies}
+\vspace{0.8em}
 
 \vspace{1em}
-
-% ============================================================================
-% FRONTMATTER SECTIONS (single-column)
-% ============================================================================
-
-\section*{Note on Prior Work}
-
-This is version 1.0.0 (November 2025), the initial preprint release establishing the theoretical foundations of consent-holding theory. Future versions will expand empirical validation with fully quantified historical cases (women's suffrage 1890-1920 planned for v2.0.0).
 
 \section*{Research Context}
 
@@ -283,12 +217,10 @@ This v1.0.0 preprint establishes theoretical foundations and demonstrates implem
 \thispagestyle{firstpage}  % No header on TOC page
 
 % ============================================================================
-% MAIN BODY (switch to two-column)
+% MAIN BODY
 % ============================================================================
 
 \clearpage
-\twocolumn
-\setstretch{1.5}  % Reapply line spacing after column switch
 
 \section{Introduction}
 \label{sec:introduction}
@@ -848,7 +780,7 @@ The meta-legitimacy challenge—determining $w_1, w_2$ without presupposing answ
 
 This unified framework treats weight determination not as an external parameter requiring normative resolution, but as an endogenous feature of consent-holding structures. The legitimacy function can evaluate its own parameters when framed at appropriate meta-levels—analogous to how Gödel numbering allows arithmetic self-reference without circularity. Future empirical work will implement this architecture through quantified historical case studies estimating $(w_1^*, w_2^*)$ from constitutional reform patterns across societies.
 
-Future extensions could integrate behavioral economics insights about preference construction, incorporate network effects in coalition formation, model learning and institutional memory explicitly, and develop welfare theorems characterizing optimal consent allocations under various efficiency and equity criteria. Connecting consent-holding theory to mechanism design literature could generate implementable allocation rules satisfying incentive compatibility while maximizing legitimacy.
+Future extensions could integrate behavioral economics insights about preference construction, incorporate network effects in coalition formation, model learning and institutional memory explicitly, and develop welfare theorems characterizing optimal consent allocations under various efficiency and equity criteria. Connecting consent-holding theory to mechanism design literature could generate implementable allocation rules satisfying incentive compatibility while maximizing legitimacy. Companion formalizations provide additional grounding: \citet{farzulla2025aoc} derives the consent-friction framework from a single axiom, establishing friction as the canonical obstruction to coordination in multi-agent systems, while \citet{farzulla2025rom} embeds these dynamics within a scale-relative formalism where legitimacy enters as survival probability in the replicator equation---providing the dynamical foundation for the persistence patterns this paper documents historically.
 
 The framework's central contribution lies in making legitimacy measurable without prescribing universal institutions. Just as markets can be analyzed without presuming capitalism's moral superiority, consent-holding structures can be measured without presuming democracy's unique virtue. This analytical stance enables rigorous comparison: Which systems achieve high $\alpha$ efficiently? How do alignment-performance trade-offs vary across domains? What institutional innovations shift legitimacy frontiers outward?
 
@@ -897,6 +829,343 @@ N & T & Equal Voice & Stakes-Weighted & Plutocracy & Random & Expert \\
 \end{tabular}
 \end{table*}
 
+\section{Appendix B: Extended Literature Synthesis}
+\label{sec:appendix-lit}
+
+This appendix expands the core literature review into adjacent domains that inform consent-holding theory but were only briefly referenced in the main text. The goal is not to force a single canonical interpretation, but to provide a wider comparative base for future journal reduction and selective retention.
+
+\subsection{B.1 Democratization and Institutional Sequencing}
+
+Large-$N$ comparative work suggests that consent expansion is typically path-dependent rather than a one-step constitutional event. Structural accounts of regime transition \citep{boix2003democracy,rueschemeyer1992capitalist,fukuyama2014political} and critical-juncture analysis \citep{capoccia2007study,mahoney2010colonialism} both support a central consent-holding claim: reforms that broaden voice are more stable when sequencing aligns new formal authority with already mobilized high-stakes groups.
+
+Electoral-system design further mediates this process. Comparative institutional work \citep{lijphart2012patterns,gallagher2017electoral,bednar2008robust} implies that federal and consociational structures can lower friction by distributing voice across domains rather than forcing a single majoritarian channel. In consent-holding terms, polycentric institutional design can increase local $\alpha(d,t)$ while avoiding aggregate overload at national scale.
+
+\subsection{B.2 Protest Dynamics and Threshold Mobilization}
+
+Collective-action and protest literatures offer micro-foundations for friction escalation. Threshold models \citep{granovetter1978threshold} explain nonlinear transitions from latent dissatisfaction to visible mobilization, while movement-outcome studies \citep{chenoweth2011why,norris2009driving} document when sustained nonviolent pressure converts into institutional reform. These findings are directly compatible with the framework's threshold hypothesis: once perceived misalignment exceeds tolerance, small shocks can trigger large shifts in observed $F(d,t)$.
+
+This perspective also motivates caution in interpreting low observed friction as legitimacy. When coordination costs are high, repression is effective, or informational environments are fragmented, measured contention may understate underlying misalignment.
+
+\subsection{B.3 Deliberative Capacity and Epistemic Inclusion}
+
+Deliberative democracy studies extend beyond classic mini-public exemplars to institutionalized participation infrastructure \citep{leib2004deliberative,peter2010political,koshimizu2020participatory}. The key insight for consent-holding is that formal voice and \textit{effective} voice diverge unless epistemic and organizational capacities are present. This reinforces the role of $\text{eff\_voice}_i(d,t)$ as a joint function of formal authority, information quality, and capacity to intervene in decision procedures.
+
+\subsection{B.4 Algorithmic Governance, Opacity, and Contestation}
+
+Algorithmic governance research increasingly emphasizes structural opacity and contestation deficits rather than only model-level bias. Work on transparency limits and visibility politics \citep{ananny2018seeing} and on system-level fairness failures \citep{selbst2019watery,noble2018algorithms} suggests that low-alignment institutions can persist even when local performance metrics improve. Legal and policy analyses of digital rights \citep{citron2014internet} similarly show that procedural recourse, not just predictive accuracy, determines perceived legitimacy.
+
+For consent-holding theory, this implies that improving $P(d,t)$ without increasing stakeholder authority can reduce some friction channels while intensifying others (appeals, litigation, exit, regulatory backlash).
+
+\subsection{B.5 Climate and Intergenerational Governance}
+
+Intergenerational justice work \citep{gardiner2011perfect,shue1993basic,intergenerational2024} highlights a structural edge case: groups with high stakes but no contemporaneous decision rights. Climate governance thus becomes a stress test for proxy mechanisms, fiduciary constraints, and constitutional safeguards for future-oriented stakes. This is consistent with the framework's claim that proxy representation can raise effective alignment, but only when institutional design grants non-symbolic influence over binding decisions.
+
+\subsection{B.6 Summary for Journal Reduction}
+
+For shorter journal versions, this appendix can be condensed into three transferable claims:
+\begin{enumerate}[leftmargin=1.4em]
+  \item Structural democratization and institutional design literatures support domain-specific rather than one-size-fits-all consent allocation.
+  \item Protest and deliberative literatures provide mechanisms linking latent misalignment to observed friction.
+  \item Algorithmic and intergenerational governance literatures expose persistent low-$\alpha$ cases where performance improvements alone are insufficient for legitimacy.
+\end{enumerate}
+
+\section{Appendix C: Extended Dynamic Comparison Tables}
+\label{sec:appendix-dynamics}
+
+This appendix consolidates results from the dynamic comparison report into publication-ready tables. It preserves details that may be excessive for the main paper but useful for readers evaluating model behavior under alternative temporal assumptions.
+
+\begin{table*}[t]
+\centering
+\caption{Mechanism Rankings Across Dynamic Modes (Final Alignment $\alpha$)}
+\label{tab:appendix-mode-rankings}
+\begin{tabular}{lccccc}
+\toprule
+Mode & DoCS (Stakes) & Equal Voice & Plutocracy & Expert Rule & Random \\
+\midrule
+Static (baseline) & \textbf{0.6274} & 0.6042 & 0.5962 & 0.5919 & 0.4884 \\
+Learning (Bayesian) & \textbf{0.8722} & 0.8695 & 0.8600 & 0.8418 & 0.7612 \\
+Social (DeGroot) & \textbf{0.7377} & 0.7278 & 0.7127 & 0.7082 & 0.5976 \\
+Stakes (endogenous) & \textbf{0.8932} & 0.8729 & 0.8742 & 0.8307 & 0.6614 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\caption{Convergence Speed and Friction Reduction by Dynamic Mode}
+\label{tab:appendix-convergence-speed}
+\begin{tabular}{lcccc}
+\toprule
+Metric & DoCS & Equal Voice & Plutocracy & Random \\
+\midrule
+Time to 90\% final $\alpha$ (Learning) & $\sim$18 & $\sim$20 & $\sim$22 & $\sim$35 \\
+Time to 90\% final $\alpha$ (Social) & $\sim$35 & $\sim$38 & $\sim$40 & N/A \\
+Time to 90\% final $\alpha$ (Stakes) & $\sim$12 & $\sim$15 & $\sim$16 & $\sim$30 \\
+\midrule
+Final friction, Static & 105.5 & 113.8 & 115.9 & --- \\
+Final friction, Learning & \textbf{1.55} & 1.76 & 2.08 & --- \\
+Final friction, Social & \textbf{1.00} & 1.03 & 1.11 & --- \\
+Final friction, Stakes & \textbf{29.9} & 34.3 & 35.0 & --- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Interpretive note.}
+Two distinctions are important for inference. First, ranking robustness (DoCS first across modes) is stronger than any single-mode effect size claim. Second, high terminal $\alpha$ under stakes evolution reflects path-dependent reinforcement and can coexist with slower friction collapse than learning/social modes.
+
+\section{Appendix D: Methodological Claim Boundaries}
+\label{sec:appendix-claim-boundaries}
+
+This appendix records the strongest and weakest claims supportable by each simulation class. It is retained in full to make inference boundaries explicit for peer review.
+
+\subsection{D.1 Static Versus Dynamic Identification}
+
+Static comparative statics establish cross-sectional performance differences under randomized societal draws. They do \textit{not} establish within-run temporal convergence. Dynamic implementations add state evolution through preference learning, social diffusion, or endogenous stakes updates, enabling convergence and trajectory claims.
+
+\subsection{D.2 Claims Defensible from Current Evidence}
+
+\begin{enumerate}[leftmargin=1.4em]
+  \item \textbf{Comparative ranking claim}: DoCS outperforms alternatives in alignment across static and dynamic specifications.
+  \item \textbf{Robustness claim}: ranking order remains stable across population size, horizon length, and stakes-heterogeneity regimes.
+  \item \textbf{Dynamic convergence claim}: under explicit learning or social update rules, alignment rises and friction declines over time.
+  \item \textbf{Transition-cost claim}: mechanisms with better initial stakes-voice matching reduce friction earlier in trajectories.
+\end{enumerate}
+
+\subsection{D.3 Claims Requiring Additional Design Before Strong Inference}
+
+\begin{enumerate}[leftmargin=1.4em]
+  \item \textbf{Universal stability claim}: requires perturbation/return analysis, not only trajectory averages.
+  \item \textbf{General-equilibrium claim}: requires endogenous entry/exit, coalition reformation, and strategic manipulation modules.
+  \item \textbf{Causal welfare-superiority claim}: requires explicit welfare aggregation assumptions and external validity checks.
+\end{enumerate}
+
+\subsection{D.4 Extensions Prioritized for Journal Version}
+
+\begin{enumerate}[leftmargin=1.4em]
+  \item Entry/exit dynamics and endogenous participation.
+  \item Measurement-error models for stakes and effective voice proxies.
+  \item Network-topology sensitivity beyond Erd\H{o}s--R\'enyi assumptions.
+  \item Formal perturbation-based stability diagnostics.
+\end{enumerate}
+
+\section{Appendix E: Additional Historical Exploration Cases}
+\label{sec:appendix-cases}
+
+The main text focuses on cases with clearer trajectory readability. This appendix adds exploratory domains where dynamics are noisier but theoretically informative.
+
+\subsection{E.1 Civil Rights Incorporation Dynamics}
+
+Civil rights struggles show prolonged periods where legal voice expansion lags behind formal constitutional commitments. In consent-holding terms, nominal increases in $C_i$ without commensurate enforcement capacity produce partial alignment gains and persistent friction. Measurement priority is therefore not only statutory change but effective implementation pathways \citep{fariss2014respect}.
+
+\subsection{E.2 Climate Governance as Persistent Proxy Challenge}
+
+Climate policy exemplifies temporally distributed stakes with weak present-day representation of future-affected groups. The framework predicts structurally low baseline $\alpha(d,t)$ unless proxy institutions are both binding and revisable. Exploratory expectation: jurisdictions with enforceable climate guardianship and constitutional sustainability clauses should exhibit lower long-run friction than otherwise similar jurisdictions lacking such institutions.
+
+\subsection{E.3 Federal and Polycentric Designs}
+
+Polycentric and federal structures can reduce aggregate friction when they localize high-stakes decisions to affected populations, but they can also entrench exclusion if boundary-setting itself is captured. Comparative federalism work \citep{bednar2008robust,lijphart2012patterns} suggests that legitimacy effects depend on whether cross-level veto points are balanced by cross-level accountability.
+
+\subsection{E.4 Exploratory Empirical Agenda}
+
+For each additional case, future data collection should prioritize:
+\begin{enumerate}[leftmargin=1.4em]
+  \item domain-specific proxy mapping for $s_i(d)$ and $\text{eff\_voice}_i(d)$,
+  \item event-based friction series (contentious action, institutional reversals, legal contestation),
+  \item explicit coding of reform timing and counter-mobilization episodes,
+  \item harmonized uncertainty intervals for cross-case comparability.
+\end{enumerate}
+
+\section{Appendix F: Extended Social Contract Architecture}
+\label{sec:appendix-social-contract}
+
+This appendix expands the main-text social contract section into a richer comparative architecture. The organizing principle is uniform: each doctrine is treated as an implicit proposal for allocating consent power $C_{i,d}$ across agents and domains, with predictable effects on alignment $\alpha(d,t)$, friction $F(d,t)$, and legitimacy $L(d,t)$.
+
+\subsection{F.1 Four-Layer Interpretation Framework}
+
+To avoid conflating normative rhetoric with institutional mechanics, we parse each social contract doctrine using four layers:
+\begin{enumerate}[leftmargin=1.4em]
+  \item \textbf{Allocation rule}: who receives decision authority in domain $d$.
+  \item \textbf{Justification rule}: why that allocation is defended normatively.
+  \item \textbf{Correction rule}: how misalignment is detected and revised.
+  \item \textbf{Failure mode}: where predicted friction accumulates under stress.
+\end{enumerate}
+
+This decomposition supports apples-to-apples comparison across doctrines with otherwise incompatible moral vocabularies.
+
+\subsection{F.2 Hobbesian Monopoly and Security-First Legitimacy}
+
+In a Hobbesian template \citep{hobbes1651}, consent is concentrated in a sovereign to suppress violent conflict and coordinate collective defense. The allocation is highly centralized: $C_{sovereign,d} \to 1$ across broad domains.
+
+\textbf{Consent-holding interpretation}: high short-run performance weight ($w_2 \gg w_1$) in acute instability contexts can be legitimacy-improving if fragmentation costs are extreme.
+
+\textbf{Failure mode}: when threat conditions normalize but authority remains centralized, consent alignment decays. Friction becomes repressed rather than resolved, often reappearing as legitimacy shocks once coercive capacity weakens.
+
+\subsection{F.3 Lockean Conditional Delegation}
+
+Lockean doctrine \citep{locke1689} treats authority as delegated and revocable. Allocation is conditional: institutions hold $C_{i,d}$ only while preserving basic rights and fiduciary obligations to governed stakeholders.
+
+\textbf{Consent-holding interpretation}: this is a dynamic contract with embedded correction rule (withdrawal/reform when violations persist). It approximates medium-to-high $\alpha$ where property and rights protections are credible and contestation channels are open.
+
+\textbf{Failure mode}: formal revocability without practical capacity (low effective voice) yields pseudo-legitimacy; rights language persists while misalignment remains structurally locked in.
+
+\subsection{F.4 Rousseauian General Will and Collective Self-Rule}
+
+Rousseau \citep{rousseau1762} seeks legitimacy through collective self-legislation rather than aggregation of private bargaining. In ideal form, allocation aims at universal co-authorship of rules.
+
+\textbf{Consent-holding interpretation}: aspirationally high alignment in constitutional domains; practically sensitive to representation design, scale, and information quality.
+
+\textbf{Failure mode}: if institutional mediation is captured, claims of ``general will'' can mask concentrated control. Observed friction then reflects the gap between symbolic inclusion and actual authority distribution.
+
+\subsection{F.5 Technocratic Delegation as Expertise Concentration}
+
+Technocratic governance concentrates consent power in accredited experts for domains where prediction, safety, or complex coordination dominate.
+
+\textbf{Consent-holding interpretation}: raises expected $P(d,t)$ in high-complexity domains, but risks low $\alpha$ for affected populations lacking procedural voice. This regime is legitimacy-sustainable when bounded by reviewability, transparency, and domain limits.
+
+\textbf{Failure mode}: boundary creep from technical to value-laden domains transforms competence advantage into representational deficit, increasing friction despite acceptable narrow performance metrics.
+
+\subsection{F.6 Anarchist and Federal Variants as Domain Fragmentation}
+
+Anarchist and federal traditions distribute authority across local units, associations, and negotiated compacts rather than a single sovereign hierarchy.
+
+\textbf{Consent-holding interpretation}: potentially high local $\alpha(d,t)$ through proximity and direct participation, with polycentric coordination reducing single-point legitimacy failures.
+
+\textbf{Failure mode}: inter-domain spillovers and uneven capacity can produce cross-unit externalities where those bearing consequences in one unit lack voice in the unit causing harm. Friction migrates from center-periphery conflict to inter-node conflict.
+
+\subsection{F.7 Algorithmic Social Contract and Code-Mediated Authority}
+
+In platform and AI-mediated systems, allocation may shift from legal institutions to codebases and model operators. Decision authority is effectively embedded in technical artifacts, policy stacks, and update pipelines.
+
+\textbf{Consent-holding interpretation}: unless design, oversight, and appeal pathways allocate meaningful stakeholder authority, these systems instantiate low-$\alpha$ governance with procedural opacity.
+
+\textbf{Failure mode}: high output performance in narrow metrics coexists with escalating contestation over legitimacy, because affected populations cannot contest rule formation on equal terms.
+
+\subsection{F.8 Comparative Matrix}
+
+\begin{table*}[t]
+\centering
+\caption{Social Contract Doctrines as Consent Allocation Regimes}
+\label{tab:appendix-social-contract-matrix}
+\begin{tabular}{p{0.16\textwidth}p{0.20\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.22\textwidth}}
+\toprule
+\textbf{Doctrine} & \textbf{Primary allocation logic} & \textbf{Typical weight profile} & \textbf{Correction mechanism} & \textbf{Primary failure mode} \\
+\midrule
+Hobbesian & Sovereign concentration for order/security & $w_2 \gg w_1$ (acute instability) & Breakdown/reconstitution after crisis & Repressed friction under prolonged centralization \\
+\addlinespace
+Lockean & Delegated, revocable authority under rights constraints & Balanced with rights floor & Legal contestation, electoral turnover, resistance & Formal revocability without effective capacity \\
+\addlinespace
+Rousseauian & Collective self-rule and civic co-authorship & High $w_1$ in constitutional domains & Civic deliberation and constitutional revision & Symbolic unity masking mediator capture \\
+\addlinespace
+Technocratic & Expertise-based delegation in complex domains & High $w_2$ in technical domains & Audit, reviewability, bounded jurisdiction & Domain creep into value-laden decisions \\
+\addlinespace
+Anarchist/Federal & Polycentric local authority and negotiated coordination & Domain-variable; local $w_1$ emphasis & Exit/voice across nodes, federation redesign & Cross-node externalities without cross-node voice \\
+\addlinespace
+Algorithmic & Code-mediated authority by designers/operators & Often implicit high $w_2$ proxy & Appeals, external oversight, governance reform & Opaque low-$\alpha$ governance with delayed backlash \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{F.9 Endogenous Weight Selection Across Doctrines}
+
+The main text introduces weight determination as a constitutional meta-problem. Here the doctrinal comparison clarifies an empirical strategy: treat doctrine labels as priors over feasible $(w_1, w_2)$ regions, then estimate posterior weights from observed friction trajectories and reform timing.
+
+Concretely, one can estimate doctrine-consistent regimes through:
+\begin{equation}
+\min_{w_1,w_2,\theta} \sum_{d,t} \left[F_{d,t}^{obs} - \hat{F}_{d,t}(\alpha_{d,t}(w,\theta),P_{d,t})\right]^2
+\end{equation}
+subject to doctrine-specific constraints on admissible allocations (e.g., rights floors, domain bounds, veto conditions). This converts social-contract debate from pure doctrine adjudication into constrained comparative model selection.
+
+\subsection{F.10 Practical Implication for Canonical and Journal Versions}
+
+For long-form versions, retaining this appendix supports interdisciplinary readership (political theory, institutional economics, governance engineering). For journal compression, the matrix (Table~\ref{tab:appendix-social-contract-matrix}) can be retained as the primary artifact while doctrinal subsections are shortened into a single comparative narrative.
+
+\section{Appendix G: Hobbes--Locke--Rousseau Text-to-Formal Mapping}
+\label{sec:appendix-text-formal}
+
+This appendix provides a compact bridge from canonical social-contract claims to the formal objects used in the paper. It is designed as a translation layer for readers moving between political theory language and consent-holding equations.
+
+\subsection{G.1 Mapping Template}
+
+For each doctrine, we map:
+\begin{enumerate}[leftmargin=1.4em]
+  \item \textbf{Textual proposition} (canonical claim in plain language),
+  \item \textbf{Allocation implication} (who gets $C_{i,d}$),
+  \item \textbf{Model expression} (how it appears in $\alpha, F, L$),
+  \item \textbf{Diagnostic prediction} (what friction pattern should be observed).
+\end{enumerate}
+
+\subsection{G.2 Hobbes (Order-First Authorization)}
+
+\textbf{Textual proposition} (\citealp{hobbes1651}): peace and security require concentrated authority capable of ending conflict.
+
+\textbf{Allocation implication}: for broad governance domains $d$, authority concentrates in a sovereign node:
+\[
+C_{s,d} \approx 1,\qquad C_{i\neq s,d} \approx 0.
+\]
+
+\textbf{Model expression}: short-run legitimacy can remain high when performance weight dominates:
+\[
+L(d,t)=w_1\alpha(d,t)+w_2P(d,t),\quad w_2 \gg w_1.
+\]
+
+\textbf{Diagnostic prediction}: if threat intensity declines but concentration persists, measured performance may remain acceptable while friction rises in excluded groups:
+\[
+\frac{\partial F(d,t)}{\partial t}>0 \;\; \text{under persistent low }\alpha(d,t).
+\]
+
+\subsection{G.3 Locke (Conditional and Revocable Delegation)}
+
+\textbf{Textual proposition} (\citealp{locke1689}): authority is legitimate only as continuing trust; rights violations justify resistance and institutional revision.
+
+\textbf{Allocation implication}: delegation is conditional rather than absolute; effective authority is bounded by rights constraints and revocation channels.
+
+\textbf{Model expression}: represent revocability as threshold-triggered correction:
+\[
+\text{if }F(d,t)>\tau_d,\;\; H_{t+1}(d)\neq H_t(d),
+\]
+where institutional mapping updates when misalignment/friction exceeds tolerable limits.
+
+\textbf{Diagnostic prediction}: systems with stronger contestation channels should show shorter lag between friction spikes and consent-reallocation reforms.
+
+\subsection{G.4 Rousseau (Collective Self-Rule)}
+
+\textbf{Textual proposition} (\citealp{rousseau1762}): legitimacy requires citizens to be co-authors of law rather than subjects of an alien will.
+
+\textbf{Allocation implication}: high participation in constitutional domains; broad inclusion in rule formation:
+\[
+C_{i,d^{const}} > 0 \;\; \forall i \in S_{d^{const}}.
+\]
+
+\textbf{Model expression}: target high alignment in constitutional layers:
+\[
+\alpha(d^{const},t)=\frac{\sum_{i\in S_{d^{const}}} s_i(d^{const})\cdot \text{eff\_voice}_i(d^{const},t)}{\sum_{i\in S_{d^{const}}} s_i(d^{const})}.
+\]
+
+\textbf{Diagnostic prediction}: when institutions claim collective sovereignty but empirical $\text{eff\_voice}_i$ is highly unequal, friction appears as legitimacy contestation over representation authenticity.
+
+\subsection{G.5 Cross-Doctrine Comparative Reading}
+
+These mappings can be read as different parameterizations of the same structural system:
+\begin{itemize}[leftmargin=1.4em]
+  \item Hobbesian configurations prioritize high $w_2$ under emergency conditions.
+  \item Lockean configurations prioritize bounded delegation with explicit correction triggers.
+  \item Rousseauian configurations prioritize high constitutional $\alpha$ through broad co-authorship.
+\end{itemize}
+
+Under this interpretation, doctrinal disagreement is not only philosophical; it is empirically legible as disagreement over admissible regions in $(w_1,w_2,\alpha,P)$ space and over the dynamics of updating $H_t(d)$ when friction accumulates.
+
+\subsection{G.6 Minimal Empirical Coding Scheme}
+
+For future empirical work, a doctrine-linked panel can be coded with:
+\begin{enumerate}[leftmargin=1.4em]
+  \item domain-level authority concentration index (proxy for Hobbesian concentration),
+  \item rights-and-revocation channel strength (proxy for Lockean conditionality),
+  \item constitutional inclusion breadth and effective participation (proxy for Rousseauian co-authorship),
+  \item lagged friction-reform elasticity $\partial H_{t+1}/\partial F_t$ across regimes.
+\end{enumerate}
+
+This allows doctrinal language to generate falsifiable comparative hypotheses without collapsing normative differences into a single scalar.
+
 \begin{table*}[t]
 \centering
 \caption{Robustness Check: Stakes Distribution Heterogeneity}
@@ -916,11 +1185,9 @@ Pareto $\alpha$=4.0 (0.42) & 0.594 & 0.584 & 0.581 & 0.487 & 0.582 \\
 \end{table*}
 
 % ============================================================================
-% SWITCH BACK TO SINGLE-COLUMN
+% BACK MATTER
 % ============================================================================
-\clearpage              % CRITICAL: Finish two-column page
-\onecolumn              % Switch back to single-column
-\setstretch{1.5}        % CRITICAL: Re-apply line spacing
+\clearpage
 
 % ============================================================================
 % ACKNOWLEDGEMENTS
@@ -928,13 +1195,50 @@ Pareto $\alpha$=4.0 (0.42) & 0.594 & 0.584 & 0.581 & 0.487 & 0.582 \\
 
 \section*{Acknowledgements}
 
-The author acknowledges the intellectual contributions of scholars in constitutional political economy, social choice theory, and legitimacy studies whose foundational work made this synthesis possible. Particular thanks to the open-source research community for making preprints, working papers, and replication materials freely accessible.
+The author acknowledges the intellectual contributions of scholars in
+constitutional political economy, social choice theory, and legitimacy
+studies whose foundational work made this synthesis possible.
 
-This research benefited from Perplexity AI for efficient literature discovery and source verification, and Anthropic's Claude for assistance with analytical framework development, literature synthesis, computational validation design, and technical writing. All conceptual innovations, theoretical claims, and interpretive judgments remain the author's sole responsibility.
+This paper benefited from extended collaboration with Claude (Anthropic),
+whose contributions to literature synthesis, computational validation
+design, and iterative refinement were substantive. The author gratefully
+acknowledges this assistance while taking full responsibility for all
+claims, errors, and interpretive choices.
 
-All computational analysis was conducted at Resurrexi Lab, a distributed computing cluster built from consumer-grade hardware (8 nodes, 66 cores, 229GB RAM, 48GB VRAM), demonstrating that rigorous political economy research is accessible without institutional supercomputing infrastructure.
+This work is part of the Adversarial Systems Research program at
+Dissensus AI, a broader investigation into stability, alignment, and
+friction dynamics across political, financial, cognitive, and multi-agent
+systems. Related papers in the series are available through the
+Adversarial Systems \& Complexity Research Initiative
+(\href{https://systems.ac}{ASCRI; systems.ac}).
 
-Research methodologies and reproducibility practices are documented at \url{https://farzulla.org/methodologies}.
+All computational analysis was conducted at Resurrexi Lab, a distributed
+computing cluster built from consumer-grade hardware, demonstrating that
+rigorous political economy research is accessible without institutional
+supercomputing infrastructure. Code and data are available at
+\url{https://github.com/studiofarzulla/consent-holding-theory}.
+
+The author welcomes feedback, criticism, and collaboration.
+Correspondence should be directed to
+\href{mailto:murad@dissensus.ai}{murad@dissensus.ai}.
+
+% ============================================================================
+% DECLARATIONS
+% ============================================================================
+
+\section*{Declarations}
+
+\paragraph{Conflict of Interest.} The author declares no competing interests.
+
+\paragraph{Funding.} This research received no external funding.
+
+\paragraph{Data Availability.} All simulation code and generated data are
+available at \url{https://github.com/studiofarzulla/consent-holding-theory}.
+
+\paragraph{AI Assistance.} Claude (Anthropic) was used as a research
+collaborator for literature synthesis, computational validation design,
+LaTeX preparation, and iterative refinement of mathematical arguments.
+All intellectual claims and errors remain the author's responsibility.
 
 % ============================================================================
 % BIBLIOGRAPHY (SINGLE-COLUMN)

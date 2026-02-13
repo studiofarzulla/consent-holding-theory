@@ -1,0 +1,345 @@
+% ============================================================================
+% HISTORIAN-2 OUTPUT: Sections 9, 10, 12
+% Labor Rights, Civil Rights, Corporate Governance
+% ============================================================================
+
+% ============================================================================
+% SECTION 9: LABOR RIGHTS AND CODETERMINATION
+% ============================================================================
+
+\section{Labor Rights and Codetermination: Union Density as Consent Alignment (1850s--Present)}
+\label{sec:labor}
+
+The workplace constitutes one of the most consequential governance domains in modern economies. Decisions regarding employment security, wages, working conditions, occupational safety, and workplace dignity affect workers' material welfare, psychological well-being, and life prospects with an intensity that few other governance domains approach outside wartime. Yet for most of industrial history, the consent-holder mapping $H_t(d_{\text{workplace}})$ concentrated authority almost entirely in capital owners and their managerial agents, generating a persistent structural gap between stakes and voice that the consent-holding framework predicts would produce sustained, high-intensity friction.
+
+This section traces the labor movement's two-century struggle to raise $\alpha(d_{\text{workplace}})$ across four national contexts, constructing quantitative alpha and friction proxies from OECD and ILO data and demonstrating how variation in institutional design produces variation in alignment-friction dynamics that closely track the framework's predictions.
+
+\subsection{Domain Definition}
+\label{subsec:labor-domain}
+
+We define $d_{\text{workplace}}$ as the set of decisions affecting employment security, wages, working conditions, occupational safety, working hours, and workplace dignity. The affected set $S_{d_{\text{workplace}}}$ includes:
+
+\begin{itemize}[nosep]
+\item \textbf{Workers} (high $s_i$): livelihood, bodily safety, and daily autonomy depend directly on workplace decisions. For workers in hazardous industries---coal mining, construction, chemical manufacturing---stakes approach existential levels.
+\item \textbf{Employers and shareholders} (high $s_i$): returns on capital, firm viability, and strategic direction are contingent on workplace governance.
+\item \textbf{Consumers} (moderate $s_i$): product quality, price, and availability are indirectly affected by workplace decisions.
+\item \textbf{Communities} (moderate $s_i$): local employment, tax base, and environmental externalities create spatially concentrated stakes.
+\end{itemize}
+
+Prior to labor organization, consent power was concentrated almost exclusively in capital owners: $C_{\text{workers}} \approx 0$, $C_{\text{capital}} \approx 1$. This extreme misalignment---high stakes with near-zero voice---generated the conditions for what became the most sustained friction campaign in modern political history: the labor movement. Early labor organizations like \citet{knightsoflabor1878} explicitly articulated this stakes-voice gap in their foundational principles, demanding ``the right of those who create [wealth] to share in its blessings.''
+
+\subsection{Alpha Proxy: Union Density and Collective Bargaining Coverage}
+\label{subsec:labor-alpha}
+
+We construct $\alpha(d_{\text{workplace}})$ from two empirical measures: trade union density (the proportion of wage earners who are union members) and collective bargaining coverage (the share of employees whose terms of employment are set through negotiated agreements). These proxy effective worker voice---the capacity to influence workplace decisions---rather than merely formal entitlements.
+
+Union density traces a distinctive arc across national contexts. In the United Kingdom, density rose from approximately 11\% in 1890 to 25\% by 1910, climbing sharply during both world wars and peaking at roughly 56\% in 1979 before declining to approximately 23\% by 2020. The United States followed a compressed trajectory: negligible density before the 1930s, a sharp rise to approximately 35\% by 1954 following the Wagner Act (1935) and wartime labor agreements, then a long secular decline to approximately 10\% by 2020. Germany's path differed qualitatively: moderate density (approximately 30--35\% through most of the postwar period, declining to approximately 17\% by 2020) was supplemented by institutional codetermination that raised effective voice independently of union membership.
+
+The critical distinction is between union density and collective bargaining coverage. In Anglo-American systems, these track closely---only union members benefit from collective agreements. In continental European systems, coverage dramatically exceeds density through extension mechanisms (erga omnes principles that extend negotiated terms to all workers in a sector). Germany maintains approximately 54\% collective bargaining coverage despite only 17\% union density. France achieves over 90\% coverage with under 10\% density. Sweden and the Nordic states sustained both high density (exceeding 80\% at peak) and near-universal coverage (above 90\%). This divergence is analytically consequential: density measures organizational capacity for friction (strikes require organized workers), while coverage measures the breadth of voice in setting employment terms.
+
+We operationalize $\alpha(d_{\text{workplace}})$ as a composite measure:
+
+\begin{equation}
+\alpha(d_{\text{workplace}}, t) = \omega_1 \cdot \frac{\text{worker-elected board seats}}{\text{total board seats}} + \omega_2 \cdot \text{CBC}_t + \omega_3 \cdot \text{density}_t
+\label{eq:alpha-workplace}
+\end{equation}
+
+\noindent where $\text{CBC}_t$ is collective bargaining coverage as a proportion, $\text{density}_t$ is union density, worker-elected board seats capture formal institutional voice, and $\omega_1 + \omega_2 + \omega_3 = 1$ with weights reflecting relative importance of each channel. Using equal weights ($\omega_i = 1/3$) as a baseline:
+
+\begin{itemize}[nosep]
+\item \textbf{Germany c.\ 2020}: $\alpha \approx 0.33 \cdot 0.50 + 0.33 \cdot 0.54 + 0.33 \cdot 0.17 \approx 0.40$
+\item \textbf{United States c.\ 2020}: $\alpha \approx 0.33 \cdot 0 + 0.33 \cdot 0.12 + 0.33 \cdot 0.10 \approx 0.07$
+\item \textbf{Sweden at peak (c.\ 1980)}: $\alpha \approx 0.33 \cdot 0.33 + 0.33 \cdot 0.90 + 0.33 \cdot 0.80 \approx 0.67$
+\item \textbf{UK at peak (1979)}: $\alpha \approx 0.33 \cdot 0 + 0.33 \cdot 0.70 + 0.33 \cdot 0.56 \approx 0.42$
+\end{itemize}
+
+The equal-weight specification is deliberately transparent; alternative weightings (privileging institutional representation or coverage) shift absolute values but preserve the cross-national ranking: Nordic $>$ Germany $>$ UK $>$ US.
+
+\begin{table}[htbp]
+\centering
+\caption{Workplace Consent Alignment Across Industrial Democracies}
+\label{tab:labor-alpha}
+\begin{tabular}{lccccc}
+\toprule
+Country & Board Seats (\%) & CBC (\%) & Density (\%) & $\hat{\alpha}$ & Strike Days/1000 \\
+\midrule
+\multicolumn{6}{l}{\textit{Peak alignment period}} \\
+Sweden (1980) & 33 & 90 & 80 & 0.67 & 44 \\
+Germany (1980) & 50 & 75 & 35 & 0.53 & 5 \\
+UK (1979) & 0 & 70 & 56 & 0.42 & 1,273 \\
+US (1954) & 0 & 35 & 35 & 0.23 & 680 \\
+\midrule
+\multicolumn{6}{l}{\textit{Contemporary (c.\ 2020)}} \\
+Sweden & 33 & 90 & 65 & 0.62 & 2 \\
+Germany & 50 & 54 & 17 & 0.40 & 4 \\
+UK & 0 & 26 & 23 & 0.16 & 6 \\
+US & 0 & 12 & 10 & 0.07 & 3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:labor-alpha} reveals several patterns consistent with the framework's predictions. Germany's institutional codetermination produces a higher $\alpha$ than its union density alone would suggest, while the UK's high density in 1979 coexisted with zero board-level representation---a configuration that generated voice through bargaining pressure rather than institutional inclusion. The anomalous UK pattern (moderate $\alpha$ but extremely high friction) is explained by the absence of institutional voice channels: without board representation or works councils, British unions could influence outcomes only through adversarial bargaining and the credible threat of work stoppages, making strikes the \textit{primary} rather than \textit{residual} voice mechanism.
+
+\subsection{Friction Proxy: Strike Frequency and Intensity}
+\label{subsec:labor-friction}
+
+We measure $F(d_{\text{workplace}}, t)$ through strike activity: days lost per 1,000 workers, supplemented by qualitative assessment of labor unrest intensity. Strike data provide a natural friction metric because strikes represent the explicit withdrawal of cooperative labor when outcomes deviate sufficiently from worker preferences---precisely the tolerance-weighted friction measure of Equation~\ref{eq:friction-tolerance-operational}. A worker strikes when $\delta(x_d(t), x^*_{i,d}) > \tau_i$: the gap between actual and preferred workplace conditions exceeds their tolerance threshold.
+
+The historical record reveals dramatic variation in strike intensity across time and space. The United States experienced extreme friction during the Gilded Age and Progressive Era: the Great Railroad Strike of 1877 paralyzed two-thirds of the nation's rail network and involved over 100,000 workers across eleven states; the Homestead Strike of 1892 produced armed conflict between strikers and 300 Pinkerton agents, killing ten; and the Pullman Strike of 1894 required federal military intervention with 12,000 troops. These episodes represented friction under conditions of near-zero $\alpha$: workers had no institutional voice, no legal protection for organizing, and no bargaining rights. The framework predicts that such extreme misalignment produces extreme friction---and the American record confirms this with some of the most violent labor conflicts in any industrial democracy.
+
+\citet{fine1969} documents the 1936--1937 General Motors sit-down strike as the pivotal conflict that forced UAW recognition and fundamentally reoriented American labor relations. The sit-down---44 days of factory occupation across multiple Flint plants, resisting both police attacks and court injunctions---demonstrated that direct action could compel institutional change when all other channels were foreclosed. The strike's success raised $\alpha$ discontinuously: GM recognized the UAW, establishing collective bargaining in the American auto industry and catalyzing unionization across heavy manufacturing. Between 1936 and 1945, union membership tripled from approximately 4 million to 14 million---the fastest alpha expansion in American labor history.
+
+British labor friction followed a different temporal pattern. \citet{cole1923} documents how labor in coal mining represented an extreme case of high stakes and near-zero consent: miners faced lethal working conditions (over 1,000 deaths annually in British mines during the early 20th century) with no voice in safety decisions, shift scheduling, or wage determination. The resulting friction was intense and sustained. \citet{hinton1973} traces the shop stewards' movement of 1916--1922 as a grassroots challenge to both employer authority and union bureaucracy---effectively a friction event directed at raising $\alpha$ from below when formal channels proved inadequate. The shop stewards emerged from the Clydeside munitions factories during World War I, where skilled engineering workers faced dilution of craft privileges without consultation, generating friction that threatened wartime production.
+
+The General Strike of 1926---1.7 million workers striking for nine days across transport, printing, heavy industry, and docks---remains the largest coordinated friction event in British labor history. The UK Miners' Strike of 1984--85 represented the last major episode of high-intensity labor friction, lasting 362 days with approximately 142,000 miners striking against pit closures. Its defeat marked the decisive shift from organized to latent friction in the British labor movement: post-1985, strike rates collapsed not because alignment improved but because organizational capacity for collective friction was destroyed.
+
+In Germany, by contrast, strike rates remained remarkably low throughout the postwar period---typically under 10 days lost per 1,000 workers annually, compared to triple-digit figures in the UK and US during their peak-friction decades. This was not because German workers lacked grievances, but because institutional channels (works councils at the plant level, supervisory board representation at the firm level, sectoral bargaining at the industry level) provided effective voice mechanisms that resolved disputes before they escalated to work stoppages. Works councils (\textit{Betriebsr\"ate}), mandated by the 1952 Works Constitution Act and strengthened in 1972, gave employee-elected representatives consultation and co-decision rights on working conditions, scheduling, and social matters---creating a continuous low-friction voice channel that supplemented formal bargaining.
+
+\subsection{Alpha--Friction Dynamics: Germany vs United States vs Nordic}
+\label{subsec:labor-dynamics}
+
+Three national trajectories provide natural experiments for testing the framework's core predictions. Each represents a distinct institutional strategy for managing the stakes-voice gap in workplace governance, with correspondingly different friction outcomes.
+
+\paragraph{Germany: High $\alpha$, Low $F$.} The German codetermination system represents the most institutionally complete $\alpha$-raising intervention in any industrial democracy. The 1951 \textit{Montanmitbestimmungsgesetz} (Coal and Steel Codetermination Act) mandated 50\% employee representation on supervisory boards of mining and steel companies---a direct response to the role of unreformed industrial elites in enabling National Socialism. The 1976 \textit{Mitbestimmungsgesetz} extended quasi-parity representation (workers elect half the supervisory board, though the chair---selected by shareholders---holds a tie-breaking vote) to all firms with over 2,000 employees. Smaller firms (500--2,000 employees) received one-third employee representation under the 1952/2004 One-Third Participation Act.
+
+\citet{mcgaughey2016} documents how German codetermination emerged not from revolutionary imposition but from negotiated incorporation during reconstruction periods (1918--1922 and 1945--1951). The Stinnes-Legien Agreement of 1918---struck during revolutionary upheaval---established works councils and the eight-hour day as concessions from capital to labor in exchange for political stability. The postwar settlement extended this logic: the Western Allies and moderate German politicians embedded worker voice to prevent the recurrence of industrial authoritarianism. The framework interprets both episodes as H4-consistent: accumulated friction (revolution, fascism) generated institutional reforms that raised $\alpha$ through negotiated incorporation.
+
+The empirical results strongly support H1. \citet{jaeger2022} provide the most comprehensive causal analysis, exploiting size thresholds in codetermination requirements to identify effects. They demonstrate that codetermined firms exhibit significantly lower strike rates, approximately 10\% longer employee tenure, and wage levels roughly 2\% higher than comparable non-codetermined firms---with no significant negative effect on shareholder returns. \citet{fauver2011good} show that codetermined firms invest more in human capital development, consistent with the framework's prediction that higher $\alpha$ produces outcomes closer to stakeholder preferences: when workers have voice in firm decisions, firms allocate more resources to worker-valued outcomes (training, career development, safety) than shareholder-primacy firms would. \citet{vitols2011coordinated} documents how Germany's coordinated market economy sustained stakeholder orientation even during the financialization pressures of the 1990s and 2000s that transformed Anglo-American corporate governance toward shareholder value maximization.
+
+\citet{bosch2013activating} provides an instructive counter-example within the German system. The Hartz IV welfare reforms of 2003--2005 reduced workers' fallback positions by tightening unemployment benefits and imposing stricter conditionality on the long-term unemployed. This effectively lowered the stakes-weighted voice of displaced and precarious workers without formally altering codetermination structures---reducing $\text{eff\_voice}_i$ through capacity constraints rather than institutional exclusion. The framework predicts that reducing effective voice (even through indirect channels like benefit conditionality) should generate friction, and indeed the reforms produced the largest protest mobilizations in postwar German history: the \textit{Montagsdemonstrationen} (Monday demonstrations) of 2004 drew over 200,000 participants across eastern German cities. That friction within a high-$\alpha$ system could be triggered by \textit{indirect} voice reduction confirms the framework's emphasis on effective rather than formal alignment.
+
+\paragraph{United States: Declining $\alpha$, Episodic $F$.} The American trajectory illustrates the framework's predictions about declining alignment. Union density peaked at approximately 35\% in 1954, then declined steadily through a combination of employer opposition (aggressive anti-union campaigns, permanent replacement of strikers after PATCO 1981), legislative erosion (Taft-Hartley 1947, right-to-work laws spreading from 14 states in 1960 to 27 by 2020), deindustrialization (manufacturing employment declining from 28\% of the workforce in 1960 to under 9\% by 2020), and the rise of service-sector employment structurally resistant to traditional organizing. The absence of institutional codetermination meant that declining density translated directly into declining $\alpha(d_{\text{workplace}})$: from approximately 0.23 at peak to approximately 0.07 by 2020.
+
+The friction pattern is analytically revealing. High-intensity strikes characterized the 1930s and 1940s (sit-down strikes, wildcat stoppages, industry-wide shutdowns: over 4,700 work stoppages in 1946 alone, the peak year). Strike activity declined through the 1950s and 1960s as moderate alignment under the postwar labor-management accord produced tolerable outcomes. It declined further from the 1980s onward---but not because alignment improved. Rather, declining union power meant declining \textit{capacity} for organized friction. The framework distinguishes crucially between friction reduction through alignment improvement (the German path) and friction reduction through voice suppression (the American path). The latter generates latent misalignment that manifests through alternative channels:
+
+\begin{itemize}[nosep]
+\item \textit{Individual exit}: The US exhibits the highest labor turnover among advanced economies, with annual voluntary quit rates exceeding 25\% in service sectors.
+\item \textit{Passive resistance}: Presenteeism, quality deterioration, and workplace disengagement represent friction expressed individually rather than collectively.
+\item \textit{Political mobilization}: Populist movements channeling workplace grievances into electoral politics---from the Tea Party to Trumpism to the Sanders campaigns---reflect friction displaced from foreclosed institutional channels.
+\item \textit{Health consequences}: Workplace stress, declining life expectancy in deindustrialized regions, and the ``deaths of despair'' documented by Case and Deaton reflect the human costs of unresolved misalignment.
+\end{itemize}
+
+The American case thus illustrates a sobering implication: low measured friction is not equivalent to high alignment. When organizational capacity for collective friction is destroyed, misalignment persists but becomes invisible to strike-based metrics---emerging instead through diffuse, individually borne costs that are harder to measure but no less consequential.
+
+\paragraph{Nordic: Maximum $\alpha$, Minimal $F$.} The Scandinavian model achieved the highest sustained $\alpha(d_{\text{workplace}})$ of any industrial democracy. Swedish union density exceeded 80\% through much of the late 20th century (peaking at approximately 86\% in 1995), collective bargaining coverage reached above 90\%, and board-level employee representation (one-third of seats) was established by the 1972 Board Representation Act. The resulting friction was minimal: Sweden averaged under 50 days lost per 1,000 workers annually during its peak-density period, falling to under 5 by the 2010s.
+
+The Nordic case tests H2 (increasing $\text{Cov}(s_i, C_i)$ reduces friction) most directly. Corporatist bargaining structures---centralized negotiations between peak employer and union federations (SAF and LO in Sweden, NHO and LO in Norway), mediated by state institutions---explicitly linked consent power to stakeholder status. The Rehn-Meidner model (1951) institutionalized solidaristic wage policy: centralized bargaining compressed wages across firms and sectors, ensuring that those with the highest workplace stakes (production workers in export industries) received wages set through their unions' central role in economy-wide negotiations. This produced high $\text{Cov}(s_i, C_i)$ by design---exactly the condition the framework predicts should minimize friction.
+
+Recent pressures from globalization, European integration, and the decline of traditional manufacturing have reduced both density and coverage across the Nordic states. Swedish density fell from 86\% in 1995 to approximately 65\% by 2020; Norwegian density declined from 57\% to 49\% over the same period. The resulting modest increases in labor friction (Sweden experienced notable public sector strikes in 2003 and 2008) test whether the model's friction-reducing properties survive institutional erosion---or whether, as the framework predicts, declining $\alpha$ eventually produces rising $F$.
+
+\subsection{Cross-Case Connections}
+\label{subsec:labor-connections}
+
+Labor rights connect to multiple other domains examined in this monograph. The franchise expansion analyzed in Section~\ref{sec:suffrage} was driven partly by working-class demands: the Chartist movement (1838--1857) explicitly linked political voice to economic justice, and the Second and Third Reform Acts (1867, 1884) that extended the British franchise were precipitated in part by labor mobilization. The civil rights movement (Section~\ref{sec:civil-rights}) strategically integrated labor demands---the 1963 March on Washington was formally the ``March on Washington for Jobs and Freedom,'' embedding economic stakes within the political franchise campaign, and A.\ Philip Randolph (president of the Brotherhood of Sleeping Car Porters) served as the march's lead organizer.
+
+Corporate governance structures (Section~\ref{sec:corporate-governance}) represent the institutional complement to labor mobilization: where this section examines how workers raised $\alpha$ through collective action and the resulting friction dynamics, Section~\ref{sec:corporate-governance} examines how institutional design can embed voice structurally within firm governance. The German codetermination system bridges both---it is simultaneously a labor achievement (won through decades of mobilization and negotiation) and a corporate governance institution (mandated by statute and embedded in company law).
+
+The labor case also demonstrates the framework's distinction between formal and effective voice. Even where collective bargaining rights are legally established, effective voice requires organizational capacity, information access, and credible exit threats. \citet{farzulla2025stakes} develops this distinction theoretically, showing how populations can hold formal consent power $C_i > 0$ yet exercise near-zero effective voice due to structural constraints on capacity. The decline of American unions illustrates this dynamic: workers retain formal rights to organize under the NLRA (1935), but employer opposition, regulatory erosion, and structural economic change have reduced effective voice far below what formal entitlements suggest---producing a formal-effective gap analogous to (though less extreme than) the Jim Crow gap analyzed in Section~\ref{sec:civil-rights}.
+
+
+% ============================================================================
+% SECTION 10: CIVIL RIGHTS
+% ============================================================================
+
+\section{Civil Rights: From Formal to Effective Voice (1950s--Present)}
+\label{sec:civil-rights}
+
+The American civil rights movement provides the framework's most powerful illustration of the gap between formal consent power and effective voice. For nearly a century after the Fourteenth and Fifteenth Amendments nominally established equal citizenship and voting rights (1868--1870), Black Americans in the South possessed constitutional $C_i > 0$ yet exercised near-zero $\text{eff\_voice}_i$ due to systematic suppression through violence, legal manipulation, and economic coercion. This case demonstrates that $\alpha(d)$ must be measured through effective participation rather than formal entitlements---and that the resulting misalignment produces exactly the sustained, escalating friction the framework predicts.
+
+\subsection{Domain Definition}
+\label{subsec:civil-rights-domain}
+
+We define $d_{\text{civil\_rights}}$ as the set of decisions affecting political participation, legal protection, economic opportunity, and social inclusion for racial minorities. While the analysis focuses on the American case, parallel dynamics operated in South Africa (apartheid regime, 1948--1994), Northern Ireland (sectarian exclusion, 1920s--1998), and colonial contexts globally. The affected set $S_{d_{\text{civil\_rights}}}$ includes:
+
+\begin{itemize}[nosep]
+\item \textbf{Racial minorities} (existential $s_i$): legal status, physical safety, economic access, educational opportunity, housing, and fundamental dignity all contingent on civil rights policy. The stakes are existential in the literal sense: Black life expectancy in Mississippi in 1950 was approximately 20 years shorter than white life expectancy.
+\item \textbf{Majority population} (moderate $s_i$): stakes in social order, moral standing, and economic costs of exclusion. The moral stakes are understated by purely material measures---as abolitionists demonstrated (Section~\ref{sec:historical}), sympathetic observers can hold genuine moral stakes in others' exclusion.
+\item \textbf{State institutions} (institutional $s_i$): stakes in domestic legitimacy, international standing (Cold War competition made racial exclusion a foreign policy liability), and constitutional coherence.
+\end{itemize}
+
+Under Jim Crow, the consent-holder mapping concentrated authority overwhelmingly in white political elites: $C_{\text{Black}} \approx 0$ across political, legal, economic, and social domains despite $s_{\text{Black}}(d) \approx \text{existential}$. This represented one of the most extreme and sustained instances of stakes-voice misalignment in modern democratic history---comparable in structural terms to the abolition case analyzed in Section~\ref{sec:historical}, though operating through legal manipulation rather than explicit chattel ownership.
+
+\subsection{Alpha Proxy: Voter Registration and Effective Participation}
+\label{subsec:civil-rights-alpha}
+
+The civil rights case demands a distinction between formal and effective alpha that no other case study illustrates as starkly. The Fifteenth Amendment (1870) nominally granted Black men voting rights: $C_{\text{Black, formal}} > 0$. Yet Jim Crow mechanisms---literacy tests (often applied selectively: white applicants passed by reciting their names, Black applicants failed for misplacing a comma), poll taxes (the equivalent of one to two days' wages for sharecroppers), grandfather clauses, white-only primaries, and lethal violence against those who attempted to register---reduced effective voice to near zero. Between 1890 and 1910, Mississippi, South Carolina, Louisiana, Alabama, Virginia, Georgia, and North Carolina all rewrote their state constitutions specifically to disenfranchise Black voters while technically complying with the Fifteenth Amendment.
+
+Voter registration data quantify this formal-effective gap with precision. In Mississippi, Black voter registration stood at approximately 5.2\% in 1960---not because 95\% of eligible Black citizens chose not to vote, but because the act of registration invited economic retaliation (eviction from tenant farms, firing from employment), physical violence (beatings, bombings, murder), and institutional obstruction (registrars who opened offices irregularly, required impossible constitutional interpretation tests, or simply refused applications). Across the Deep South, Black registration rates in 1940 were approximately 3\%. Even in the Upper South (Virginia, North Carolina, Tennessee), rates remained below 20\%.
+
+We construct $\alpha(d_{\text{civil\_rights}}, t)$ using effective participation measures:
+
+\begin{equation}
+\alpha(d_{\text{civil\_rights}}, t) = \frac{s_{\text{Black}} \cdot \text{eff\_voice}_{\text{Black}}(t) + s_{\text{other}} \cdot \text{eff\_voice}_{\text{other}}(t)}{s_{\text{Black}} + s_{\text{other}}}
+\label{eq:alpha-civil-rights}
+\end{equation}
+
+\noindent where $\text{eff\_voice}_{\text{Black}}(t)$ reflects actual voter registration rates, the presence of elected Black officials, and access to legal protections---not constitutional text. Under this measure, $\alpha(d_{\text{civil\_rights}})$ in the Deep South circa 1960 was close to zero despite nearly a century of formal constitutional guarantees. This is the framework's formal-effective gap in its starkest empirical form.
+
+The Voting Rights Act (VRA) of 1965 produced the most dramatic single-year increase in $\alpha$ documented anywhere in this monograph. Federal registrars were dispatched to counties where less than 50\% of eligible voters were registered, literacy tests were suspended in covered jurisdictions, and Section 5 required preclearance of any changes to voting procedures. The results were immediate, quantifiable, and transformative:
+
+\begin{table}[htbp]
+\centering
+\caption{Black Voter Registration in the Deep South, Pre- and Post-VRA}
+\label{tab:vra-registration}
+\begin{tabular}{lcccc}
+\toprule
+State & 1960 (\%) & 1966 (\%) & 1970 (\%) & $\Delta$ (pp) \\
+\midrule
+Mississippi & 5.2 & 32.9 & 71.0 & +65.8 \\
+Alabama & 13.7 & 51.2 & 66.0 & +52.3 \\
+South Carolina & 15.6 & 51.4 & 56.1 & +40.5 \\
+Georgia & 29.3 & 47.2 & 57.5 & +28.2 \\
+Louisiana & 31.6 & 47.1 & 57.4 & +25.8 \\
+Virginia & 23.0 & 46.9 & 57.0 & +34.0 \\
+\midrule
+South (total) & $\sim$29 & $\sim$52 & $\sim$62 & +33 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Black elected officials provide a complementary alpha measure. Between 1901 and 1972, zero Black members of Congress represented Southern states---a seven-decade absence reflecting the complete exclusion of Black political voice from representative institutions. The number of Black elected officials nationally rose from approximately 1,500 in 1970 to over 4,900 by 1980 and over 10,500 by 2002, though this remained substantially below proportional representation (approximately 2\% of elected officials for 13\% of the population). The election of Black mayors in major Southern cities---Atlanta (Maynard Jackson, 1973), New Orleans (Ernest Morial, 1978), Birmingham (Richard Arrington, 1979)---represented qualitative threshold crossings in local $\alpha$.
+
+This case is \textit{the} demonstration of why $\text{eff\_voice}$ matters in the consent-holding framework. Nominal consent power without capacity to exercise it---without physical safety, economic independence, educational access, or institutional support---produces a measurement artifact that conceals ongoing misalignment. As \citet{farzulla2025stakes} argues, populations with stakes but no effective voice exist in a condition of structural exclusion that formal rights alone cannot resolve. The civil rights case forces any legitimacy framework to distinguish between de jure and de facto consent power---a distinction the $\text{eff\_voice}_i$ specification is designed to capture.
+
+\subsection{Friction Proxy: Protest Events and Litigation}
+\label{subsec:civil-rights-friction}
+
+Friction in the civil rights domain manifested through multiple channels, each representing the stakes-weighted deviation between realized outcomes (segregation, disenfranchisement, economic exclusion) and stakeholder preferences (equal citizenship, political participation, economic opportunity). The movement deployed an escalating repertoire of friction tactics---from litigation to direct action to mass mobilization---that the framework interprets as progressive intensification in response to institutional resistance to alpha improvement.
+
+\textit{Legal friction} came first. The NAACP's litigation strategy, developed under Charles Hamilton Houston and Thurgood Marshall, systematically challenged segregation through the courts. \textit{Brown v.\ Board of Education} (1954) ruled school segregation unconstitutional---a formal alpha intervention in the educational domain. However, ``massive resistance'' by Southern states (school closures, interposition resolutions, the Southern Manifesto signed by 101 congressmen) demonstrated that legal alpha increases without enforcement capacity produce phantom alignment. By 1964, only 1.2\% of Black students in the Deep South attended desegregated schools---a decade after \textit{Brown}.
+
+\textit{Direct action} escalated friction. \citet{parks1992} provides a firsthand account of the Montgomery Bus Boycott (1955--1956)---381 days of sustained economic friction targeting segregated public transit. The boycott reduced Montgomery bus revenue by approximately 65\% and demonstrated that coordinated withdrawal of cooperation could impose costs sufficient to force institutional change. \citet{branch1988} situates Montgomery within the broader arc of the King years, documenting how the movement deployed escalating friction tactics calibrated to expose the violence required to maintain low-$\alpha$ arrangements: the strategic genius of the movement was to make the \textit{costs of suppression} visible rather than merely the \textit{grievances of the excluded}.
+
+The sit-in movement of 1960 expanded friction geographically and generationally: within two months of the Greensboro sit-in (four Black college students occupying a segregated Woolworth's lunch counter), over 70,000 participants conducted sit-ins across more than 100 cities in the South, targeting segregated lunch counters, libraries, theaters, and public facilities. The Freedom Rides of 1961 involved over 450 riders testing desegregation of interstate bus facilities, provoking violent reactions (buses firebombed in Anniston, riders beaten in Birmingham and Montgomery) that generated national and international media attention. The 1963 March on Washington drew approximately 250,000 participants---the largest political demonstration in American history at that time---where King's ``I Have a Dream'' speech articulated the stakes-voice gap in language that transcended political science: ``America has given the Negro people a bad check, a check which has come back marked `insufficient funds.'\,''
+
+\citet{king1963} \textit{Letter from Birmingham Jail} provides the most rigorous theoretical articulation of friction as a political strategy within the movement itself. King's argument---that ``nonviolent direct action seeks to create such a crisis and foster such a tension that a community which has constantly refused to negotiate is forced to confront the issue''---maps directly onto H4's prediction that sustained friction generates institutional reform pressure. His distinction between ``negative peace which is the absence of tension'' and ``positive peace which is the presence of justice'' anticipates the framework's distinction between friction reduction through voice suppression and friction reduction through alignment improvement. King explicitly identified low $\alpha$ as the problem: ``We know through painful experience that freedom is never voluntarily given by the oppressor; it must be demanded by the oppressed.''
+
+\citet{levy1998} documents the broader movement history, tracing how friction escalated from legal strategies (NAACP litigation) through direct action (sit-ins, Freedom Rides, marches) to urban uprisings (Watts 1965: 34 dead, \$40 million in property damage; Detroit 1967: 43 dead, 7,231 arrested; post-assassination riots in over 100 cities in April 1968). This escalation follows the framework's prediction precisely: when lower-intensity friction fails to produce alpha increases (Southern resistance to \textit{Brown} was sustained for a decade), friction intensifies through higher-cost repertoires until either alignment improves or the system reaches a breaking point. The urban uprisings represented the highest-cost friction repertoire, emerging in Northern and Western cities where \textit{de facto} segregation, police brutality, and economic exclusion persisted despite formal legal equality.
+
+\subsection{Alpha--Friction Dynamics}
+\label{subsec:civil-rights-dynamics}
+
+The civil rights case illuminates four key framework predictions with unusual clarity.
+
+\paragraph{H1: The Formal-Effective Alpha Gap.} The century between the Fifteenth Amendment (1870) and the VRA (1965) demonstrates that formal $\alpha > 0$ is insufficient to reduce friction when effective voice remains near zero. Constitutional promises without enforcement mechanisms, institutional support, or protection from retaliation generate what we term \textit{phantom alignment}---the appearance of consent without its substance. The framework's $\text{eff\_voice}$ specification captures this: $\alpha$ must be computed from effective participation, not paper entitlements. During this period, formal $\alpha$ was moderate (Black men had constitutional voting rights), but effective $\alpha \approx 0$, and friction was high and sustained---exactly as H1 predicts for low effective alignment. The implication is methodological: any empirical operationalization of the framework must distinguish between formal and effective measures, or risk systematic measurement error that understates misalignment and overpredicts stability.
+
+\paragraph{H3: Threshold Effects and Critical Junctures.} \textit{Brown v.\ Board of Education} (1954) represents a critical juncture \citep{capoccia2007study} where judicial intervention crossed a threshold in the legal domain. The decision did not immediately raise $\alpha$ (implementation was resisted through ``massive resistance'' for over a decade), but it shifted the legitimacy baseline: segregation moved from legally sanctioned to constitutionally proscribed. This threshold crossing catalyzed friction escalation---the Montgomery Boycott began the following year, the sit-in movement erupted six years later, and the movement built momentum continuously through 1965. The framework interprets this as a threshold effect: once the legal system signaled that exclusion was illegitimate, the tolerance threshold $\tau_i$ for accepting low $\alpha$ dropped sharply among affected populations, producing discontinuously higher mobilization even though \textit{actual} alignment had not yet changed. Formal legitimacy signals can thus lower friction thresholds and \textit{increase} observed friction in the short run---a counterintuitive prediction that the civil rights timeline confirms.
+
+\paragraph{H4: Friction Generates Alpha.} The sustained friction of 1955--1965 produced the most significant alpha increases in American history: the Civil Rights Act (1964, prohibiting discrimination in employment and public accommodations), the Voting Rights Act (1965, enforcing the Fifteenth Amendment through federal oversight), and the Fair Housing Act (1968, prohibiting discrimination in housing). Each represented an institutional response to accumulated friction that raised effective Black voice in specific domains. The VRA in particular demonstrates H4's prediction that persistent high $F$ generates future alpha increases: a decade of direct action, media attention, televised police violence (Birmingham 1963, Selma 1965), and political pressure culminated in federal enforcement of voting rights that transformed Southern politics within three years (Table~\ref{tab:vra-registration}). The Selma-to-Montgomery marches of March 1965---and particularly the ``Bloody Sunday'' attack on marchers at the Edmund Pettus Bridge, broadcast nationally---provided the proximate friction event that generated the political will for the VRA's passage.
+
+\paragraph{Domain-Specific Alpha Persistence.} The civil rights case also reveals a feature the framework handles naturally: alpha increases are domain-specific and do not automatically transfer across domains. The VRA raised $\alpha$ dramatically in the \textit{political} domain, but left $\alpha$ low in:
+
+\begin{itemize}[nosep]
+\item \textit{Criminal justice}: Mass incarceration (Black incarceration rates 5--7 times white rates through the 2000s), policing practices, and sentencing disparities reflect governance domains where Black Americans have minimal effective voice despite formal political rights.
+\item \textit{Wealth accumulation}: The racial wealth gap remained approximately 10:1 (median white household wealth to median Black household wealth) through 2020, reflecting centuries of exclusion from wealth-building mechanisms (homeownership, education, inheritance) that political voice alone did not remedy.
+\item \textit{Educational quality}: Despite \textit{Brown}, school segregation by race and class persisted through residential patterns and school funding mechanisms tied to local property taxes.
+\end{itemize}
+
+Persistent friction in these domains---the Black Lives Matter movement (2013--present), protests against police violence (Ferguson 2014, Baltimore 2015, Minneapolis 2020), educational equity campaigns---reflects continued low $\alpha$ in governance domains where formal political rights did not translate into effective voice over policy outcomes. The framework predicts exactly this: raising $\alpha$ in one domain does not automatically raise it in others, and domains with persistently low effective alignment will continue to generate friction until domain-specific alpha improvements occur.
+
+\subsection{Cross-Case Connections}
+\label{subsec:civil-rights-connections}
+
+The civil rights movement built directly on abolition's unfinished alpha expansion (Section~\ref{sec:historical}). The Reconstruction amendments (1865--1870) nominally resolved abolition's zero-consent condition, but the withdrawal of federal enforcement after the Compromise of 1877 allowed Southern states to reimpose near-zero effective voice through Jim Crow---a case of formal alpha expansion followed by effective alpha collapse. The civil rights movement can thus be understood as completing the alpha expansion that abolition began but Reconstruction failed to sustain.
+
+The connection to labor rights (Section~\ref{sec:labor}) was explicit and strategic. The 1963 March on Washington was organized jointly by civil rights and labor leaders, and its full title---``March on Washington for Jobs and Freedom''---embedded economic stakes within the political franchise campaign. A.\ Philip Randolph, the march's lead organizer, was president of the Brotherhood of Sleeping Car Porters, and the AFL-CIO provided substantial organizational and financial support. This cross-domain mobilization illustrates how friction in one domain (workplace exclusion) can amplify friction in another (political disenfranchisement) when affected populations overlap---a cross-domain friction resonance effect that the framework's multi-domain structure is designed to capture.
+
+The civil rights movement also served as a strategic template for subsequent campaigns. The LGBT rights movement (Section~\ref{sec:lgbt}) adapted civil rights litigation strategies (constitutional equal protection challenges), direct action tactics (pride marches modeled on civil rights demonstrations), and narrative frameworks (coming-out as analogous to visibility politics). Suffrage movements (Section~\ref{sec:suffrage}) and civil rights movements influenced each other bidirectionally: women of color experienced compounded exclusion across both gender and racial domains, and the intersectional character of their stakes drove distinctive organizing strategies that neither movement alone fully addressed.
+
+
+% ============================================================================
+% SECTION 12: CORPORATE GOVERNANCE
+% ============================================================================
+
+\section{Corporate Governance: Codetermination as Natural Experiment (1950s--Present)}
+\label{sec:corporate-governance}
+
+While Section~\ref{sec:labor} examined how workers raised $\alpha(d_{\text{workplace}})$ through collective mobilization, this section examines the institutional architecture of corporate governance itself---who holds formal decision authority within firms, how that authority is allocated, and what happens when governance structures systematically exclude high-stakes populations from voice. The corporate governance domain provides unusually clean natural experiments because codetermination mandates were imposed by statute at specific dates, creating before-and-after comparisons and regression discontinuity designs that approximate the framework's causal predictions more closely than most historical case studies allow.
+
+\subsection{Domain Definition}
+\label{subsec:corporate-domain}
+
+We define $d_{\text{corporate}}$ as the set of decisions affecting firm strategy, capital allocation, employment levels, operational practices, and externalities imposed on non-shareholder constituencies. The affected set includes:
+
+\begin{itemize}[nosep]
+\item \textbf{Shareholders} (financial $s_i$): returns on invested capital, portfolio risk, and firm survival. Stakes are significant but typically diversifiable---shareholders can exit through sale.
+\item \textbf{Employees} (livelihood $s_i$): employment security, wages, career development, working conditions, and workplace dignity. Stakes are high and largely non-diversifiable---workers cannot hedge their human capital exposure to a single employer.
+\item \textbf{Communities} (externality $s_i$): local employment, environmental impact, tax base, infrastructure demands, and social fabric. Plant closures can devastate entire municipalities.
+\item \textbf{Suppliers} (contractual $s_i$): payment terms, relationship continuity, and supply chain stability.
+\item \textbf{Customers} (product $s_i$): quality, safety, pricing, availability, and post-sale support.
+\end{itemize}
+
+Under Anglo-American shareholder primacy, the consent-holder mapping concentrates authority overwhelmingly in shareholders and their board-appointed agents: $C_{\text{shareholders}} \approx 1$, $C_{\text{employees}} \approx 0$, $C_{\text{communities}} \approx 0$. \citet{friedman1970} provided the canonical articulation: ``the social responsibility of business is to increase its profits.'' This doctrine generates low $\alpha(d_{\text{corporate}})$ when stakes are calculated comprehensively. The asymmetry is stark: employees hold non-diversifiable livelihood stakes (they cannot spread their dependence across multiple employers the way shareholders spread capital across a portfolio), yet possess negligible formal voice in the governance structures that determine their working lives.
+
+\citet{aguilera2015connecting} demonstrate that this internal governance structure cannot be understood in isolation from external institutional environments. National legal traditions, labor market institutions, financial systems, and political cultures shape the set of feasible consent-holder mappings. The ``varieties of capitalism'' literature \citep{vitols2011coordinated} distinguishes between liberal market economies (LMEs: US, UK) where shareholder primacy dominates, and coordinated market economies (CMEs: Germany, Nordic states) where stakeholder voice is institutionally embedded. The consent-holding framework reinterprets this distinction as variation in $\alpha(d_{\text{corporate}})$ across institutional environments---not as culturally contingent preferences but as different institutional solutions to the universal problem of allocating corporate consent power.
+
+\subsection{Alpha Proxy: Board Composition and Voice Channels}
+\label{subsec:corporate-alpha}
+
+We construct $\alpha(d_{\text{corporate}})$ from governance data capturing the distribution of formal decision authority:
+
+\begin{equation}
+\alpha(d_{\text{corporate}}, t) = \sum_{k \in \text{stakeholders}} \frac{s_k \cdot V_k(t)}{\sum_j s_j}
+\label{eq:alpha-corporate}
+\end{equation}
+
+\noindent where $V_k(t)$ represents the effective governance voice of stakeholder category $k$, measured through board representation, voting rights, consultation requirements, and legal standing. Under pure shareholder primacy ($V_{\text{shareholders}} = 1$, $V_{\text{others}} = 0$), this yields low $\alpha$ because shareholders' financial stakes---while genuine---represent only a fraction of the total stakes affected by corporate decisions. Workers' non-diversifiable livelihood stakes, communities' spatially concentrated externality stakes, and consumers' product safety stakes are all governed without their consent.
+
+Board composition provides the most tractable measure. In shareholder-only boards (the Anglo-American default), governance voice maps exclusively to capital: $V_{\text{shareholders}} = 1$. In codetermined boards (Germany post-1976), workers elect half the supervisory board, yielding $V_{\text{workers}} \approx 0.45$--$0.50$ (slightly below parity due to the shareholder-elected chair's tie-breaking vote). In Nordic systems, employee representation is typically one-third of board seats, supplemented by broader corporatist voice channels. In France, the 2013 Rebsamen law introduced employee board representation (1--2 members) in firms with over 1,000 employees---a modest alpha increase from a low baseline.
+
+\citet{goranova2014shareholder} document how shareholder activism---proxy fights, shareholder proposals, institutional investor engagement---constitutes a voice channel within the shareholder constituency. This activism has intensified dramatically: shareholder proposals on governance and social issues rose from under 300 annually in the 1990s to over 900 by 2020. However, this activism operates \textit{within} the shareholder primacy model, redistributing voice among capital providers rather than extending it to non-shareholder stakeholders. From the framework's perspective, intra-shareholder activism raises alpha within the narrow financial domain but leaves the broader $\alpha(d_{\text{corporate}})$ unchanged because non-financial stakeholders remain excluded. It is voice redistribution within a privileged class, not voice extension to affected parties.
+
+\citet{edmans2017equity} show that equity vesting structures create temporal misalignment even within shareholder governance: short-vesting equity incentivizes managerial decisions that boost near-term stock prices at the expense of long-term value (underinvestment in R\&D, deferred maintenance, excessive cost-cutting). The framework interprets this as a within-class alpha problem: managers' decision horizons (set by vesting schedules of 1--3 years) are misaligned with long-term shareholders' actual temporal stakes (investment horizons of decades for pension funds and endowments), producing friction (value destruction) even within the nominally privileged constituency. Myopia-induced friction manifests as shareholder lawsuits, activist campaigns targeting short-termism, and regulatory proposals for longer-term governance structures.
+
+\subsection{Friction Proxy: Shareholder Activism and Stakeholder Pressure}
+\label{subsec:corporate-friction}
+
+Friction in the corporate domain manifests through multiple channels reflecting the diverse constituencies excluded from governance voice.
+
+\textit{Labor disputes} represent the most direct friction channel: strikes, work-to-rule actions, and collective bargaining impasses reflect workers' stakes-weighted deviation from preferred outcomes. As analyzed in Section~\ref{sec:labor}, countries with higher $\alpha(d_{\text{workplace}})$ exhibit systematically lower strike rates. The cross-national correlation between board-level employee representation and strike frequency is strongly negative---precisely H1's prediction.
+
+\textit{Shareholder activism} constitutes friction within the governance structure: \citet{goranova2014shareholder} review proxy fights, shareholder proposals, hostile takeover attempts, and ``say on pay'' votes as mechanisms through which excluded or dissatisfied shareholder factions challenge incumbent management. The rise of hedge fund activism since the 2000s---with activists like Carl Icahn, Nelson Peltz, and Elliott Management targeting firms for governance changes---reflects growing friction between dispersed shareholders' return expectations and managerial entrenchment.
+
+\textit{Regulatory pressure} represents political friction from constituencies that lack direct corporate voice. The Sarbanes-Oxley Act (2002, responding to Enron/WorldCom scandals), Dodd-Frank (2010, responding to the financial crisis), the EU's Corporate Sustainability Due Diligence Directive (2024), and national corporate governance codes reflect legislative responses to accumulated stakeholder grievances---exactly the H4 prediction that persistent friction generates institutional reform. Each major corporate scandal or crisis produced a regulatory alpha intervention: an exogenous increase in stakeholder voice through mandatory disclosure, board independence requirements, or stakeholder consultation obligations.
+
+\textit{Consumer and community friction} manifests through boycotts, reputation damage, social media campaigns, and legal challenges. ESG (Environmental, Social, Governance) activism represents a sustained attempt by excluded stakeholders to impose voice constraints on corporate decisions through market and reputational pressure rather than governance mechanisms. The growth of ESG-mandated assets from under \$5 trillion in 2010 to over \$35 trillion by 2020 represents the financialization of stakeholder friction: investor demand for ESG compliance channels non-shareholder grievances through capital markets.
+
+\textit{Employee exit} constitutes passive friction: high turnover, difficulty attracting talent, and ``quiet quitting'' reflect workers' response to governance exclusion through individual rather than collective action. The framework predicts that declining collective voice capacity (Section~\ref{sec:labor}) shifts friction from organized (strikes) to diffuse (turnover, disengagement) channels---a prediction consistent with contemporary labor market dynamics where US firms spend approximately \$1 trillion annually on employee turnover costs.
+
+\subsection{Alpha--Friction Dynamics: Natural Experiments}
+\label{subsec:corporate-dynamics}
+
+Three institutional configurations provide quasi-experimental variation in corporate $\alpha$.
+
+\paragraph{German Codetermination: Institutional Alpha.} The German codetermination system provides the cleanest natural experiment in corporate governance. The 1951 Coal and Steel Codetermination Act imposed full parity representation (50\% employee-elected supervisory board seats) on mining and steel firms---sectors where labor friction had historically been most intense (Section~\ref{sec:labor}). The 1976 Codetermination Act extended quasi-parity to all firms with over 2,000 employees. The One-Third Participation Act (1952, amended 2004) mandated one-third employee representation in firms with 500--2,000 employees. These statutory mandates produced exogenous variation in board composition at specific employment thresholds that enables regression discontinuity analysis.
+
+\citet{fauver2011good} find that codetermined firms invest more in human capital development (higher training expenditure per employee), maintain longer employee tenure (approximately 15\% longer than non-codetermined firms), and exhibit lower labor turnover---consistent with the framework's prediction that higher $\alpha$ produces outcomes closer to employee preferences. When workers have voice in firm decisions, firms allocate resources differently: more to training, workplace safety, and job security; less to short-term shareholder distributions and executive compensation. This is alignment working as predicted: higher $\text{Cov}(s_i, C_i)$ produces outcomes that better reflect the stakeholder distribution of stakes.
+
+\citet{jaeger2022} provide the most comprehensive causal analysis, exploiting the 2,000-employee threshold in the 1976 Act to identify codetermination effects through regression discontinuity. Their findings are striking: codetermined firms exhibit significantly lower strike rates, approximately 10\% longer employee tenure, wages roughly 2\% higher, and---crucially---no significant negative effect on shareholder returns or firm valuation. This last finding is important for H5 (performance interactions): the common objection that stakeholder voice reduces efficiency finds no support in the most rigorous available evidence. Codetermination appears to reduce friction costs (fewer strikes, lower turnover, better labor relations) by roughly the same amount it raises labor costs, producing a net wash for shareholders while substantially improving outcomes for employees.
+
+\citet{vitols2011coordinated} documents the institutional resilience of codetermination during financialization. Where Anglo-American firms restructured toward shareholder value maximization during the 1990s and 2000s---through leveraged buyouts, hostile takeovers, mass layoffs, and stock buybacks---German codetermined firms maintained more stable employment, continued investing in apprenticeship programs, and resisted pressure to prioritize quarterly earnings over long-term stakeholder value. The framework interprets this as structurally embedded $\alpha$: codetermination made it institutionally difficult to reduce worker voice even when capital market pressures incentivized shareholder primacy. This structural resistance to alpha reduction---what we might call \textit{institutional stickiness} of voice---is a feature the framework should capture theoretically.
+
+\paragraph{Nordic Model: Corporatist Alpha.} The Nordic countries achieved high corporate $\alpha$ through a different institutional pathway. Rather than board-level codetermination as the primary mechanism, the Scandinavian model embedded stakeholder voice through corporatist bargaining structures: centralized wage negotiations between peak employer and union federations, active labor market policies that maintained full employment (reducing the threat of involuntary exit from the labor market), and comprehensive welfare states that raised workers' fallback positions and thereby their effective bargaining power even outside formal governance channels.
+
+\citet{doyle2020nordic} provides evidence on the Nordic model's effects at the firm level, documenting how companies in coordinated Nordic economies maintain stakeholder orientation through institutional complementarities rather than single governance mandates. Board-level employee representation (typically one-third of seats in Swedish, Norwegian, and Danish firms) supplements rather than replaces the broader institutional framework. The framework interprets the Nordic case as demonstrating that $\alpha(d_{\text{corporate}})$ can be raised through multiple institutional channels operating simultaneously---the key variable is the aggregate effective voice of affected stakeholders, not the specific mechanism through which it is achieved. Whether voice is embedded through board seats (Germany), through corporatist bargaining (Sweden), or through both (Norway), the friction-reducing effects predicted by H1 appear consistent.
+
+\paragraph{Anglo-American Shareholder Primacy: Low $\alpha$, Episodic $F$.} The \citet{friedman1970} doctrine---adopted as orthodoxy in American business schools from the 1970s onward and exported to the UK through Thatcherite reforms---produced the lowest sustained $\alpha(d_{\text{corporate}})$ among advanced industrial democracies. The resulting friction followed the pattern the framework predicts for persistent low alignment: episodic high-intensity conflicts interspersed with periods of latent friction.
+
+The episodic pattern includes: hostile takeover waves of the 1980s (LBO-funded raiders like KKR extracting shareholder value through leveraged restructuring that imposed massive costs on employees and communities---the RJR Nabisco buyout alone produced over 5,000 layoffs); corporate governance scandals of the early 2000s (Enron, WorldCom, Tyco---representing friction from \textit{within} the shareholder class when managers' misaligned incentives destroyed value); the 2008 financial crisis (systemic friction from risk-taking by financial firms whose governance structures excluded the populations bearing the consequences); and the ESG backlash of the 2020s (friction from environmental and social stakeholders demanding voice through capital markets).
+
+The 2019 Business Roundtable statement---signed by 200 CEOs endorsing ``stakeholder capitalism'' and explicitly repudiating the Friedman doctrine---represents an elite response to accumulated friction \citep{businessroundtable2019}. The framework interprets this as H4-consistent: persistent friction from excluded stakeholders (employee activism, consumer boycotts, regulatory pressure, ESG campaigns, political backlash against inequality, and the reputational costs of visibly prioritizing shareholders during the COVID-19 pandemic) generated sufficient pressure to produce at least rhetorical commitment to alpha improvement. Whether this represents genuine institutional change (structural alpha increase) or cheap talk (friction-reduction through signaling without governance reform) remains an empirically testable question: the framework predicts that if the statement is not followed by actual governance changes (board composition, stakeholder consultation mechanisms, accountability structures), friction will persist or intensify.
+
+\citet{jackson2010corporate} analyze corporate social responsibility (CSR) as a friction-reduction strategy within the shareholder primacy model. Their comparative analysis reveals a striking pattern: in CMEs with high institutional $\alpha$ (Germany, Nordic states), explicit CSR is less developed because stakeholder voice is already embedded in governance structures. In LMEs with low $\alpha$ (US, UK), CSR serves as a voluntary substitute for institutional voice---firms address stakeholder concerns through discretionary programs rather than governance reform. The framework generates a testable prediction from this observation: voluntary CSR should be less effective than institutional codetermination at sustainably reducing friction, because discretionary commitments lack the credibility and enforceability of structural voice. Firms can withdraw CSR commitments during downturns; codetermination mandates persist through economic cycles.
+
+\citet{ferrarini2012corporate} examine the tension between shareholder and creditor governance, documenting how corporate governance structures create distributional conflicts among financial claimants that standard shareholder primacy models overlook. The framework extends this analysis: creditors hold substantial stakes in firm solvency and risk management ($s_{\text{creditor}}(d_{\text{risk}})$ can be existential for concentrated lenders), yet possess limited governance voice compared to equity holders. The resulting misalignment produces friction through credit market channels: covenant restrictions, lending conditions, credit rationing, and---in extreme cases---creditor-initiated bankruptcy proceedings represent friction responses to governance exclusion. This within-capital-class friction demonstrates that even the privileged constituency under shareholder primacy is itself fragmented, with different financial claimants holding different stakes and different levels of effective voice.
+
+\subsection{Cross-Case Connections}
+\label{subsec:corporate-connections}
+
+Corporate governance connects to multiple domains analyzed in this monograph. Section~\ref{sec:labor} examines how workers raised $\alpha$ through collective mobilization---strikes, unionization, bargaining pressure. This section examines how institutional design can embed voice structurally within firm governance. The two are complementary: German codetermination bridges labor rights and corporate governance by institutionalizing what unions achieved through adversarial bargaining. Where Section~\ref{sec:labor}'s analysis focuses on friction as a mechanism for raising alpha, this section focuses on the institutional outcome: what corporate governance looks like when alpha has been structurally raised, and how the resulting friction reduction validates the framework's predictions.
+
+Platform governance (Section~\ref{sec:platform}) represents the digital extension of corporate governance challenges. Digital platforms are firms whose governance decisions---content moderation, algorithmic recommendation, data privacy, marketplace rules---affect billions of users, yet maintain shareholder-primacy structures that exclude user voice entirely. The consent-holding framework predicts that platform governance should exhibit the same friction dynamics as traditional corporate governance (user boycotts, regulatory backlash, migration to alternatives), with additional intensity due to the unprecedented scale of affected populations and the velocity of decision cycles.
+
+The social contract literature (Section~\ref{sec:social-contract}) provides normative foundations. The Friedman-Freeman debate---whether firms exist solely for shareholder returns or for stakeholder value creation---maps directly onto the consent-holding framework's question of how $C_{i,d}$ should be allocated in corporate domains. The framework resolves this debate empirically rather than normatively: the governance structure that minimizes friction while maintaining performance represents the legitimacy-maximizing allocation, regardless of which philosophical tradition endorses it.
+
+The German codetermination case also provides the strongest available evidence for H5 (performance interactions). Critics from the Friedman tradition predicted that codetermination would reduce competitiveness by constraining managerial discretion, slowing decision-making, and misallocating resources toward employee preferences at shareholders' expense. The empirical evidence from \citet{jaeger2022} and \citet{fauver2011good}---stable returns, lower friction costs, higher human capital investment, sustained export competitiveness despite higher unit labor costs---suggests that the performance cost of higher $\alpha$ is offset by friction reduction. German firms' position as the world's third-largest exporter, sustained through decades of codetermination, provides evidence that H5's performance interaction is not uniformly negative: in domains where affected stakeholders hold decision-relevant information (employees know production processes, safety risks, and market conditions that shareholders and managers may not), higher $\alpha$ can \textit{improve} rather than degrade performance through better information aggregation, reduced turnover costs, greater employee commitment, and lower adversarial friction.

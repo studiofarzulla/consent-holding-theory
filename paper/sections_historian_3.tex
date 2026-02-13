@@ -1,0 +1,639 @@
+% ============================================================================
+% HISTORIAN-3 OUTPUT: Sections 11, 13, 14, 15
+% LGBT Inclusion, Platform Governance, Climate Governance, Scope Conditions
+% ============================================================================
+
+\section{LGBT Inclusion: Legal Recognition as Consent Alignment (1969--Present)}
+\label{sec:lgbt}
+
+The struggle for LGBT legal recognition constitutes one of the most compressed consent alignment trajectories in modern history. Within a single lifetime, multiple Western democracies moved from criminalizing homosexuality to constitutionally protecting same-sex marriage---a shift from $\alpha(d_{\text{lgbt}}) \approx 0$ to $\alpha \approx 1.0$ across an expanding set of legal recognition domains. This velocity of consent restructuring, and the distinctive dynamics that enabled it, provides rich material for testing the framework's predictions about threshold effects, friction accumulation, and international norm diffusion.
+
+\subsection{Domain Definition}
+\label{subsec:lgbt-domain}
+
+The governance domain $d_{\text{lgbt}}$ encompasses decisions affecting the legal recognition, anti-discrimination protection, relationship status, and social inclusion of lesbian, gay, bisexual, and transgender persons. Formally:
+\[
+d_{\text{lgbt}} = \{d_{\text{crim}}, d_{\text{discrim}}, d_{\text{relationship}}, d_{\text{identity}}\}
+\]
+where $d_{\text{crim}}$ covers criminal law regarding consensual sexual conduct, $d_{\text{discrim}}$ covers employment, housing, and public accommodation protections, $d_{\text{relationship}}$ covers marriage and civil union recognition, and $d_{\text{identity}}$ covers gender identity recognition and transition-related healthcare access.
+
+Stakeholders divide along a clear stakes asymmetry. LGBT individuals hold existential stakes across all sub-domains: $s_{\text{lgbt}}(d_{\text{crim}})$ includes physical liberty and safety from prosecution; $s_{\text{lgbt}}(d_{\text{relationship}})$ includes legal recognition of intimate partnerships affecting inheritance, medical decision-making, immigration, and parental rights. These are not policy preferences but conditions of basic social existence. The broader population holds moderate stakes in social norm stability and legal framework coherence---real but categorically lower than the existential exposure of the directly affected population.
+
+Prior to the mid-twentieth century, LGBT persons held effectively zero consent power across all sub-domains. Criminalization meant that visibility itself carried legal risk, creating a structural suppression of friction: the population most affected could not safely organize to contest its exclusion. This feature---where zero alpha suppresses friction visibility rather than merely generating it---distinguishes the LGBT case from suffrage or labor movements where the excluded population could at least visibly mobilize.
+
+\subsection{Alpha Proxy: Legal Recognition Index}
+\label{subsec:lgbt-alpha}
+
+We construct an ordinal alpha scale mapping legal status to consent alignment, ranging from complete exclusion to comprehensive inclusion:
+
+\begin{table}[htbp]
+\centering
+\caption{Ordinal Alpha Scale for LGBT Legal Recognition}
+\label{tab:lgbt-alpha}
+\begin{tabular}{@{}lll@{}}
+\toprule
+$\alpha$ Value & Legal Status & Proxy Indicators \\
+\midrule
+0.00 & Active criminalization & Sodomy laws, police enforcement, persecution \\
+0.25 & Decriminalization & Removal of criminal penalties for consensual conduct \\
+0.50 & Anti-discrimination protections & Employment, housing, public accommodation \\
+0.75 & Civil unions / domestic partnerships & Legal recognition short of marriage \\
+1.00 & Full marriage equality + protections & Marriage equality, comprehensive anti-discrimination \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Tracking this index across jurisdictions reveals markedly different trajectories:
+
+\textbf{United States.} Alpha remained at 0.00 throughout most of the twentieth century, with sodomy laws enforced in all states as late as 1961. Illinois became the first state to decriminalize in 1962 ($\alpha \to 0.25$ locally). The trajectory stalled for decades. \textit{Lawrence v.\ Texas} (2003) decriminalized nationally ($\alpha \to 0.25$). Massachusetts legalized same-sex marriage in 2004 ($\alpha \to 1.0$ locally), and \textit{Obergefell v.\ Hodges} (2015) established national marriage equality ($\alpha \to 1.0$). The jump from $\alpha = 0.25$ to $\alpha = 1.0$ took just twelve years at the national level---an extraordinary compression.
+
+\textbf{United Kingdom.} Partial decriminalization in England and Wales in 1967 ($\alpha \to 0.25$), with Scotland following in 1980 and Northern Ireland in 1982. The Equality Act 2010 consolidated anti-discrimination protections ($\alpha \to 0.50$). Civil partnerships were established in 2004 ($\alpha \to 0.75$), and the Marriage (Same Sex Couples) Act 2013 brought marriage equality ($\alpha \to 1.0$). The trajectory from decriminalization to full recognition took 46 years---roughly one generation slower than the US compression.
+
+\textbf{Netherlands.} The earliest achiever of full recognition: decriminalization in 1811 (Napoleonic Code adoption), anti-discrimination law in 1992, registered partnerships in 1998, and full marriage equality in 2001---the world's first. The Dutch trajectory demonstrates that early decriminalization does not automatically accelerate later stages; the 190-year gap between decriminalization and marriage equality dwarfs the American compression.
+
+\textbf{Global variation.} As of 2025, approximately 70 countries still criminalize homosexuality ($\alpha = 0.00$), while 35 recognize same-sex marriage ($\alpha \approx 1.0$). Pew Research Center surveys document that public acceptance of homosexuality correlates with but does not determine legal alpha---South Africa constitutionally protects same-sex marriage despite lower public acceptance than several countries lacking legal recognition, demonstrating that institutional pathways mediate between social attitudes and consent alignment.
+
+The global distribution of alpha values reveals regional clustering that supports the international diffusion hypothesis. Western Europe and the Americas show the highest average alpha (most countries at 0.75--1.0 by 2025), followed by parts of East Asia (Taiwan recognizing marriage equality in 2019), with Sub-Saharan Africa, the Middle East, and Central Asia remaining predominantly at $\alpha = 0.00$--$0.25$. This regional pattern mirrors suffrage diffusion, where adoption cascaded through culturally proximate states before crossing regional boundaries. The persistence of criminalization in former British colonies---a colonial legal legacy---demonstrates how initial institutional conditions shape long-run alpha trajectories even when underlying social attitudes evolve, consistent with \citet{acemoglu2012why} on the persistence of colonial institutional legacies.
+
+\textbf{Alpha trajectory visualization.} The ordinal alpha trajectories for the United States, United Kingdom, and Netherlands can be represented as step functions with identifiable transition dates:
+
+\begin{table}[htbp]
+\centering
+\caption{LGBT Alpha Trajectories: Three National Cases}
+\label{tab:lgbt-trajectories}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Period & United States & United Kingdom & Netherlands \\
+\midrule
+Pre-1960 & 0.00 & 0.00 & 0.25 (since 1811) \\
+1960s & 0.00 $\to$ 0.25 (IL 1962) & 0.25 (E\&W 1967) & 0.25 \\
+1970s--1980s & 0.25 (local only) & 0.25 & 0.25 \\
+1990s & 0.25 & 0.25 & 0.25 $\to$ 0.50 (1992) \\
+2000--2005 & 0.25 (Lawrence 2003) & 0.50 $\to$ 0.75 (2004) & 0.75 $\to$ 1.0 (2001) \\
+2005--2010 & 0.25 $\to$ 0.50 (local) & 0.75 & 1.0 \\
+2010--2015 & 0.50 $\to$ 1.0 (2015) & 0.75 $\to$ 1.0 (2013) & 1.0 \\
+2015--present & 1.0 (with backlash in $d_{\text{identity}}$) & 1.0 & 1.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The table reveals that alpha trajectories are not monotonically increasing even within successful cases. The US experienced local reversals (Proposition 8 in 2008, DOMA in 1996) that temporarily reduced alpha in specific jurisdictions or sub-domains before being judicially overturned. These reversals represent counter-friction from populations perceiving their own stakes as threatened by alpha advances---a dynamic the framework must accommodate alongside the primary friction-to-alpha pathway.
+
+\subsection{Friction Proxy: Pride, Litigation, and Political Mobilization}
+\label{subsec:lgbt-friction}
+
+Friction in the LGBT domain manifests through three principal channels: direct action and protest, litigation, and counter-mobilization.
+
+\textbf{Stonewall and direct action.} The Stonewall Riots of June 1969 represent the paradigmatic friction eruption: a population with existential stakes ($s \to \max$) and zero consent power ($C = 0$) responding to routine police raids with spontaneous resistance. Stonewall did not create the homophile movement---the Mattachine Society (1950) and Daughters of Bilitis (1955) preceded it---but it transformed friction from individualized to collective. \citet{stekelenburg2010social} identify precisely this transition as critical: the shift from grievance (which can persist indefinitely without collective expression) to collective identity and group efficacy, which convert latent into manifest friction.
+
+The subsequent growth of Pride marches provides a quantifiable friction series: the first Christopher Street Liberation Day (1970) drew a few thousand participants in New York. By the 1990s, annual Pride events mobilized millions globally. Participation growth serves as a proxy for friction intensity---not because Pride events are primarily protest (they evolved into celebration), but because their scale reflects the organized visibility of a previously invisible population.
+
+\textbf{Litigation as institutional friction.} Lambda Legal (founded 1973) and the ACLU LGBT Rights Project systematically channeled friction through the judicial system.
+Major cases constitute friction events with measurable institutional impact:
+\begin{itemize}
+    \item \textit{Bowers v.\ Hardwick} (1986): Friction absorbed---the Supreme Court upheld Georgia's sodomy law, ruling 5--4 that the Constitution did not protect homosexual conduct. In consent-holding terms, the institutional system absorbed the friction input without alpha change.
+    \item \textit{Romer v.\ Evans} (1996): Friction partially converted---the Court struck down Colorado's Amendment 2, which had prohibited anti-discrimination protections for LGBT people. This raised alpha by removing a structural barrier to local alpha improvements.
+    \item \textit{Lawrence v.\ Texas} (2003): Friction converted---the Court struck down remaining sodomy laws nationwide, explicitly overruling \textit{Bowers}. National alpha jumped from 0.00 to 0.25 in a single decision.
+    \item \textit{United States v.\ Windsor} (2013): Friction converted---the Court struck down Section 3 of the Defense of Marriage Act, requiring federal recognition of state-level same-sex marriages.
+    \item \textit{Obergefell v.\ Hodges} (2015): Friction fully converted---the Court established marriage equality as a constitutional right. National alpha jumped to 1.0 in $d_{\text{relationship}}$.
+\end{itemize}
+This litigation trajectory demonstrates Hypothesis 4 in action: persistent friction generating incremental alpha increases through institutional reform pressure.
+The sequence also illustrates a ratchet mechanism:
+each successful case created legal precedent that made subsequent challenges more likely to succeed,
+generating a positive feedback loop between friction expression and alpha expansion.
+Failed cases (\textit{Bowers}) did not permanently block the pathway but rather
+delayed it while shifting legal strategy---Lambda Legal's response to \textit{Bowers}
+was to pursue state-level litigation and build a stronger evidentiary record,
+producing the factual foundation for \textit{Lawrence} seventeen years later.
+
+\textbf{Counter-mobilization and backlash.} Alpha advances trigger counter-friction from populations perceiving stake losses from inclusion. California's Proposition 8 (2008)---a ballot measure overturning judicially established marriage equality---represents friction generated by alpha advancement. The measure passed with 52\% support, temporarily reducing $\alpha(d_{\text{relationship}})$ from 1.0 to 0.75 in California before federal courts struck it down. Anti-trans legislation in the 2020s (bathroom bills, sports participation restrictions, healthcare access limitations) demonstrates that backlash friction can target sub-domains ($d_{\text{identity}}$) even as others ($d_{\text{relationship}}$) stabilize at high alpha. \citet{tarrow1998power} identifies this pattern as characteristic of contentious politics: movements and counter-movements escalate in response to each other's gains, creating friction spirals that test institutional capacity to absorb competing claims.
+
+\subsection{Alpha-Friction Dynamics}
+\label{subsec:lgbt-dynamics}
+
+The LGBT case illuminates several framework predictions with particular clarity:
+
+\textbf{Suppressed friction under extreme exclusion.} Pre-Stonewall, $\alpha \approx 0$ coexisted with apparently low friction---but this reflected suppression, not satisfaction. Criminalization raised the personal cost of friction expression to the point where $F_{\text{observed}} \ll F_{\text{latent}}$. The framework must therefore distinguish between observed friction (protest events, litigation, mobilization) and latent friction (suppressed grievance weighted by stakes). When suppression mechanisms weaken---in this case, urbanization creating anonymous spaces, the sexual revolution reducing general sexual taboo, police overreach provoking a tipping point---latent friction converts to manifest friction suddenly. This is Hypothesis 3's threshold effect operating through a suppression mechanism: the threshold is not in alpha itself but in the cost-of-friction-expression, which, once crossed, releases accumulated pressure.
+
+The distinction between observed and latent friction has broad implications for the framework's empirical application. In any domain where expressing friction is penalized (whistleblower retaliation, protest criminalization, social ostracism for dissent), observed friction will underestimate the true alignment deficit. The pre-Stonewall period suggests a diagnostic: when observed friction is low but structural alpha is also low, the gap likely reflects suppression rather than satisfaction. Policy implications follow: reducing the cost of friction expression (anti-retaliation protections, protest rights, anonymous complaint mechanisms) reveals rather than creates misalignment.
+
+\textbf{Political opportunity structures and movement timing.} \citet{tarrow1998power} argues that social movement success depends on political opportunity structures---configurations of resources, institutional access, and elite alignments that create openings for collective action. The LGBT rights trajectory confirms this analysis. The post-Stonewall movement emerged during a period of expanding civil liberties jurisprudence, declining religious institutional authority, and increasing cultural pluralism in Western democracies. These structural conditions lowered the cost of friction expression and raised the probability that friction would convert to alpha increases. The framework can incorporate political opportunity structures as mediating variables between friction and alpha response: $\frac{\partial \alpha}{\partial F}$ is not constant but depends on institutional context.
+
+The timing of breakthrough moments further supports this analysis. The Netherlands' early adoption of marriage equality (2001) occurred in a political context of coalition governance, strong LGBTQ advocacy organizations, and a cultural tradition of pragmatic tolerance (\textit{gedoogbeleid}). The US breakthrough came through judicial rather than legislative channels---reflecting the structure of American federalism and the strategic litigation pathway pioneered by civil rights movements. These institutional variations explain why the same level of friction produced different alpha trajectories in different political contexts.
+
+\textbf{The S-curve pattern.} Alpha trajectories in the LGBT domain follow a logistic curve: long dormancy at $\alpha \approx 0$ (pre-1960s), slow initial increase (decriminalization 1960s--1980s), rapid acceleration (1990s--2010s), and stabilization near $\alpha = 1.0$. This S-curve maps onto \citet{granovetter1978threshold} threshold models of collective behavior: as each jurisdiction extends recognition, it lowers the threshold for others by providing demonstration effects and legal precedent. International diffusion accelerates the steep portion of the S-curve, just as \citet{ramirez1997} documented for women's suffrage.
+
+\textbf{The formal-effective alpha gap.} Marriage equality ($\alpha_{\text{formal}} = 1.0$) does not eliminate friction because formal legal recognition differs from effective social inclusion. Workplace discrimination persists in jurisdictions with legal protections (enforcement gaps), hate crimes continue (the gap between law and lived experience), and social stigma creates capability constraints on effective voice even where formal rights exist. This gap between formal and effective alpha---visible also in post-abolition racial inequality and post-suffrage gender gaps---suggests that the framework should track both dimensions, with $\alpha_{\text{effective}} < \alpha_{\text{formal}}$ as a general condition and the gap itself as a predictor of residual friction.
+
+Quantifying the formal-effective gap reveals its persistence. In the United States, despite marriage equality since 2015, the Williams Institute estimates that 46\% of LGBT workers remain closeted at work, and 29 states lacked comprehensive employment non-discrimination protections until the \textit{Bostock v.\ Clayton County} (2020) ruling extended Title VII coverage. Anti-transgender violence has increased even as legal recognition expanded, with the Human Rights Campaign documenting record fatalities in several recent years. The framework interprets these patterns through the effective voice function: $\text{eff\_voice}_i = f(C_{i,d}, \text{capacity}_i)$, where capacity includes not only formal rights but safety, social acceptance, and institutional access. When capacity constraints depress effective voice, $\alpha_{\text{effective}}$ remains below $\alpha_{\text{formal}}$, and the residual gap predicts continued friction---which is precisely what is observed in the form of ongoing advocacy, litigation, and protest focused on implementation rather than formal rights.
+
+\textbf{Domain fragmentation and backlash dynamics.} The LGBT case reveals that alpha can advance unevenly across sub-domains, creating complex friction patterns. Marriage equality ($d_{\text{relationship}}$) reached $\alpha \approx 1.0$ in much of the West by 2020, but gender identity recognition ($d_{\text{identity}}$) has faced intensifying backlash. Anti-trans legislation in the United States accelerated from a handful of bills annually before 2020 to over 500 introduced in 2023 alone, targeting healthcare access, sports participation, and bathroom use. This backlash represents counter-friction generated by alpha advances in adjacent domains: opponents who lost the marriage equality debate redirected friction toward a sub-domain where alpha was lower and the affected population smaller and more vulnerable.
+
+The framework predicts this pattern: when alpha advances in one sub-domain trigger reallocation of opposition resources to another, the aggregate alpha trajectory becomes non-monotonic. Total domain alpha $\alpha(d_{\text{lgbt}})$ may increase on net while $\alpha(d_{\text{identity}})$ decreases, creating a compositional effect that masks localized regression. Tracking alpha at the sub-domain level is therefore essential for accurate friction prediction.
+
+\textbf{Hypothesis testing.} The LGBT case provides evidence for:
+\begin{itemize}
+    \item \textbf{H1} (alpha-friction inverse): Strongly supported. Jurisdictions with higher legal recognition indices exhibit lower friction (fewer protests, less litigation), controlling for other factors.
+    \item \textbf{H3} (threshold effects): Stonewall operates as a critical juncture \citep{capoccia2007study}---a moment where contingent events trigger path-dependent trajectory change. Pre-Stonewall friction was suppressed; post-Stonewall, it became self-reinforcing.
+    \item \textbf{H4} (friction predicts future alpha): The strongest case in the portfolio. Decades of sustained friction (1969--2015) generated incremental and then accelerating alpha increases through a combination of litigation, legislation, and judicial interpretation.
+\end{itemize}
+
+\subsection{Cross-Case Connections}
+\label{subsec:lgbt-cross}
+
+The LGBT rights trajectory builds directly on infrastructure developed during the civil rights movement. Legal strategies pioneered by the NAACP Legal Defense Fund---test case selection, strategic litigation sequences, building precedent incrementally---were adopted by Lambda Legal and the ACLU for LGBT rights. The organizational repertoire of protest (marches, sit-ins, boycotts) transferred from civil rights to gay liberation movements in the 1970s, illustrating how friction repertoires diffuse across social movements \citep{tilly2008contentious}. This cross-movement learning accelerated the LGBT trajectory: rather than developing novel friction strategies from scratch, the movement inherited a proven playbook and adapted it to a new domain. The framework predicts that later movements will generally achieve faster alpha expansion, controlling for other factors, because they inherit accumulated organizational knowledge.
+
+The LGBT case also parallels the suffrage trajectory in a structural sense: both involved long campaigns of friction accumulation followed by rapid international diffusion once a critical mass of adopters was reached. New Zealand's early adoption of women's suffrage (1893) and the Netherlands' early adoption of marriage equality (2001) both served as demonstration cases that accelerated subsequent adoption elsewhere. The diffusion pattern---initial outlier adoption, followed by a cascade among culturally proximate states, followed by broader international adoption---appears to be a general feature of consent expansion in domains where international comparison is salient.
+
+However, the LGBT trajectory also reveals a feature absent from earlier movements: the role of visibility as an alpha-raising mechanism in itself. The act of coming out---making one's stakes visible to family, friends, and colleagues---functioned as a distributed friction strategy that operated interpersonally rather than institutionally. When a legislator's child, colleague, or constituent came out, it personalized abstract policy debates and shifted individual-level cost-benefit calculations about accommodation versus exclusion. No previous movement had an equivalent mechanism: women's status was already visible, enslaved persons' status was already visible, workers' status was already visible. Only the LGBT case involved a population whose initial invisibility was both a source of oppression (closeting as survival strategy) and a barrier to friction expression (invisible grievances cannot generate collective action). The coming-out movement systematically dismantled this barrier, converting latent into manifest friction at the interpersonal level before it aggregated into collective action.
+
+This connects to \citet{farzulla2025stakes} analysis of structural exclusion patterns: once a population's voicelessness becomes visible through comparative institutional analysis, the legitimacy costs of maintaining exclusion increase. The LGBT case demonstrates that visibility operates at multiple scales---individual (coming out), organizational (Pride marches), and international (cross-national legal comparison)---each raising the cost of continued exclusion at its respective level.
+
+
+%% ============================================================================
+%% SECTION 13: PLATFORM GOVERNANCE
+%% ============================================================================
+
+\section{Platform Governance: Algorithmic Authority and User Revolt (2010s--Present)}
+\label{sec:platform-governance}
+
+Digital platforms represent the earliest-stage case in our portfolio of consent alignment dynamics. Unlike the historical cases examined above---where decades or centuries of friction eventually generated substantial alpha increases---platform governance remains in its pre-institutional phase. Users with high stakes and near-zero consent power have begun generating friction, but the friction has not yet produced structural consent restructuring. The case is therefore predictive rather than retrospective: the framework anticipates trajectories that empirical observation can confirm or disconfirm in real time.
+
+\subsection{Domain Definition}
+\label{subsec:platform-domain}
+
+Platform governance spans multiple decision domains, each affecting billions of users:
+\begin{align*}
+d_{\text{moderation}} &: \text{content moderation (speech, community standards, removal)} \\
+d_{\text{algorithm}} &: \text{recommendation and ranking (information diet, attention)} \\
+d_{\text{data}} &: \text{data governance (collection, retention, sharing, monetization)} \\
+d_{\text{policy}} &: \text{platform rules (terms of service, API access, monetization policies)}
+\end{align*}
+
+Users hold high stakes across all domains. Content moderation decisions ($d_{\text{moderation}}$) affect speech rights, community norms, and information access. Algorithmic recommendation ($d_{\text{algorithm}}$) shapes information diets, attention allocation, and---through amplification effects---political discourse and mental health outcomes. Data governance ($d_{\text{data}}$) affects privacy, identity control, and economic value extraction from user-generated content. Platform policy ($d_{\text{policy}}$) determines creator livelihoods, developer ecosystem viability, and third-party business models.
+
+Yet consent power concentrates almost entirely in platform executives and engineers: $C_{\text{users}}(d) \approx 0$ across all domains. Platform decisions about content moderation, algorithm design, data handling, and policy changes are made unilaterally by corporate actors with no formal obligation to consult affected users. \citet{gillespie2018} documents how this governance structure emerged not from principled institutional design but from the path-dependent evolution of platform business models---platforms began as technology companies, acquired governance responsibilities through scale, and never developed the consent mechanisms that political institutions evolved over centuries. \citet{gorwa2020algorithmic} extends this analysis, arguing that algorithmic governance creates accountability deficits that traditional regulatory frameworks were not designed to address: the governed cannot see, understand, or contest the rules being applied to them.
+
+The platform domain is distinctive in two respects. First, the consent-holder $H_t(d)$ is a private corporation rather than a state, complicating traditional legitimacy analysis which assumes public governance structures. Second, the primary exit mechanism---leaving the platform---is constrained by network effects, data lock-in, and the absence of interoperable alternatives. This limits exit as a friction channel and concentrates friction expression in voice (protest, boycott) and external regulation.
+
+\subsection{Alpha Proxy: User Representation Indices}
+\label{subsec:platform-alpha}
+
+Measuring alpha in platform governance requires identifying institutional mechanisms that give users formal decision power. The results are stark:
+
+\textbf{Board representation.} No major platform allocates board seats to user representatives. Meta's board (12 members) includes no user representatives. Alphabet, Amazon, Apple, and X/Twitter follow the same pattern. Board composition alpha for users: $\alpha_{\text{board}} = 0$. This is remarkable when considered comparatively: even under the shareholder primacy model that preceded stakeholder governance reforms, shareholders---a subset of stakeholders---held formal voting rights on board composition and major corporate decisions. Platform users have \textit{less} governance power than nineteenth-century shareholders, despite bearing stakes that arguably exceed shareholder financial exposure in domains like information access, political discourse, and mental health.
+
+\textbf{Oversight and advisory bodies.} Meta's Oversight Board (established 2020) represents the most significant experiment in raising platform alpha. The Board reviews content moderation decisions and issues binding rulings on specific cases and advisory opinions on policy. However, its jurisdiction is limited (only content moderation, not algorithmic design or data policy), its case selection is narrow (roughly 200 cases in its first four years from millions of user appeals), and its policy recommendations are advisory only. We estimate this raises effective alpha in $d_{\text{moderation}}$ by approximately 0.05---meaningful as precedent, negligible as consent restructuring. YouTube's Creator Advisory Board and similar bodies at other platforms provide even less formal authority.
+
+\textbf{Community moderation.} Reddit's volunteer moderator system represents a structurally different model. Community moderators hold genuine decision power within their subreddits: $C_{\text{mod}}(d_{\text{moderation, local}}) > 0$. However, this authority is delegated (revocable by Reddit administrators), unpaid (creating labor extraction dynamics), and subject to platform-wide policy overrides. Reddit's 2023 API pricing changes---which eliminated third-party moderation tools without moderator consultation---demonstrated the fragility of delegated consent power when the platform retains ultimate authority. Wikipedia's collaborative editing model achieves higher alpha for content decisions through its consensus-based governance, though administrative hierarchies and paid staff retain structural veto power.
+
+\textbf{Composite platform governance index.} We define:
+\[
+\alpha_{\text{platform}}(d) = \frac{\text{decisions with meaningful user input}}{\text{total governance decisions}}
+\]
+
+For major platforms, this ratio approaches zero. Even generous estimates---counting Oversight Board cases, community moderation decisions, and user feedback integration---yield $\alpha_{\text{platform}} < 0.05$ across Meta, Alphabet, and X/Twitter. This is lower than pre-reform corporate governance under shareholder primacy, where at least shareholders (a subset of stakeholders) held formal voting rights. \citet{costanza2020design} argues that this deficit reflects deeper design choices: platforms are built to extract value from users, not to represent their interests, and governance mechanisms would threaten business models predicated on unilateral control.
+
+\begin{table}[htbp]
+\centering
+\caption{Platform Governance Alpha Estimates by Mechanism}
+\label{tab:platform-alpha}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Platform & Mechanism & Domain & Est.\ $\alpha$ \\
+\midrule
+Meta & Oversight Board & $d_{\text{moderation}}$ (partial) & $\sim$0.05 \\
+Meta & Board of Directors & All domains & 0.00 \\
+Reddit & Community moderators & $d_{\text{moderation}}$ (local) & $\sim$0.15 \\
+Reddit & Platform-wide policy & All domains & 0.00 \\
+Wikipedia & Consensus editing & $d_{\text{content}}$ & $\sim$0.40 \\
+X/Twitter & None & All domains & 0.00 \\
+YouTube & Creator Advisory Board & $d_{\text{policy}}$ (advisory) & $\sim$0.02 \\
+\midrule
+\multicolumn{3}{@{}l}{Average across major commercial platforms} & $<$0.05 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:platform-alpha} reveals the stark alpha deficit across major platforms. Only Wikipedia---a non-profit with a collaborative governance model---achieves alpha values comparable to historical cases' pre-reform baselines. Commercial platforms uniformly maintain near-zero alpha, confirming the framework's prediction that profit-maximizing governance structures resist consent expansion when the cost of accommodation (shared governance) exceeds the cost of managing friction (PR responses, minimal concessions).
+
+\subsection{Friction Proxy: Boycotts, Migration, and Regulatory Action}
+\label{subsec:platform-friction}
+
+Platform friction manifests through exit (user migration), voice (boycotts and protest), and external regulatory intervention:
+
+\textbf{User exit and migration.} The \#DeleteFacebook movement (2018), triggered by the Cambridge Analytica scandal, represented the first mass user exit event driven by governance grievances. However, network effects limited its impact: Facebook's monthly active users declined briefly but recovered within a quarter. The Twitter/X migration (2022--2024) following Elon Musk's acquisition was more sustained, with significant user flows to Mastodon, Bluesky, and Threads. Unlike \#DeleteFacebook, the X migration was driven not by a single scandal but by ongoing governance changes (content moderation policy reversals, verified account restructuring, API restrictions) that progressively alienated user segments. Exit as friction is structurally limited by network lock-in, but the emergence of federated alternatives (Mastodon, ActivityPub protocol) is reducing switching costs---potentially transforming exit from an individual choice into a collective action mechanism.
+
+\textbf{Advertiser boycotts.} The Stop Hate for Profit campaign (2020) organized over 1,000 advertisers to pause Facebook spending, costing the platform an estimated \$7.2 billion in market capitalization. The X/Twitter advertiser exodus (2022--2024) was more severe: over half of top-100 advertisers suspended spending, with X's advertising revenue reportedly declining by approximately 50\%. Advertiser boycotts operate as indirect friction: advertisers are not the affected population (users are), but their economic leverage translates user grievances into financial pressure on platform governance. This is analogous to consumer boycotts in the abolition movement, where sympathetic third parties converted moral friction into economic pressure.
+
+\textbf{Regulatory intervention.} The GDPR (2018) represents the first major external alpha-raising intervention: by granting users rights over their data (access, portability, erasure), it shifted consent power in $d_{\text{data}}$ from platforms to users---albeit with enforcement gaps. The Digital Services Act (DSA, 2022) mandated transparency in content moderation and algorithmic recommendation, addressing $d_{\text{moderation}}$ and $d_{\text{algorithm}}$. The Digital Markets Act (DMA, 2023) targeted gatekeeping power, requiring interoperability and data portability. These regulations constitute external alpha-raising: regulatory bodies acting as proxy consent agents for users who lack direct governance power. \citet{resseguier2020ai} argues that such regulatory interventions are necessary precisely because platform self-governance mechanisms lack enforcement teeth---voluntary ethics commitments without institutional backing remain toothless. \citet{mittelstadt2017individual} extends this analysis to high-stakes domains (healthcare, criminal justice) where algorithmic governance without consent mechanisms creates systemic risks that individual-level protections cannot address.
+
+\subsection{Alpha-Friction Dynamics}
+\label{subsec:platform-dynamics}
+
+Platform governance illuminates the framework's predictions about early-stage consent dynamics:
+
+\textbf{The pre-codetermination analogy.} Contemporary platform governance resembles early industrial labor relations before codetermination. Workers in nineteenth-century factories had high stakes and zero voice; platform users occupy a structurally analogous position. Early management responses to labor friction---company unions, welfare capitalism, paternalistic reforms---parallel platform responses to user friction: Oversight Boards as company unions (management-created bodies with limited authority), Creator Funds as welfare capitalism (financial concessions without governance power), and transparency reports as paternalistic disclosure (information provision without decision-sharing).
+
+The analogy suggests a predictive trajectory: if platform friction follows the labor pattern, we should expect (a) escalating friction as users develop collective action capacity, (b) institutional innovation in user representation (platform equivalents of works councils), and (c) eventual regulatory codetermination mandates. The EU's regulatory trajectory already mirrors this sequence, with the DSA and DMA representing the early stages of mandatory governance restructuring.
+
+The analogy also highlights structural differences that may alter the trajectory. Labor movements succeeded partly because workers could withhold their labor---a form of friction with direct economic consequences for employers. Platform users cannot easily ``withhold their usage'' because the platform extracts value from their attention and data regardless of their satisfaction level, and network effects make individual withdrawal costly without collective coordination. The closest platform equivalent to a strike is coordinated mass migration---which requires a viable alternative destination. The emergence of federated social media (Mastodon, Bluesky) and interoperability mandates (DMA) may be creating the structural conditions for effective user collective action, analogous to how the right to organize and picket created structural conditions for effective labor action.
+
+\textbf{Network effects as consent lock-in.} Platform governance involves a distinctive mechanism absent from other cases: network effects create consent lock-in that dampens the friction-to-alpha conversion. In the labor case, workers could form unions and strike without losing their workplace entirely. In the platform case, users who exit lose access to their social graph, content history, and community connections---a cost that rises with platform tenure and network centrality. \citet{olson1965logic} collective action theory predicts that this cost structure will suppress friction expression: rational users will free-ride on others' protest rather than bear the personal costs of exit. The implication is that platform alpha may require external intervention (regulation) rather than organic friction-driven reform, making the platform case structurally different from historical cases where affected populations could organize within the system they sought to reform.
+
+\textbf{External vs.\ internal alpha-raising.} Platform alpha is being raised primarily through external regulatory intervention (GDPR, DSA, DMA) rather than internal governance reform. This contrasts with the labor case, where codetermination emerged from negotiated settlements between labor and capital \citep{mcgaughey2016}. The difference may reflect the absence of organized user power: labor unions provided bargaining partners for codetermination negotiations, but no equivalent user organization exists for platforms. The implication is that platform alpha may remain externally imposed---regulatory rather than participatory---unless users develop collective bargaining capacity.
+
+\textbf{Content moderation as consent crisis.} \citet{douek2022} frames content moderation as a systems-level governance challenge rather than a series of individual decisions. In consent-holding terms, this means $d_{\text{moderation}}$ involves billions of micro-decisions daily, each affecting specific users' stakes, with no scalable mechanism for user input. The Oversight Board model attempts to address this through case-by-case review, but the scale mismatch---200 reviewed cases against billions of moderation actions---renders it structurally inadequate as a consent mechanism.
+
+The scale problem distinguishes platform governance from all historical cases. Suffrage decisions affected millions but were made periodically (elections). Labor decisions affected thousands per firm and were negotiated through collective bargaining. Platform moderation affects billions of users through millions of daily automated decisions---a governance volume that exceeds any institutional mechanism's capacity for meaningful consent. This suggests that platform alpha may require not human-scale governance mechanisms but algorithmic governance systems that embed consent principles into automated processes---a fundamentally new form of consent-holding that the framework must eventually accommodate.
+
+\textbf{The AI governance frontier.} Platform governance increasingly intersects with artificial intelligence governance as algorithmic systems take over decision-making in content moderation, recommendation, and risk assessment. \citet{grimmelikhuijsen2022} document how algorithmic decision-making compounds the consent deficit: not only are users excluded from governance decisions, but the decision-making process itself is opaque, non-deliberative, and resistant to the forms of contestation that historical movements relied on. The framework predicts that as AI systems assume more governance functions, the alpha deficit will deepen unless countervailing institutions are developed. This connects platform governance to broader AI alignment concerns: the question of how to ensure AI systems serve affected populations' interests is structurally identical to the question of how to ensure governance systems align decision power with stakes.
+
+\textbf{Hypothesis testing.} The platform case provides evidence for:
+\begin{itemize}
+    \item \textbf{H1} (alpha-friction inverse): Supported. Near-zero alpha coexists with rising friction (boycotts, migration, regulatory pressure), as predicted. The relationship is particularly visible in the X/Twitter case, where alpha \textit{decreased} after the 2022 ownership change (dissolution of Trust and Safety Council, reversal of content moderation policies) and friction \textit{increased} correspondingly (mass migration, advertiser exodus, regulatory scrutiny). This natural experiment---where alpha moved in the wrong direction---provides within-platform evidence for H1 that cross-platform comparisons cannot.
+    \item \textbf{H4} (friction predicts future alpha): Partially supported. Regulatory responses (GDPR, DSA) represent friction-driven alpha increases, though the lag between friction events and regulatory response is measured in years. The Cambridge Analytica scandal (2018) triggered both immediate friction (\#DeleteFacebook) and delayed alpha response (regulatory action), with the GDPR implementation accelerated by the scandal's political salience. The DSA (2022) represents a further response to accumulated platform governance friction. If H4 holds, we should expect additional regulatory alpha-raising in the coming decade as friction continues to accumulate.
+    \item \textbf{H5} (performance interactions): The strongest H5 case in the portfolio. Platforms maintain user bases despite near-zero alpha partly because performance ($P$) remains high---search works, social connection functions, content recommendation satisfies immediate desires. The framework predicts that performance degradation (declining content quality, increased spam, worse recommendations) would accelerate friction by removing the performance buffer. The X/Twitter trajectory partially confirms this: as platform performance declined following the ownership change (reduced moderation quality, increased spam, degraded verification systems), friction escalated more rapidly than governance changes alone would predict---suggesting that performance decline amplifies the alpha-friction relationship as H5 predicts.
+\end{itemize}
+
+\textbf{Predictive implications.} If the framework's predictions hold, platform governance will follow one of three trajectories over the next decade: (a) the labor trajectory, where sustained friction and regulatory intervention produce structural consent mechanisms (user representation on governance bodies, binding transparency requirements, algorithmic accountability); (b) the corporate governance trajectory, where modest reforms (enhanced oversight boards, community governance experiments) raise alpha incrementally without fundamentally restructuring decision authority; or (c) the indigenous trajectory, where friction persists indefinitely because the four incorporation factors remain unfavorable and platforms retain the capacity to absorb user dissatisfaction without structural reform. The EU's regulatory trajectory suggests outcome (a) is most likely in Europe, while the US's lighter regulatory approach may produce outcome (b) or (c). This cross-jurisdictional variation will itself provide an empirical test of the framework: if EU platforms develop higher alpha through regulatory mandates and exhibit lower user friction as a result, H1 receives additional support from a quasi-experimental design.
+
+\subsection{Cross-Case Connections}
+\label{subsec:platform-cross}
+
+Platform governance recapitulates corporate governance dynamics in digital space. The stakeholder model debate---whether corporations should serve shareholders exclusively \citep{friedman1970} or all stakeholders \citep{freeman1984}---maps directly onto the platform governance debate: should platforms serve advertisers and shareholders, or users and the public? The Business Roundtable's \citeyearpar{businessroundtable2019} redefinition of corporate purpose to include all stakeholders has a platform analogue in calls for multi-stakeholder governance models.
+
+The platform case also connects to algorithmic governance literature reviewed in Section~\ref{sec:lit-review}. \citet{grimmelikhuijsen2022} identify three value-based strategies for algorithmic legitimacy---accuracy, transparency, and participation---mapping onto performance ($P$), information provision, and consent alignment ($\alpha$) respectively. The framework suggests that the third strategy (participation) is structurally necessary when the first two are insufficient, echoing the historical pattern where performance alone could not sustain legitimacy without consent.
+
+Finally, the platform case connects forward to climate governance (Section~\ref{sec:climate}) through the shared structure of diffuse-stakeholder governance. Both domains involve billions of affected parties with limited coordination capacity facing concentrated decision-makers. Both generate friction through proxy mechanisms (advertisers for platform users; youth activists for future generations) rather than through direct collective action by the most affected population. And both face structural barriers to the friction-to-alpha conversion: network effects in the platform case, temporal distance in the climate case. These parallels suggest that twenty-first-century governance challenges share a common structural feature---the scale mismatch between affected populations and governance institutions---that distinguishes them from the more concentrated conflicts of earlier centuries and may require novel institutional forms rather than adaptations of existing ones.
+
+
+%% ============================================================================
+%% SECTION 14: CLIMATE GOVERNANCE
+%% ============================================================================
+
+\section{Climate Governance: Intergenerational Stakes and Proxy Consent (2015--Present)}
+\label{sec:climate}
+
+Climate governance presents the consent-holding framework with its most theoretically demanding case: a domain where the population bearing the greatest stakes---future generations---possesses zero consent power by temporal exclusion. Unlike the historical cases above, where affected populations could at least in principle mobilize, organize, and articulate claims, future generations are literally absent from present governance processes. This creates a structural zero-alpha condition that cannot be remedied through the standard friction-to-incorporation pathway, forcing the framework to address proxy consent mechanisms and their adequacy.
+
+\subsection{Domain Definition}
+\label{subsec:climate-domain}
+
+The climate governance domain $d_{\text{climate}}$ encompasses decisions affecting greenhouse gas emissions, adaptation policy, climate finance, and ecological system integrity. The domain is defined by three distinctive features:
+
+\textbf{Temporal stakes distribution.} Climate decisions made today produce consequences extending centuries into the future. The present generation bears moderate adaptation costs; future generations bear potentially existential costs from cumulative emissions. In consent-holding terms, $s_{\text{future}}(d_{\text{climate}}) \gg s_{\text{present}}(d_{\text{climate}})$, yet $C_{\text{future}} = 0$ by definition. No institutional mechanism can give unborn citizens direct voice in present decisions. This is not a failure of specific institutions but a structural impossibility: temporal distance precludes direct participation.
+
+\textbf{Spatial stakes asymmetry.} The Global South bears disproportionate climate impacts (sea-level rise, agricultural disruption, extreme weather) relative to its historical emissions and governance influence. Small island developing states face existential threats from decisions made predominantly by major emitters. This spatial asymmetry---where stakes and consent power are inversely correlated across nations---mirrors the domestic alpha deficits examined in earlier sections but operates at the international level where enforcement mechanisms are weaker.
+
+\textbf{Youth stakes premium.} Within present generations, younger cohorts bear higher stakes than older cohorts because they will live longer with the consequences of current policy. A 20-year-old in 2025 has roughly 60 years of climate exposure; a 70-year-old has roughly 10. Yet voting power and political influence correlate positively with age in most democracies, creating an intragenerational alpha inversion: those with the highest stakes have the least consent power.
+
+\subsection{Alpha Proxy: Youth Representation and Climate Voice}
+\label{subsec:climate-alpha}
+
+Measuring alpha in climate governance requires tracking both direct representation mechanisms and proxy institutions:
+
+\textbf{National climate policy.} In most democracies, climate policy is determined through standard legislative processes where alpha reflects general electoral representation. Since climate is one of many domains covered by elected representatives, specific climate alpha depends on issue salience, party positioning, and lobbying dynamics. For future generations, alpha in national climate policy is definitionally zero.
+
+\textbf{Citizens' climate assemblies.} Several jurisdictions have experimented with deliberative bodies specifically addressing climate governance. The French Convention Citoyenne pour le Climat (2019--2020) assembled 150 randomly selected citizens who produced 149 proposals for reducing greenhouse gas emissions. \citet{courant2021} documents both the promise and limitations: the Convention achieved high deliberative quality and produced ambitious proposals, but the government implemented only a fraction, and the Convention had no binding authority. The UK Climate Assembly \citep{ukclimate2020,ukclimate2022} followed a similar model, producing recommendations on the path to net zero. \citet{wells2021citizen} assesses whether such assemblies are driving democratic climate policymaking, finding that they raise public awareness and political salience but have limited direct policy impact.
+
+These assemblies represent modest alpha increases for present citizens in climate governance, but they do not address the core problem: future generations remain unrepresented. Even randomly selected present citizens cannot genuinely represent future interests because they do not bear the full costs of current inaction. The assemblies also face the ``implementation gap'' common to deliberative innovations: the quality of deliberation may be high, but the binding authority is low. In consent-holding terms, assemblies raise the \textit{quality} of voice (informed, deliberative, representative) without raising its \textit{power} ($C_{\text{assembly}} \approx 0$ for binding decisions). This distinction between voice quality and voice power has broader implications for the framework: merely creating institutions where affected populations can speak does not constitute alpha improvement unless those institutions have genuine decision authority.
+
+\textbf{Youth climate litigation.} Legal challenges filed by young people claiming violations of their rights through inadequate climate policy represent an alternative alpha channel. \textit{Juliana v.\ United States} (filed 2015) alleged that government failure to address climate change violated constitutional rights to life, liberty, and property. \textit{Urgenda Foundation v.\ State of the Netherlands} (2019) successfully required the Dutch government to reduce emissions by 25\% by 2020. \textit{Held v.\ State of Montana} (2023) found that Montana's prohibition on considering climate impacts in fossil fuel permitting violated the state constitution's right to a clean environment. These cases constitute friction events that, when successful, raise alpha by judicially mandating consideration of youth and future stakes in present policy. \citet{lorenzoni2025review} documents the global expansion of climate litigation, with over 2,000 cases filed worldwide as of 2024---a rapidly growing friction series.
+
+\textbf{Constitutional provisions and guardianship institutions.} Several jurisdictions have created institutional proxies for future generations. Ecuador's 2008 constitution grants rights to nature (Pachamama). Bolivia's Law of Mother Earth (2010) establishes similar provisions. Hungary's Ombudsman for Future Generations (established 2008) reviews legislation for intergenerational impact. Wales's Well-being of Future Generations Act (2015) requires public bodies to consider long-term impacts. These institutions raise alpha by creating proxy consent mechanisms---present actors authorized to represent future interests---but their effectiveness depends on enforcement capacity and political insulation from short-term pressures.
+
+\textbf{Voting age and youth quotas.} Austria lowered its voting age to 16 in 2007, directly raising alpha for a younger cohort in all governance domains including climate. Malta (2018), Scotland (2015 for local elections), and several German \textit{L\"ander} have followed suit. Several climate assemblies have included youth quotas. The Intergenerational Foundation \citeyearpar{intergenerational2024} has proposed weighted voting systems giving younger voters additional influence in domains with long-term consequences, though no jurisdiction has implemented such a mechanism.
+
+The aggregate alpha picture in climate governance can be summarized as follows: for present adult citizens, alpha in climate policy is moderate (comparable to alpha in any policy domain mediated through electoral representation, $\alpha \approx 0.3$--$0.5$ depending on democratic quality). For youth (under voting age), alpha is near zero except in the handful of jurisdictions with lowered voting ages. For future generations, alpha is structurally zero, with proxy mechanisms providing at best a thin institutional representation that lacks binding authority. The stakes-weighted alpha---which is what the framework measures---is therefore extremely low because the populations with the highest stakes (future generations, youth) have the lowest consent power. This makes climate governance the domain with the largest stakes-alpha gap in our portfolio, exceeding even pre-abolition slavery when measured by the number of affected future persons multiplied by their per-capita stakes.
+
+\subsection{Friction Proxy: Climate Litigation and Youth Mobilization}
+\label{subsec:climate-friction}
+
+Climate friction manifests through three channels of escalating intensity:
+
+\textbf{Youth mobilization.} Fridays for Future, initiated by Greta Thunberg in August 2018,
+mobilized millions of young people globally in school strikes demanding climate action.
+The movement's growth trajectory illustrates classic friction escalation dynamics:
+\begin{itemize}
+    \item August 2018: Single protester outside Swedish parliament (individual friction expression)
+    \item November 2018: Approximately 17,000 students strike across Australia (geographic diffusion)
+    \item March 2019: First Global Climate Strike---1.4 million participants in 128 countries
+    \item September 2019: Largest Global Climate Strike---7.6 million participants across 185 countries
+    \item 2020--2021: Pandemic suppression of physical protest (friction channel blocked; shift to digital)
+    \item 2022--present: Resumed physical protests with reduced scale but sustained institutional engagement
+\end{itemize}
+This trajectory maps onto \citet{stekelenburg2010social} social-psychological framework:
+collective identity formation (``climate generation''),
+perceived injustice (intergenerational inequity),
+and group efficacy (belief that collective action can influence policy) combine to produce sustained mobilization.
+The pandemic interruption provides a natural experiment in friction suppression: when the dominant friction channel (physical protest) was blocked, the movement shifted to digital advocacy and institutional engagement (litigation, political candidacy), demonstrating the substitutability of friction channels predicted by the framework.
+
+\textbf{Direct action.} Extinction Rebellion (XR, founded 2018) escalated friction through disruptive direct action:
+road blockades, building occupations, and other civil disobedience tactics
+designed to impose visible costs on governance systems that maintain low alpha.
+XR's ``Rebellion'' events blocked major London roads in April 2019 (over 1,100 arrests),
+October 2019 (over 1,800 arrests), and subsequent actions across multiple countries.
+Just Stop Oil and similar movements continued this escalation through 2023--2025
+with increasingly confrontational tactics targeting cultural institutions (museum protests),
+infrastructure (motorway blockades), and sporting events.
+
+The escalation pattern follows the framework's prediction:
+when institutional channels (voting, petitioning) fail to raise alpha,
+affected populations shift to higher-cost friction mechanisms.
+The progression from marches (Fridays for Future) to civil disobedience (XR)
+to infrastructure disruption (Just Stop Oil) mirrors the historical escalation
+in suffrage movements (petitions to marches to property destruction to hunger strikes)
+and labor movements (petitions to strikes to factory occupations).
+\citet{chenoweth2011why} document that nonviolent resistance campaigns
+succeed when they achieve sustained participation above approximately 3.5\% of the population---a
+threshold that climate movements have approached in some jurisdictions
+(estimated 7.6 million participants in September 2019 against a global population of 7.7 billion
+represents approximately 0.1\%, well below the threshold).
+The framework would predict that unless participation rates increase substantially
+or institutional friction channels (litigation, regulation) prove more effective,
+direct-action friction alone is unlikely to generate sufficient pressure for structural alpha change.
+
+\textbf{Climate litigation.} As documented above,
+the global expansion of climate litigation from a handful of cases in the 2000s
+to over 2,000 by 2024 represents a rapidly growing institutional friction series.
+Unlike protest, litigation operates within institutional channels
+but challenges existing governance structures by invoking rights claims
+that override standard legislative processes.
+The litigation strategy parallels the LGBT rights trajectory:
+strategic case selection, precedent building, and jurisdictional forum shopping
+are tactics directly inherited from the civil rights and LGBT movements'
+legal playbooks.
+Successful cases (\textit{Urgenda}, \textit{Held v.\ Montana}) create precedent
+that lowers the barrier for subsequent litigation,
+generating the same positive feedback loop observed in the LGBT litigation trajectory.
+The key difference is that climate litigation seeks to raise proxy alpha
+for future generations, whereas LGBT litigation sought to raise direct alpha
+for the litigating community itself.
+This makes climate litigation outcomes structurally dependent on courts'
+willingness to act as intergenerational guardians---a role for which
+most judicial systems were not designed.
+
+\textbf{COP protests and civil society pressure.} Annual COP meetings have become focal points for climate friction expression. COP15 (Copenhagen, 2009) drew approximately 100,000 protesters and was widely perceived as a governance failure, catalyzing the shift toward the bottom-up Paris Agreement architecture. COP26 (Glasgow, 2021) drew an estimated 100,000 marchers. The concentration of friction around COP events creates a distinctive temporal pattern: friction spikes annually around conference dates and declines between them, unlike the more continuous friction patterns observed in domestic political movements. This periodicity may reduce friction's effectiveness by allowing governance systems to absorb short-duration pressure without structural reform.
+
+\textbf{Barriers to friction expression.} \citet{lorenzoni2007barriers} identify psychological, social, and structural barriers to climate engagement: temporal distance (future impacts feel abstract), spatial distance (impacts concentrated elsewhere), collective action problems (individual actions seem futile), and competing priorities. These barriers suppress friction expression relative to the actual stakes involved, creating a gap between latent and manifest friction analogous to the pre-Stonewall suppression in the LGBT case---but driven by cognitive rather than legal mechanisms. The barrier structure explains a puzzle in the framework: climate stakes are arguably the highest of any domain examined (existential, global, irreversible), yet friction levels remain modest relative to stakes. The barriers identified by \citet{lorenzoni2007barriers} operate as friction suppressors, maintaining $F_{\text{observed}} \ll F_{\text{latent}}$ even without deliberate repression.
+
+\subsection{Alpha-Friction Dynamics}
+\label{subsec:climate-dynamics}
+
+Climate governance dynamics test the framework's limits in several respects:
+
+\textbf{Structural zero-alpha for future generations.} Unlike every other case in our portfolio, the zero-alpha condition for future generations cannot be remedied through the standard friction-to-incorporation pathway. Future people cannot organize, protest, litigate, or vote. Their interests can only be represented through proxy mechanisms: constitutional provisions, guardianship institutions, youth advocacy, and intergenerational ethics frameworks. The framework must therefore distinguish between \textit{direct alpha} (stakeholders gaining their own voice) and \textit{proxy alpha} (present actors authorized to represent absent stakeholders). All historical cases involved direct alpha expansion; climate governance requires proxy alpha as a structural necessity.
+
+\textbf{The discount rate problem.} Even when proxy mechanisms exist, present decision-makers systematically discount future stakes. Economic discount rates of 3--7\% render impacts beyond 50 years nearly negligible in cost-benefit analysis. In consent-holding terms, this means that even technically adequate proxy alpha is undermined by temporal discounting of the very stakes it is meant to represent. Future generations' stakes are existentially high ($s_{\text{future}} \to \max$) but temporally discounted to near-zero in present governance calculations, creating a structural mismatch between actual and operationalized stakes.
+
+\textbf{The abolition parallel.} Climate governance shares a structural feature with abolition: in both cases, the most affected population cannot represent itself, requiring proxy consent mechanisms. Abolitionist societies represented enslaved persons' interests without enslaved persons' direct participation in governance (though slave narratives like \citealt{equiano1789} provided essential first-person testimony). Climate assemblies and youth advocates play an analogous role for future generations. The abolition case suggests that proxy consent can eventually generate sufficient friction to overcome resistance---but the timeline was measured in decades to centuries.
+
+The analogy has limits. Enslaved persons were contemporaneous---they could resist, testify, and eventually participate in their own liberation. Future generations are temporally absent and cannot contribute to their own representation. This makes climate governance's proxy alpha permanently proxy, never convertible to direct alpha for the most affected population. The framework must therefore evaluate proxy mechanisms not by their convergence toward direct representation (which is impossible) but by their fidelity to the interests they claim to represent---a normative standard that requires institutional design principles beyond the empirical alpha-friction dynamics examined here.
+
+\textbf{The COP architecture and international alpha.} International climate governance through the UNFCCC and annual Conferences of the Parties (COP) adds a layer of alpha complexity. COP operates on a one-country-one-vote basis, giving Tuvalu (population 11,000) equal formal voice to China (population 1.4 billion). In stakes terms, this overweights small island states (existential stakes, minimal emissions) relative to major emitters (high emissions, lower relative vulnerability). The framework interprets COP as a partial alpha correction: by giving vulnerable states voice disproportionate to their population, the architecture partially compensates for the spatial stakes asymmetry. However, consensus requirements and the non-binding character of most COP outcomes limit effective alpha: formal voice does not translate to binding authority when powerful states can defect without consequence. \citet{gardiner2011perfect} characterizes climate change as a ``perfect moral storm'' combining intergenerational, international, and epistemic challenges---each of which maps onto a distinct alpha deficit in the consent-holding framework.
+
+\textbf{Intergenerational justice and discount rate formalization.} The discount rate problem can be formalized within the consent-holding framework. Let $s_i^{\text{actual}}(d)$ represent agent $i$'s actual stakes in climate policy and $s_i^{\text{operationalized}}(d)$ represent the stakes as incorporated into governance calculations. For present citizens, $s_i^{\text{operationalized}} \approx s_i^{\text{actual}}$. For future citizens born at time $t + \tau$:
+\[
+s_i^{\text{operationalized}}(d) = s_i^{\text{actual}}(d) \cdot e^{-r\tau}
+\]
+where $r$ is the discount rate. At $r = 0.05$ and $\tau = 50$ years, $s_i^{\text{operationalized}} \approx 0.08 \cdot s_i^{\text{actual}}$---a 92\% reduction in effective stakes. Since $\alpha(d,t)$ is stakes-weighted, temporal discounting mechanically depresses the alpha measure even when proxy institutions exist. This formalization makes explicit what the climate justice literature has long argued: discounting future generations' welfare is equivalent to devaluing their consent claims. The framework provides a quantitative language for what is usually argued in purely normative terms.
+
+\textbf{Hypothesis testing.} The climate case provides evidence for:
+\begin{itemize}
+    \item \textbf{H1} (alpha-friction inverse): Supported. Near-zero alpha for future generations coexists with rising friction from present proxies (youth strikes, litigation, direct action).
+    \item \textbf{H4} (friction predicts future alpha): Weakly supported. Youth mobilization and litigation have generated some institutional alpha increases (climate assemblies, constitutional provisions, litigation victories), but the pace of alpha expansion lags far behind the urgency implied by stakes. The temporal structure of climate governance creates a unique H4 challenge: even if friction generates alpha increases on the historical timescale (decades), the physical climate system may reach irreversible tipping points before consent alignment improves sufficiently to produce adequate policy responses. The framework thus reveals a structural mismatch between institutional and physical timescales that is absent from other cases.
+    \item \textbf{H5} (performance interactions): The critical test case. High performance on emissions reduction ($P$) could partially compensate for low alpha---if governments delivered rapid decarbonization, the legitimacy deficit from excluding future generations might be tolerable. But performance has been poor: global emissions continue rising, Paris Agreement targets are being missed, and adaptation investments remain inadequate. Low alpha combined with low performance is the framework's predicted worst case for friction escalation.
+
+    The climate case also provides the clearest counterfactual test for H5. Consider Singapore's technocratic governance: relatively low alpha ($\alpha \approx 0.4$ on V-Dem measures) combined with high policy performance ($P$ high on infrastructure, education, economic growth). Singapore maintains low friction partly because performance compensates for consent deficits. Climate governance is the anti-Singapore case: low alpha and low performance, which the framework predicts should produce the highest friction. That climate friction remains lower than this prediction suggests is explained by the friction barriers identified by \citet{lorenzoni2007barriers}---temporal and spatial distance suppress manifest friction below the level that stakes-alpha calculations would predict.
+\end{itemize}
+
+\subsection{Cross-Case Connections}
+\label{subsec:climate-cross}
+
+Climate governance shares features with several earlier cases, making it a theoretically rich node in the cross-case network:
+
+\textbf{Abolition parallel.} Both climate governance and abolition require proxy consent for populations that cannot represent themselves. Abolitionist societies articulated enslaved persons' interests through moral persuasion; climate assemblies and youth advocates articulate future generations' interests through deliberative processes. The structural parallel extends to the opposition dynamics: slaveholders defended their economic interests against abolition just as fossil fuel industries defend theirs against decarbonization. The abolition timeline (decades of agitation before breakthrough) may or may not be a useful predictor for climate governance, given the urgency of physical tipping points that create a hard deadline absent from the abolition case.
+
+\textbf{Platform governance parallel.} Both climate and platform governance involve diffuse stakeholders versus concentrated decision-makers. Billions of people bear climate impacts but have minimal influence over emissions policy, just as billions of platform users bear governance impacts but have minimal input into platform decisions. Both cases exhibit the \citet{olson1965logic} collective action problem: the per-capita cost of organization exceeds the per-capita benefit of marginal policy improvement, suppressing friction expression below the level warranted by aggregate stakes.
+
+\textbf{Corporate governance parallel.} Environmental externalities in corporate governance parallel climate externalities in national governance. In both cases, those bearing costs (communities affected by pollution, future generations affected by emissions) are excluded from decisions producing those costs. The corporate governance literature's distinction between shareholder primacy and stakeholder governance \citep{freeman1984} maps directly onto the climate debate between present-generation interests and intergenerational justice. The framework suggests that stakeholder governance in the corporate domain and intergenerational governance in the climate domain are structurally identical problems: both require expanding the affected set $S_d$ to include populations currently excluded from decision authority.
+
+\textbf{Suffrage parallel.} International diffusion operates in climate governance as it did in suffrage extension. Early adopters of ambitious climate policy (Denmark's renewable energy transition, Costa Rica's carbon neutrality commitment, Germany's \textit{Energiewende}) serve as demonstration cases that raise the normative cost of inaction for laggards---just as New Zealand's 1893 women's suffrage raised normative costs for non-adopting democracies. The diffusion mechanism operates through international comparison, treaty obligations, and norm entrepreneurship. However, climate governance faces a diffusion obstacle absent from suffrage: the costs of ambitious climate policy fall disproportionately on energy-intensive economies, creating material resistance to norm adoption that the suffrage case---where extending the franchise was relatively cheap---did not face.
+
+
+%% ============================================================================
+%% SECTION 15: SCOPE CONDITIONS AND COMPARATIVE ANALYSIS
+%% ============================================================================
+
+\section{Scope Conditions and Comparative Analysis}
+\label{sec:scope-conditions}
+
+The preceding eight case studies---suffrage (Section~\ref{sec:suffrage}), abolition (Section~\ref{sec:abolition}), labor rights (Section~\ref{sec:labor}), civil rights (Section~\ref{sec:civil-rights}), LGBT inclusion (Section~\ref{sec:lgbt}), corporate governance (Section~\ref{sec:corporate}), platform governance (Section~\ref{sec:platform-governance}), and climate governance (Section~\ref{sec:climate})---demonstrate the framework's analytical power across diverse institutional contexts. But they also reveal boundary conditions: the cases were selected partly \textit{because} they exhibit the predicted alpha-friction dynamics. To test the framework rigorously, we must examine both the conditions under which friction successfully generates incorporation and the cases where it does not.
+
+\subsection{When Does Friction Generate Incorporation?}
+\label{subsec:friction-incorporation}
+
+Our case studies reveal four factors that determine whether sustained friction converts into alpha expansion:
+
+\textbf{Factor 1: Cost of repression versus accommodation.} Incorporation occurs when the cost of maintaining exclusion exceeds the cost of extending consent. In the suffrage case, repression costs escalated as women's organizations grew more sophisticated and international pressure mounted---accommodating women's political participation became cheaper than suppressing it. In the labor case, codetermination emerged partly because postwar German reconstruction required labor cooperation, making accommodation cheaper than continued conflict \citep{mcgaughey2016}. In the LGBT case, criminalization became increasingly costly as visibility rose and public opinion shifted. By contrast, where repression remains cheap---prison populations, undocumented migrants, populations in geographically isolated authoritarian states---friction can be absorbed without alpha expansion. The framework predicts: when the ratio $\text{cost}(\text{repression}) / \text{cost}(\text{accommodation})$ exceeds a threshold, incorporation becomes the equilibrium response to friction.
+
+\textbf{Factor 2: International pressure and norm diffusion.} Incorporation accelerates when international demonstration effects create legitimacy costs for non-adoption. \citet{ramirez1997} document this mechanism for women's suffrage: each country's adoption raised the normative cost for remaining holdouts. The same dynamic operated for LGBT marriage equality, with the Netherlands (2001) initiating a cascade that reached 35 countries by 2025. International pressure operates through multiple channels: diplomatic pressure, treaty obligations, international court rulings, media comparison, and diaspora advocacy. Where international isolation is possible---North Korea, Eritrea, pre-reform Myanmar---norm diffusion operates weakly and exclusion persists despite high internal friction.
+
+\textbf{Factor 3: Coalition availability among enfranchised groups.} Excluded populations rarely achieve incorporation through their own efforts alone; they require allies with existing consent power. Abolition required white abolitionists with parliamentary voice. Women's suffrage required male legislators willing to extend the franchise. Civil rights required white allies in the federal government and judiciary. LGBT rights required heterosexual allies in legislatures and courts. \citet{chenoweth2011why} demonstrate that nonviolent resistance succeeds largely through the mechanism of coalition expansion---drawing sympathetic thirds into the movement's orbit. Where potential allies are absent, hostile, or indifferent, friction may persist without generating incorporation. Platform governance currently lacks a natural ally class: advertisers are potential allies but prioritize their own commercial interests, not user governance rights.
+
+\textbf{Factor 4: Elite interest alignment with reform.} Incorporation becomes feasible when elite factions perceive benefits from consent expansion. \citet{acemoglu2000why} model franchise extension as a strategic response by elites facing revolutionary threat---extending the vote is cheaper than risking overthrow. In the corporate governance case, German industrialists accepted codetermination partly because it stabilized labor relations and reduced strike costs. In the climate case, renewable energy industries create an elite faction benefiting from climate policy---but their political influence remains insufficient to override fossil fuel incumbents in most jurisdictions. Where no elite faction benefits from reform, friction must overcome not only institutional inertia but active elite opposition.
+
+These four factors interact multiplicatively rather than additively. Successful incorporation typically requires at least three of four to be favorable. The most compressed trajectories (LGBT rights in Western democracies, 1969--2015) occurred when all four aligned: repression became costly (rising visibility made criminalization politically embarrassing), international diffusion was rapid (demonstration effects cascaded after the Netherlands 2001), coalition allies were available (straight allies in positions of legislative and judicial power), and elite factions benefited (corporate diversity initiatives, pink tourism, cultural capital accumulation). The slowest trajectories---or outright failures---occur when none or few align.
+
+We can formalize this interaction as a rough incorporation probability function:
+\[
+P(\text{incorporation} | F > \tau) = f(\text{cost ratio}, \text{int'l pressure}, \text{coalition}, \text{elite alignment})
+\]
+where friction above threshold $\tau$ is necessary but not sufficient, and the four factors determine the conditional probability of conversion. This formalization is deliberately loose---the factors resist quantification at this stage---but it captures the analytical structure: friction creates the pressure, and the four factors determine whether the system yields or absorbs it.
+
+Table~\ref{tab:incorporation-factors} summarizes the four-factor profile across the eight case studies, illustrating why some trajectories succeeded and others stalled.
+
+\begin{table}[htbp]
+\centering
+\caption{Incorporation Factor Profiles Across Case Studies}
+\label{tab:incorporation-factors}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Domain & Cost Ratio & Int'l Pressure & Coalition & Elite Align. \\
+\midrule
+Suffrage & Rising & High & Moderate & Moderate \\
+Abolition & Rising (war) & High & High & Split \\
+Labor & High (strikes) & Moderate & Low $\to$ High & Split \\
+Civil Rights & Rising & High (Cold War) & Growing & Split \\
+LGBT & Rising & High & High & Growing \\
+Corporate & Moderate & Low & Low & Split \\
+Platform & Low & Rising (EU) & Low & Low \\
+Climate & Low & Rising & Growing & Split \\
+\midrule
+Indigenous & Low & Low & Low & Low \\
+Stateless & Low & Moderate & Low & Low \\
+Prisoners & Low & Low & Low & Negative \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The table reveals the pattern: successful incorporation cases (top six rows) have at least two ``High'' or ``Rising'' factors, while stalled cases (bottom three rows) have predominantly ``Low'' entries. Platform and climate governance---the contemporary cases---show intermediate profiles, suggesting that their trajectories depend on whether international pressure continues to rise and coalition availability expands.
+
+\subsection{Cross-Case Comparative Table}
+\label{subsec:comparative-table}
+
+Table~\ref{tab:comparative} synthesizes the alpha-friction dynamics across all eight case studies, providing a structured basis for comparative analysis. Several patterns emerge from the comparison that are not visible from individual cases alone.
+
+\begin{table*}[htbp]
+\centering
+\caption{Cross-Case Comparative Analysis of Consent Alignment Dynamics}
+\label{tab:comparative}
+\small
+\begin{tabular}{@{}p{1.6cm}p{1.5cm}p{1.8cm}p{1.3cm}p{1.8cm}p{1.6cm}p{1.8cm}p{1.0cm}p{1.4cm}@{}}
+\toprule
+Domain & Time Span & $\alpha$ Proxy & $\alpha$ Range & $F$ Proxy & $F$ Pattern & Key Mechanism & H1--H5 & Incorp.\ Type \\
+\midrule
+Suffrage & 1848--1971 & Enfranchised / adult pop. & 0.50 $\to$ 1.0 & Petition, protest, civil disobedience & Escalating, then declining & International diffusion + elite concession & H1,H3, H4 & Direct: franchise extension \\
+\addlinespace
+Abolition & 1787--1865 & Free / total pop.\ in slavery domains & 0.0 $\to$ 1.0 & Rebellions, abolitionist campaigns, civil war & Extreme spikes, violent resolution & Proxy consent + moral friction & H1,H3, H4 & Proxy $\to$ direct: emancipation \\
+\addlinespace
+Labor & 1870s--1951 & Union density + board seats & 0.0 $\to$ 0.5 & Strike days, union drives & Cyclical, institutionalized & Negotiated codetermination & H1,H2, H4,H5 & Direct: works councils, board seats \\
+\addlinespace
+Civil Rights & 1865--1968 & Voter reg.\ + legal protections & 0.1 $\to$ 0.8 & Marches, sit-ins, litigation, riots & Escalating, punctuated by legislation & Litigation + mass mobilization & H1,H3, H4 & Direct: legislation + judicial \\
+\addlinespace
+LGBT & 1969--2015 & Legal recognition index (0--1) & 0.0 $\to$ 1.0 & Pride, litigation, ballot measures & Suppressed $\to$ rapid escalation & Strategic litigation + norm diffusion & H1,H3, H4 & Direct: judicial + legislative \\
+\addlinespace
+Corporate & 1920s--present & Stakeholder board seats / total & 0.0 $\to$ 0.5 & Strikes, activism, regulatory pressure & Declining in codetermined systems & Statutory codetermination & H1,H2, H5 & Direct: statutory board representation \\
+\addlinespace
+Platform & 2010s--present & User governance input index & $\approx$ 0.0 & Boycotts, migration, regulation & Rising, pre-institutional & External regulation (GDPR, DSA) & H1,H4, H5 & External: regulatory imposition \\
+\addlinespace
+Climate & 2015--present & Youth/future rep.\ in binding decisions & $\approx$ 0.0 & Strikes, litigation, direct action & Rising, sustained & Proxy consent (assemblies, litigation) & H1,H4, H5 & Proxy: constitutional + institutional \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The comparative table reveals three structural patterns. First, \textit{incorporation type} clusters into three modes: direct incorporation (suffrage, labor, civil rights, LGBT, corporate), where the affected population gains its own voice; proxy incorporation (abolition, climate), where third parties represent absent or voiceless populations; and external imposition (platform governance), where regulatory bodies raise alpha without organic stakeholder demand. These modes have different durability: direct incorporation tends to be self-sustaining (enfranchised populations resist disenfranchisement), while proxy and externally imposed alpha is vulnerable to erosion when proxy institutions lose influence or regulatory regimes change.
+
+Second, \textit{friction patterns} vary systematically with domain characteristics. Domains with clear group identity (suffrage, civil rights, LGBT) produce sustained escalating friction. Domains with diffuse stakeholders (platform, climate) produce episodic friction that spikes around focal events and declines between them. Domains with organized collective action capacity (labor) produce cyclical friction correlated with economic conditions. These pattern differences suggest that the framework should incorporate stakeholder organization capacity as a mediating variable between alpha deficits and friction expression.
+
+Third, the \textit{alpha range} achieved through incorporation is bounded above by institutional constraints. No case achieves $\alpha = 1.0$ in the effective sense: suffrage grants formal equality but not effective equality (gender gaps in political representation persist), abolition grants formal freedom but not effective freedom (racial inequality persists), and marriage equality grants formal recognition but not effective inclusion. The maximum achievable effective alpha appears to be domain-specific and constrained by structural factors beyond institutional design.
+
+\subsection{Ordinal Hypothesis Testing}
+\label{subsec:hypothesis-testing}
+
+Systematic evaluation across all eight case studies reveals the empirical standing of each hypothesis:
+
+\textbf{H1 (Alpha-friction inverse relationship).} Supported in 8/8 cases. Every case study exhibits the predicted pattern: low alpha coexists with high or rising friction, and alpha increases are followed by friction reduction. The relationship is strongest in the suffrage, labor, and LGBT cases where longitudinal data allows temporal tracking. Platform and climate governance represent ongoing tests where low alpha and rising friction are observed but the predicted alpha increase has not yet (fully) materialized. The universal support for H1 across highly diverse institutional contexts---from eighteenth-century abolitionism to twenty-first-century platform governance---constitutes the framework's strongest empirical finding.
+
+\textbf{H2 (Covariance increase reduces friction).} Supported in 3/8 cases with clear evidence: labor (codetermination explicitly increases the correlation between worker stakes and decision power), corporate governance (stakeholder board representation), and suffrage (franchise extension aligning electoral power with citizen stakes). The remaining cases do not provide clean tests because the covariance mechanism is less visible: abolition involved complete exclusion-to-inclusion rather than gradual covariance improvement; civil rights and LGBT cases involved rights-based rather than covariance-based alpha shifts. H2 is most naturally tested in domains with continuous consent measures (union density, board composition) rather than binary ones (enfranchised/disenfranchised).
+
+\textbf{H3 (Threshold effects).} Supported in 5/8 cases with identifiable critical junctures \citep{capoccia2007study}:
+\begin{itemize}
+    \item Suffrage: Seneca Falls Convention (1848) and subsequent international demonstration effects
+    \item Abolition: Haitian Revolution (1791) demonstrating that slave systems could be overthrown
+    \item Civil Rights: \textit{Brown v.\ Board of Education} (1954) catalyzing the modern civil rights movement
+    \item LGBT: Stonewall Riots (1969) converting suppressed into manifest friction
+    \item Climate: Fridays for Future (2018) mobilizing a previously quiescent youth population
+\end{itemize}
+Labor, corporate, and platform governance exhibit more gradual dynamics without clear threshold moments, though the Wagner Act (1935) and GDPR (2018) might qualify as regulatory thresholds that shifted friction dynamics. The threshold mechanism appears most relevant in domains where friction is suppressed (by criminalization, social taboo, or cognitive distance) rather than continuously expressed.
+
+\textbf{H4 (Friction predicts future alpha increase).} Supported in 6/8 cases: suffrage (decades of protest preceded franchise extension), abolition (abolitionist campaigns preceded emancipation), labor (strike waves preceded codetermination legislation), civil rights (mass mobilization preceded the Civil Rights Act), LGBT (Stonewall-to-Obergefell trajectory), and climate (youth mobilization is generating climate assemblies and litigation victories). Platform governance shows early-stage evidence (user revolt is generating regulatory responses). Corporate governance shows mixed evidence---shareholder activism has generated some governance reforms, but the relationship between stakeholder friction and alpha expansion is less direct.
+
+The lag between sustained friction and alpha response varies enormously: 46 years for UK suffrage (1882 suffragist organizations to 1928 equal franchise), approximately 80 years for American abolition (1787 abolition society to 1865 Thirteenth Amendment), approximately 50 years for US LGBT rights (1969 Stonewall to 2015 Obergefell), and approximately 100 years for civil rights (1865 Thirteenth Amendment to 1965 Voting Rights Act). These lags suggest that the friction-to-alpha conversion is mediated by the four incorporation factors identified in Section~\ref{subsec:friction-incorporation} rather than operating mechanically.
+
+The variation in lag length is itself analytically informative. The shortest successful lag (LGBT, approximately 50 years from Stonewall to Obergefell) occurred when all four incorporation factors were favorable and the movement inherited organizational infrastructure from the civil rights movement. The longest lag (civil rights, approximately 100 years from formal emancipation to effective enfranchisement) occurred when elite interest alignment was actively hostile (Jim Crow as organized resistance to incorporation) and coalition availability was constrained by regional political dynamics. If the four-factor model is correct, we should expect platform governance and climate governance trajectories to depend on how quickly their factor profiles evolve---which is an empirically testable prediction rather than a retrospective rationalization.
+
+\textbf{H5 (Performance interactions).} Supported in 3/8 cases with clear evidence: corporate governance (German codetermination maintains competitive performance, validating the alpha-performance combination), platform governance (high platform performance partially compensates for zero alpha), and climate governance (the framework predicts that high emissions-reduction performance would reduce legitimacy deficits, but this counterfactual has not materialized). The labor case provides partial support---high-performing firms with codetermination experience less friction---but the evidence is complicated by selection effects. H5 is the hardest hypothesis to test because it requires independent variation in both alpha and performance, which is difficult to observe historically.
+
+\subsection{Limitations and Non-Cases}
+\label{subsec:limitations}
+
+The framework's empirical validity depends not only on explaining successful incorporation but on accounting for cases where high friction has \textit{not} generated alpha expansion:
+
+\textbf{Indigenous sovereignty.} Indigenous populations in settler-colonial states exhibit maximal stakes (land, culture, self-determination, survival) combined with minimal consent power. Sustained friction has continued for centuries---from the Lakota/Dakota resistance (1850s--present) to Aboriginal land rights struggles in Australia to M\=aori sovereignty movements in New Zealand. Incorporation has been partial at best: treaty processes, land claims settlements, and recognition programs have raised alpha incrementally but nowhere near proportional to stakes. The four-factor analysis explains the persistence of exclusion: repression costs have historically been low (geographic isolation, military asymmetry), international pressure has been limited (settler-colonial states dominate international institutions), coalition availability has been constrained (small population share limits political leverage), and elite interest alignment has been weak (land and resource interests oppose indigenous claims).
+
+\textbf{Stateless populations.} Rohingya, Palestinians, Kurds, and other stateless groups face existential stakes with zero formal consent power in any sovereign jurisdiction. Their friction (refugee crises, armed conflict, diplomatic campaigns) has generated international attention but minimal alpha expansion. The framework correctly predicts persistent high friction, but the pathway to incorporation is blocked by a structural feature absent from successful cases: the absence of a governing authority willing or able to extend consent. In the suffrage case, the state that excluded women was also the state that could enfranchise them. In the stateless case, the states that exclude the population deny responsibility for its governance, creating a structural gap between the locus of friction and the locus of potential incorporation. This suggests a boundary condition: the friction-to-alpha pathway requires that the friction targets---the decision-makers whose policies generate misalignment---have the institutional capacity and sovereign authority to extend consent. Where sovereignty is contested, fragmented, or absent, friction may generate international sympathy without generating institutional change.
+
+\textbf{Prisoners.} Incarcerated populations hold direct stakes in criminal justice policy---sentencing, conditions, rehabilitation, reentry---but possess negligible voice. Prisoner disenfranchisement is explicit policy in most US states. The cost-of-repression factor explains the persistence: incarcerated populations are already physically controlled, making friction suppression structurally inexpensive. Coalition availability is limited by social stigma. Elite interest alignment is negative---``tough on crime'' politics creates electoral incentives to maintain exclusion.
+
+\textbf{Authoritarian repression.} The framework's predictions assume that friction can be observed
+and that governance systems have some mechanism for responding to it.
+Under authoritarian repression, friction may be generated but systematically suppressed
+before it can trigger alpha responses.
+North Korea, Turkmenistan, and Eritrea maintain near-zero alpha
+across most governance domains
+with high latent friction that never converts to manifest form
+because the cost of friction expression---imprisonment, death, family punishment---exceeds
+nearly any threshold.
+This represents a boundary condition for the framework:
+when repression is total, the friction-to-alpha conversion mechanism is blocked entirely.
+
+The theory correctly predicts that these systems are characterized by extreme misalignment,
+but it cannot predict when (or whether) the repression barrier will eventually break.
+Historical evidence from the fall of Eastern European communism (1989) and the Arab Spring (2011)
+suggests that repression barriers can collapse suddenly
+when external shocks or internal contradictions reduce the state's capacity for suppression---but
+the timing remains unpredictable.
+\citet{granovetter1978threshold} threshold models may apply here:
+individual willingness to protest depends on how many others are already protesting,
+creating a coordination problem where latent friction remains suppressed
+until a small perturbation pushes the system past a tipping point,
+triggering cascading mobilization.
+The framework interprets authoritarian collapse as a threshold event where
+$F_{\text{observed}}$ jumps discontinuously from near-zero to maximum
+as the repression barrier fails---precisely the H3 dynamic,
+but with the threshold located in repression capacity rather than alpha level.
+
+These non-cases do not constitute failures of the framework. The theory predicts friction when alpha is low relative to stakes---and friction is indeed observed in all cases where it can be measured. What the theory does not predict is \textit{guaranteed incorporation}: friction is a necessary but not sufficient condition for alpha expansion. The four-factor model specified above explains the variance between successful and unsuccessful incorporation trajectories. The theory predicts the pressure; the scope conditions predict the response.
+
+This distinction is analytically important.
+A theory that predicted guaranteed incorporation from sustained friction
+would be empirically falsified by the cases above.
+A theory that predicts friction from misalignment (which is confirmed)
+and identifies the conditions under which friction converts to alpha expansion
+(which the four-factor model provides) is both more modest and more useful.
+The framework's contribution is not to promise that justice will prevail
+but to identify the structural conditions under which it is more or less likely to---and
+to provide measurement tools for tracking progress.
+
+This scope-conditioned prediction also addresses a common objection
+to legitimacy frameworks: that they serve merely as normative critique
+without analytical purchase on actual governance dynamics.
+The consent-holding framework, supplemented by the four-factor incorporation model,
+generates falsifiable predictions:
+it predicts friction levels from alpha-stakes gaps,
+predicts incorporation likelihood from factor profiles,
+and predicts friction trajectory shapes from domain characteristics.
+These predictions are testable against the historical record
+(as Part III demonstrates) and against ongoing developments
+in platform and climate governance (as the next decade will reveal).
+
+\subsection{Toward Quantified Panel Analysis}
+\label{subsec:panel-analysis}
+
+The ordinal alpha and friction proxies constructed across the eight case studies prepare the ground for systematic econometric testing. The panel regression specification from Section~\ref{sec:empirical}:
+\begin{equation}
+F_{d,t} = \beta_0 + \beta_1 \cdot \alpha_{d,t} + \beta_2 \cdot P_{d,t} + \gamma \cdot X_{d,t} + \mu_d + \lambda_t + \varepsilon_{d,t}
+\tag{\ref{eq:regression}}
+\end{equation}
+could be estimated using the proxies constructed here, supplemented by panel data from several established sources.
+
+\textbf{Alpha measurement.} V-Dem (Varieties of Democracy) provides annual data on electoral democracy, liberal democracy, participatory democracy, deliberative democracy, and egalitarian democracy indices for 202 countries from 1789 to the present. These indices can be mapped onto domain-specific alpha measures: the participatory component captures direct citizen voice ($\alpha_{\text{participation}}$), the egalitarian component captures stakes-consent covariance ($\text{Cov}(s_i, C_i)$), and the liberal component captures minority rights protections (thresholds against extreme alpha deficits). OECD governance indicators provide additional data on regulatory quality, rule of law, and government effectiveness that can serve as performance ($P$) measures.
+
+\textbf{Friction measurement.} The Cross-National Time-Series Data Archive (Banks) provides annual counts of protests, strikes, riots, revolutions, and government crises from 1815 to the present. The Armed Conflict Location and Event Data (ACLED) provides geocoded event-level data on protests, riots, and political violence from 2018 onward. The Global Database of Events, Language, and Tone (GDELT) provides automated event coding from news sources. Combining these sources enables construction of domain-specific friction series.
+
+\textbf{Identification strategy.} Causal identification of $\beta_1$ (the alpha-friction relationship) faces endogeneity concerns: alpha and friction are jointly determined, with friction driving alpha changes (H4) while alpha affects friction levels (H1). Instrumental variable strategies could exploit exogenous variation in consent structures from several sources: (a) colonial institutional legacies providing quasi-random variation in initial alpha levels \citep{acemoglu2012why}; (b) international diffusion shocks from neighboring countries' reforms; (c) constitutional changes driven by factors orthogonal to friction (succession crises, natural disasters triggering constitutional conventions). \citet{capoccia2007study} identify critical junctures that produce exogenous institutional variation usable as instruments.
+
+\textbf{Expected results.} Based on the ordinal evidence assembled across eight case studies, we would expect: $\beta_1 < 0$ (higher alpha reduces friction), $\beta_2 < 0$ (better performance reduces friction), interaction effects ($\beta_1 \times \beta_2$) indicating that performance partially compensates for low alpha (H5), and nonlinear specifications revealing threshold effects (H3) at low alpha values. Domain fixed effects ($\mu_d$) would capture structural differences in friction propensity across governance domains, while time fixed effects ($\lambda_t$) would control for global trends in mobilization capacity.
+
+\textbf{Cross-domain estimation.} A key advantage of the consent-holding framework is its applicability across governance domains. Rather than treating suffrage, labor rights, platform governance, and climate policy as unrelated phenomena, the framework enables cross-domain panel estimation where domain-specific alpha and friction measures enter a common regression framework. This pooled estimation increases statistical power and enables testing of whether the alpha-friction relationship is stable across domains or varies systematically with domain characteristics (e.g., whether the relationship is stronger in domains with existential stakes than in domains with economic stakes).
+
+The cross-domain approach also enables counterfactual analysis. By estimating the alpha-friction relationship from historical cases where trajectories are known, the model can generate predictions for contemporary cases (platform governance, climate) where trajectories are still unfolding. If the estimated $\beta_1$ from suffrage, abolition, labor, and civil rights data predicts the friction levels observed in platform governance and climate given their current alpha values, this constitutes out-of-sample validation of the framework's core hypothesis.
+
+\textbf{Limitations of quantification.} Several caveats attend the quantification agenda. First, alpha and friction are multi-dimensional concepts that resist reduction to single indices without information loss. Second, the causal mechanisms connecting alpha to friction operate through institutional channels that vary across contexts, making a single $\beta_1$ estimate potentially misleading. Third, the longest historical series (suffrage, abolition) involve institutional contexts so different from contemporary governance that temporal comparability is uncertain. These limitations suggest that quantified panel analysis should complement rather than replace the case study approach---providing robustness checks on patterns identified qualitatively rather than serving as the sole basis for theoretical evaluation.
+
+The transition from ordinal case studies to quantified panel analysis represents the framework's research frontier. The proxies constructed here are necessarily crude---legal recognition indices, board composition ratios, protest counts---but they provide the conceptual infrastructure for increasingly precise measurement. As \citet{fariss2014respect} demonstrates for human rights measurement, ordinal proxies can be refined into continuous latent measures through Bayesian item-response models, offering a pathway from the illustrative analysis presented here to rigorous empirical testing. The eight case studies examined in Part III---spanning two centuries of governance transformation across political, economic, social, and technological domains---demonstrate that the consent-holding framework provides a unified analytical language for understanding when and why governance systems incorporate excluded populations, and when they do not.

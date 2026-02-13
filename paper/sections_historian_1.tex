@@ -1,0 +1,458 @@
+% ============================================================================
+% HISTORIAN-1 OUTPUT: Sections 6, 7, 8
+% Historical Methodology, Suffrage, Abolition
+% For integration into Farzulla_2025_Consent_Holding monograph expansion
+% ============================================================================
+
+
+\section{Methodology for Historical Case Analysis}
+\label{sec:historical-methodology}
+
+The consent-holding framework's empirical viability depends on whether its core constructs---consent alignment $\alpha(d,t)$ and friction $F(d,t)$---can be operationalized across historical domains where governance authority was contested, restructured, or overthrown. This section develops a systematic methodology for constructing time series of $\alpha$ and $F$ from historical data, establishing the inferential foundations for the case studies that follow.
+
+The methodological challenge is substantial. Unlike contemporary governance domains where survey data, election returns, and institutional records provide direct measurement, historical cases require proxy construction from heterogeneous sources: census records, petition archives, parliamentary debates, rebellion chronologies, legal codes, and organizational membership rolls. We do not claim to reconstruct ``true'' consent alignment with precision; rather, we construct ordinal and ratio-scale proxies whose trajectories can be compared across cases and tested against the framework's predictions.
+
+\subsection{Domain Definition Protocol}
+\label{subsec:domain-definition}
+
+Each historical case study begins by defining the governance domain $d$ under analysis. A domain is a bounded set of decisions producing shared consequences for an identifiable population. Domain definition requires three specifications:
+
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Decision scope}: What decisions does this domain encompass? For suffrage, $d_{\text{suffrage}}$ covers decisions about who may participate in collective governance---franchise rules, voter eligibility criteria, electoral procedures. For abolition, $d_{\text{slavery}}$ covers decisions about the legal status, bodily autonomy, and labor conditions of enslaved persons.
+
+  \item \textbf{Affected set}: Who bears consequences from decisions in this domain? The affected set $S_d = \{i \mid s_i(d) > 0\}$ includes all agents with positive stakes. In suffrage, $S_d$ encompasses all adult residents whose interests are shaped by political decisions from which they may be excluded. In abolition, $S_d$ includes enslaved persons (existential stakes), slaveholders (economic stakes), and broader populations affected by the slave economy.
+
+  \item \textbf{Consent-holder mapping}: Who actually decides? The consent-holder mapping $H_t(d)$ identifies, at each time point $t$, which agents hold effective decision power $C_{i,d} > 0$. This mapping is the object whose evolution we track: franchise extensions, emancipation acts, and institutional reforms all constitute changes to $H_t(d)$.
+\end{enumerate}
+
+Domain boundaries are inevitably porous. Suffrage and abolition overlapped in both organizational networks and philosophical commitments---Seneca Falls grew directly from abolitionist organizing. We handle this by tracking each domain separately while documenting cross-domain linkages in dedicated subsections. The framework's notation accommodates this: an agent $i$ may hold different consent power levels across domains, with $C_{i,d_1} > 0$ and $C_{i,d_2} = 0$ simultaneously.
+
+A further consideration is the distinction between \textit{nested} and \textit{adjacent} domains. Suffrage is nested within broader political governance: franchise rules determine who holds consent power in all policy domains simultaneously. Abolition is adjacent to but distinct from franchise: enslaved persons' legal status determined their eligibility for political participation, but the slavery domain itself encompassed decisions (labor conditions, physical treatment, family separation) that extended far beyond the franchise question. Nested domains exhibit stronger cross-domain $\alpha$ transmission---raising $\alpha$ in the franchise domain automatically raises it in subordinate policy domains---while adjacent domains require independent $\alpha$ expansion in each domain.
+
+\subsection{Ordinal and Proxy Alpha Construction}
+\label{subsec:alpha-construction}
+
+The consent alignment measure $\alpha(d,t)$ is defined theoretically as the stakes-weighted share of decision power held by affected parties (Equation~\ref{eq:alignment-operational}). Direct computation requires cardinal measurement of both stakes $s_i(d)$ and effective voice $\text{eff\_voice}_i(d,t)$---feasible in some contemporary settings but rarely in historical ones. We therefore employ two proxy strategies depending on data availability.
+
+\textbf{Ratio-scale proxies.} Where quantitative data permit, we construct $\alpha$ as a population ratio:
+\begin{equation}
+  \hat{\alpha}(d,t) = \frac{N_{\text{enfranchised}}(t)}{N_{\text{affected}}(t)}
+  \label{eq:alpha-ratio}
+\end{equation}
+
+This proxy is available for suffrage expansion (enfranchised adults as a share of total adult population), labor rights (union density, board representation ratios), and corporate governance (employee representation on supervisory boards). The ratio-scale proxy assumes equal stakes across the affected population---a simplification that understates $\alpha$ divergence when high-stakes subpopulations are disproportionately excluded. We discuss this limitation where it binds.
+
+Data sources for ratio-scale proxies include the Varieties of Democracy (V-Dem) dataset \citep{dahl1971}, which provides standardized suffrage coverage indicators across countries and years; census records identifying the total adult population; and institutional records documenting franchise eligibility criteria. V-Dem's methodology---expert coding with Bayesian aggregation---provides the most reliable cross-national suffrage data available, though measurement error increases for pre-1900 periods.
+
+\textbf{Ordinal-scale proxies.} For domains where cardinal measurement is impossible, we construct ordinal $\alpha$ indices mapping legal and institutional configurations to a $[0, 1]$ scale. The abolition case, for instance, employs a six-point ordinal index:
+
+\begin{table}[htbp]
+\centering
+\caption{Ordinal alpha scale for abolition domain}
+\label{tab:alpha-abolition-scale}
+\begin{tabular}{@{}cl@{}}
+\toprule
+$\hat{\alpha}$ & Legal--institutional configuration \\
+\midrule
+0.00 & Chattel slavery (full legal dehumanization, zero personhood) \\
+0.10 & Amelioration laws (restrictions on punishment, limited protections) \\
+0.25 & Gradual emancipation statutes (phased freedom, conditional) \\
+0.50 & Immediate emancipation (legal freedom, limited citizenship rights) \\
+0.75 & Full legal citizenship (constitutional amendments, formal equality) \\
+1.00 & Effective citizenship with enforced rights (substantive participation) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ordinal scales sacrifice cardinality for tractability. We cannot claim that the move from 0.00 to 0.25 represents the same ``amount'' of consent expansion as the move from 0.50 to 0.75. What we can claim is monotonicity: higher ordinal values represent unambiguously greater incorporation of affected populations into decision structures. This suffices for testing the framework's directional predictions (H1, H4) and threshold predictions (H3), even if it cannot test precise functional forms.
+
+The validity of ordinal proxies depends on whether the ranked categories correspond to genuine differences in the consent alignment construct. We ground each scale in the framework's operational definition: does this institutional configuration give affected parties greater effective voice over decisions bearing on their stakes? Amelioration laws (0.10) grant more voice than chattel slavery (0.00) because they impose constraints on slaveholders' decision power---but only marginally, as the constrained decisions concern treatment rather than status. Full citizenship (0.75) grants substantially more voice because it extends formal decision rights, even where enforcement remains incomplete.
+
+\textbf{Measurement validity considerations.} Two threats to validity deserve explicit treatment. First, \textit{construct validity}: do our proxies capture the theoretical concept of consent alignment rather than some correlated but distinct quantity? The ratio-scale proxy (Equation~\ref{eq:alpha-ratio}) faces this concern when the franchise is formally broad but effectively narrow---the American case between the 15th Amendment (1870) and the Voting Rights Act (1965) exemplifies this, where formal $\hat{\alpha}$ overstated effective consent alignment. We address this by supplementing formal measures with effective participation indicators where available (voter registration rates, turnout data, office-holding patterns). Second, \textit{inter-coder reliability}: ordinal scales require judgment about category assignment. A slaveholding territory with amelioration laws restricting extreme punishment could be coded 0.10 or 0.25 depending on the scope of restrictions. We report our coding decisions transparently and note where alternative codings would substantively alter the analysis.
+
+\subsection{Friction Proxy Construction}
+\label{subsec:friction-construction}
+
+Friction $F(d,t)$ captures the stakes-weighted deviation between realized governance outcomes and stakeholder preferences (Equation~\ref{eq:friction-basic}). Direct measurement is impossible historically: we cannot survey the dead about their preference-outcome gaps. Instead, we operationalize friction through its observable manifestations---the actions agents take when governance deviates from their interests.
+
+We distinguish three categories of friction proxies, ordered by data quality:
+
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Count-based proxies}: Petition signatures, protest event counts, strike days, rebellion frequency. These provide ratio-scale measurement where archival records are systematic. British petitioning data is particularly rich: \citet{miller2021} documents petition campaigns with signature counts from the 1780s onward, enabling construction of annual friction series. Protest event databases (adapted from \citealt{tilly2008contentious} contentious politics methodology) provide comparable data for labor and civil rights mobilization.
+
+  \item \textbf{Institutional proxies}: Parliamentary votes against the status quo, litigation rates, regulatory complaints, advertiser boycotts. These capture friction channeled through existing institutions rather than extra-institutional mobilization. They are particularly useful for platform governance and corporate domains where institutional channels exist.
+
+  \item \textbf{Intensity-weighted indices}: Where raw counts are available, we weight by intensity measures---petition signature counts rather than binary petition existence, rebellion casualties rather than rebellion counts, strike duration rather than strike frequency. This captures the distinction between low-level persistent friction and mobilization spikes that the framework associates with threshold-crossing events (H3).
+\end{enumerate}
+
+A critical methodological issue arises when multiple friction channels operate simultaneously. British abolitionism generated petition friction, consumer boycott friction (the sugar boycott movement of the 1790s), parliamentary friction (annual abolition motions defeated repeatedly), and moral-philosophical friction (pamphlets, sermons, public lectures). Our friction index should, in principle, aggregate across channels, but the heterogeneity of measurement units (petition signatures, boycott participation estimates, parliamentary vote margins) makes simple aggregation impossible. We adopt a pragmatic approach: within each case study, we identify the primary friction channel based on data quality and construct the friction time series from that channel, reporting supplementary channels qualitatively.
+
+The fundamental measurement challenge is that friction proxies capture mobilized friction rather than latent friction. Populations with zero consent power may experience maximal preference-outcome deviation yet lack the organizational capacity to generate observable friction. This creates a systematic downward bias in friction measurement for the most excluded populations---a bias the framework itself predicts, since consent power correlates with organizational capacity. We address this by supplementing mobilization-based proxies with narrative evidence of latent grievance where possible, and by interpreting the absence of observed friction under extreme exclusion as consistent with capacity constraints rather than satisfied preferences.
+
+\subsection{Time Series Construction}
+\label{subsec:time-series}
+
+From proxy measures, we construct paired $\hat{\alpha}(d,t)$ and $\hat{F}(d,t)$ trajectories at the finest temporal resolution the data support. The panel structure has the form:
+
+\begin{equation}
+  \{(\hat{\alpha}_{d,c,t}, \hat{F}_{d,c,t}) \mid d \in \mathcal{D}, c \in \mathcal{C}, t \in \mathcal{T}_d\}
+  \label{eq:panel-structure}
+\end{equation}
+
+where $d$ indexes domains (suffrage, abolition, labor, etc.), $c$ indexes countries or polities, and $t$ indexes time periods whose granularity varies by data availability---annual for well-documented domains (British suffrage post-1780), decadal for sparser cases (early colonial abolition trajectories).
+
+Several construction decisions require justification:
+
+\textbf{Interpolation.} Between observed institutional changes, we hold $\hat{\alpha}$ constant (step function). Consent alignment shifts discretely through institutional reform---a franchise act, an emancipation statute, a board representation mandate---rather than continuously. Friction, by contrast, may be interpolated linearly between observed data points when annual data are unavailable, reflecting the assumption that mobilization capacity evolves gradually between observed peaks.
+
+\textbf{Missing periods.} Some trajectories contain gaps where neither $\alpha$ nor $F$ data are available. We mark these explicitly rather than imputing values, restricting analysis to periods with at least one observed proxy. Where $\alpha$ is observed but $F$ is not (e.g., periods of effective suppression where mobilization data are absent), we note the censoring rather than coding $F = 0$.
+
+\textbf{Normalization.} Cross-domain comparison requires normalizing $\hat{F}$ to a common scale. We report friction both in raw units (petition signatures, strike days) and as within-domain z-scores relative to the domain's observed range, enabling comparison of friction trajectories across domains with different absolute scales.
+
+\textbf{Structural breaks.} Major institutional reforms---franchise acts, emancipation statutes, constitutional amendments---produce structural breaks in both $\alpha$ and $F$ time series. We model these as regime changes rather than continuous evolution, consistent with the framework's prediction that consent alignment changes discontinuously through institutional intervention. For statistical testing in future large-$N$ work, Chow tests or Bai--Perron structural break detection can identify the timing and magnitude of regime changes, enabling formal tests of whether breaks in $\alpha$ correspond to predicted breaks in $F$.
+
+\textbf{Source hierarchy.} For each case study, we document our source hierarchy explicitly. Primary sources (census records, parliamentary rolls, petition archives, legal codes) are preferred over secondary compilations. Where we rely on secondary sources---particularly for pre-1800 data---we cross-reference against at least two independent secondary accounts. Quantitative data (petition signature counts, voter registration numbers, rebellion casualties) are preferred over qualitative assessments, but we integrate qualitative evidence where it provides information about mechanisms that quantitative data cannot capture (e.g., the reasons legislators cited for supporting reform, the internal deliberations of abolitionist organizations).
+
+\subsection{Comparative Design}
+\label{subsec:comparative-design}
+
+The historical case studies employ a structured, focused comparison design \citep{capoccia2007study}. Cases were selected along two dimensions: (i) variation in alpha trajectories---gradual incorporation (suffrage), delayed incorporation with violent friction (abolition), cross-national divergence (labor), and early-stage emergence (platform governance); and (ii) variation in stakes types---political (suffrage), existential (abolition), economic (labor), and informational (platform). This variation enables testing whether the framework's predictions hold across fundamentally different governance contexts.
+
+What makes these cases comparable despite their manifest differences is precisely the framework's contribution: the common metric of consent alignment $\alpha(d,t)$ and friction $F(d,t)$ provides a structural vocabulary for describing dynamics that manifest through different institutional mechanisms and historical contingencies. A franchise extension and an emancipation act are institutionally distinct but structurally identical---both raise $\alpha$ by expanding $H_t(d)$ to include previously excluded stakeholders.
+
+The comparative logic proceeds as follows. Within each case, we trace the $\alpha$--$F$ co-evolution and assess consistency with the framework's five hypotheses. Across cases, we test whether the predicted relationships hold with sufficient regularity to constitute empirical generalizations rather than post hoc rationalization. The framework's contribution is not explaining each historical episode \textit{ex post}---any sufficiently flexible narrative can do that---but generating predictions about \textit{comparative dynamics}: cases with lower $\alpha$ should exhibit higher $F$; sustained $F$ should predict eventual $\alpha$ increases; and the mode of transition (gradual vs. revolutionary) should correlate with the trajectory of friction escalation relative to institutional accommodation capacity.
+
+The comparative design also enables a form of process tracing. Within each case, we identify the causal mechanisms linking $\alpha$ and $F$: through what specific channels does low $\alpha$ generate friction? How does accumulated friction translate into institutional reform? Process tracing complements the correlational evidence from $\alpha$--$F$ trajectories by documenting the intervening steps---petition campaigns leading to parliamentary debates, rebellion costs shifting elite cost--benefit calculations, international demonstration effects lowering resistance thresholds.
+
+We acknowledge the inferential limitations of this design. Seven case studies cannot establish causal relationships with the confidence of randomized experiments or even well-identified natural experiments. What they can do is demonstrate the framework's descriptive adequacy---its ability to organize diverse historical dynamics within a common analytical structure---and generate precise predictions testable through future large-$N$ cross-national panel analyses. The hypotheses specified in Section~\ref{sec:operationalization} (H1--H5) provide the testable predictions; the case studies provide initial evidence of consistency or inconsistency with those predictions.
+
+\subsection{Causal Identification and Endogeneity Concerns}
+\label{subsec:causal-identification}
+
+The framework's core predictions are directional: low $\alpha$ causes high $F$ (H1), and persistent $F$ causes future $\alpha$ increases (H4). Testing these causal claims requires addressing the obvious endogeneity: $\alpha$ and $F$ are jointly determined by unobserved institutional and cultural factors. An authoritarian system may exhibit both low $\alpha$ and low observed $F$---not because alignment is high, but because repression suppresses friction expression. Conversely, a liberalizing system may exhibit rising $\alpha$ alongside rising $F$ if liberalization enables previously suppressed friction to become visible.
+
+For the historical case studies, we rely on three identification strategies, none of which is fully satisfactory but which together provide reasonable confidence in directional claims:
+
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Temporal sequencing}: Where friction mobilization demonstrably preceded institutional reform (e.g., Chartist petitions preceded the Reform Acts; the Jamaican rebellion preceded the Abolition Act), we can infer that friction contributed to reform rather than the reverse. Temporal precedence is necessary but not sufficient for causal identification.
+
+  \item \textbf{Mechanism documentation}: Process tracing through archival sources can establish the channels through which friction translated into reform---parliamentary debates citing petition numbers, Cabinet discussions referencing rebellion costs, legislative records linking specific mobilization events to specific reform proposals. \citet{clarkson1808} provides precisely this kind of mechanism documentation for British abolition.
+
+  \item \textbf{Cross-case comparison}: Variation in institutional accommodation capacity across polities (British parliamentary system vs. American constitutional veto points vs. Haitian colonial absence of accommodation channels) provides quasi-experimental variation in the $F \rightarrow \alpha$ transmission mechanism, enabling tests of the framework's predictions about how institutional structure moderates this relationship.
+\end{enumerate}
+
+Future work should exploit quasi-experimental variation more systematically---for instance, using franchise extensions driven by international diffusion \citep{ramirez1997} or wartime mobilization needs as instruments for $\alpha$ changes, and examining their effects on subsequent friction levels.
+
+
+%% ========================================================================
+%% SECTION 7: SUFFRAGE EXPANSION
+%% ========================================================================
+
+
+\section{Suffrage Expansion: Quantifying the Consent Broadening (1790s--1970s)}
+\label{sec:suffrage}
+
+The expansion of political suffrage provides the consent-holding framework's cleanest historical test case. The domain is well-defined, the alpha proxy is directly measurable as a population ratio, friction proxies are abundant in the archival record, and the dynamics span nearly two centuries across multiple polities. If the framework cannot organize suffrage history coherently, it cannot organize anything.
+
+\subsection{Domain Definition}
+\label{subsec:suffrage-domain}
+
+Define $d_{\text{suffrage}}$ as the governance domain covering decisions about political franchise---who may vote, stand for office, and participate in collective self-governance. The affected set $S_d$ encompasses all adult residents whose lives are shaped by political decisions: taxation, conscription, property law, family law, criminal justice, welfare provision, and public goods allocation. The consent-holder mapping $H_t(d_{\text{suffrage}})$ identifies, at each time $t$, the subset of the adult population with effective electoral participation rights.
+
+The stakes distribution in $d_{\text{suffrage}}$ is approximately uniform across the affected population: every adult resident has substantial stakes in political outcomes, though stakes vary by domain-specific exposure. Women had disproportionate stakes in family law (coverture laws extinguished married women's legal personhood), property rights (married women could not own property independently until the Married Women's Property Acts of the 1870s--1880s), and employment regulation (no legal protections for women workers until the late 19th century). Workers had disproportionate stakes in labor regulation, poor relief, and criminal law enforcement. These differential stakes distributions mean that excluding women or workers from the franchise produced particularly severe misalignment in the domains where their stakes were highest---a pattern the framework captures through the stakes-weighting in the $\alpha$ measure.
+
+For the suffrage domain itself, we treat $s_i(d_{\text{suffrage}}) \approx s_j(d_{\text{suffrage}})$ for all $i, j \in S_d$, enabling the ratio-scale alpha proxy:
+
+\begin{equation}
+  \hat{\alpha}(d_{\text{suffrage}}, t) = \frac{N_{\text{enfranchised}}(t)}{N_{\text{adult population}}(t)}
+  \label{eq:alpha-suffrage}
+\end{equation}
+
+This proxy has the virtue of directness: franchise expansion is literally the expansion of consent power across the affected population. Its limitation is that it treats all enfranchised citizens as holding equal effective voice, ignoring capacity constraints (literacy requirements, registration barriers, intimidation) that may depress effective $\alpha$ below formal $\alpha$. We address this discrepancy between de jure and de facto franchise in the American case (Section~\ref{subsec:suffrage-dynamics}).
+
+\subsection{Alpha Proxy: Enfranchised Population Share}
+\label{subsec:suffrage-alpha}
+
+Table~\ref{tab:suffrage-alpha} traces $\hat{\alpha}(d_{\text{suffrage}}, t)$ across five countries, documenting the stepwise expansion from narrow property-based franchise to universal adult suffrage. The data reveal several patterns relevant to the framework.
+
+\begin{table}[htbp]
+\centering
+\caption{Consent alignment proxy $\hat{\alpha}(d_{\text{suffrage}}, t)$: enfranchised share of adult population}
+\label{tab:suffrage-alpha}
+\begin{tabular}{@{}llrl@{}}
+\toprule
+Country & Year & $\hat{\alpha}$ (\%) & Institutional change \\
+\midrule
+\multirow{5}{*}{United Kingdom}
+  & 1831 & $\sim$5 & Pre-Reform Act (propertied males only) \\
+  & 1832 & $\sim$7 & First Reform Act \\
+  & 1867 & $\sim$13 & Second Reform Act (urban working men) \\
+  & 1884 & $\sim$28 & Third Reform Act (rural working men) \\
+  & 1918 & $\sim$47 & Representation of the People Act (women $>$30) \\
+  & 1928 & $\sim$97 & Equal Franchise Act (all adults $>$21) \\
+\addlinespace
+\multirow{4}{*}{United States}
+  & 1790 & $\sim$6 & Constitutional franchise (white male freeholders) \\
+  & 1870 & $\sim$19 & 15th Amendment (race-blind, nominal) \\
+  & 1920 & $\sim$52 & 19th Amendment (women's suffrage) \\
+  & 1965 & $\sim$95 & Voting Rights Act (effective Black suffrage) \\
+\addlinespace
+\multirow{3}{*}{France}
+  & 1791 & $\sim$15 & Active citizens (tax-paying males) \\
+  & 1848 & $\sim$48 & Universal male suffrage (Second Republic) \\
+  & 1944 & $\sim$96 & Women's suffrage (provisional government) \\
+\addlinespace
+\multirow{2}{*}{Switzerland}
+  & 1848 & $\sim$48 & Universal male suffrage (federal constitution) \\
+  & 1971 & $\sim$96 & Women's suffrage (federal level) \\
+\addlinespace
+New Zealand & 1893 & $\sim$95 & Electoral Act (first full female suffrage) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The trajectories reveal three distinct patterns. First, \textit{stepwise rather than continuous} expansion: $\alpha$ jumps at discrete institutional moments separated by periods of stasis. The framework explains this through threshold dynamics (H3)---friction must accumulate to levels exceeding institutional accommodation capacity before discrete reform occurs. Second, \textit{substantial cross-national variation} in timing: Switzerland delayed women's suffrage until 1971, a full 78 years after New Zealand. The framework predicts that this variation correlates with differences in friction intensity, repression costs, and elite interest alignment. Third, \textit{acceleration over time}: later extensions came faster, consistent with international diffusion effects documented by \citet{ramirez1997}.
+
+The American case reveals the critical distinction between formal and effective $\alpha$. The 15th Amendment (1870) nominally raised $\hat{\alpha}$ to include Black men, but poll taxes, literacy tests, grandfather clauses, and violent intimidation held effective Black political participation near zero across the South until the Voting Rights Act of 1965 \citep{acemoglu2000why}. The framework handles this through the effective voice concept: $\text{eff\_voice}_i$ can diverge sharply from formal $C_{i,d}$ when capacity constraints---including deliberate suppression---prevent formal rights from translating into actual decision power. Mississippi's Black voter registration rate was approximately 6.7\% in 1964 despite formal constitutional eligibility since 1870---a 94-year gap between formal and effective $\alpha$ that reveals the limitations of de jure measurement alone.
+
+\citet{acemoglu2000why} provide an influential formal model of franchise extension as elite preemption of revolutionary threat, arguing that the West extended the franchise when the threat of revolution made concession cheaper than repression. The consent-holding framework encompasses this mechanism but generalizes it: franchise extension raises $\alpha$ not only to preempt revolutionary friction (the Acemoglu--Robinson channel) but also to reduce ongoing governance costs from non-revolutionary friction (petitioning, protest, non-cooperation) and to capture the performance benefits of broader inclusion (the Chapman and Batinti channels). The Acemoglu--Robinson model maps onto H3 (threshold effects) and H4 (reform pressure from persistent friction), while the consent-holding framework additionally captures H1 (the continuous alignment--friction relationship below the revolutionary threshold) and H5 (performance interactions).
+
+The Swiss case merits specific attention as an outlier. Switzerland---one of Europe's oldest democracies---denied women the federal franchise until 1971, a full 123 years after introducing universal male suffrage in 1848. The canton of Appenzell Innerrhoden resisted women's suffrage until forced by federal court order in 1990. The framework interprets this as a case where the institutional structure (cantonal autonomy, direct democracy requiring male-majority referenda to extend the franchise to women) created a structural barrier: the population holding consent power had to vote to dilute its own power, a collective action problem that the framework's friction dynamics eventually resolved but only with extreme temporal lag. The Swiss case thus represents a natural experiment in institutional accommodation capacity: when franchise extension requires approval from the currently enfranchised, friction must overcome not just elite resistance but majoritarian self-interest.
+
+\subsection{Friction Proxy: Petition Data and Protest Events}
+\label{subsec:suffrage-friction}
+
+The suffrage case offers unusually rich friction data, particularly for Britain where petitioning constituted a primary mechanism for expressing political demands. Petitioning was not merely a symbolic act; it was the primary formal channel through which the unenfranchised population could communicate demands to Parliament. The right to petition, enshrined in the 1689 Bill of Rights, provided an institutional channel for friction expression even when the franchise itself was denied---making Britain a natural laboratory for studying how friction operates within institutional constraints. \citet{miller2021} documents the British women's suffrage petition campaigns in systematic detail, enabling construction of a friction time series spanning the 1830s through the 1910s.
+
+\textbf{British Chartist and suffrage petitions.} The Chartist movement provides the earliest large-scale friction data: the People's Charter petitions of 1839 (1.3 million signatures), 1842 (3.3 million signatures), and 1848 (estimated 2--6 million signatures, though contested) represent massive mobilization by working men excluded from the post-1832 franchise. These petition counts, normalized by adult population, provide a friction index:
+
+\begin{equation}
+  \hat{F}_{\text{petition}}(t) = \frac{N_{\text{signatures}}(t)}{N_{\text{adult population}}(t)}
+  \label{eq:friction-petition}
+\end{equation}
+
+The Chartist petition trajectory---escalating from 1.3 million to 3.3 million signatures over three years---illustrates the framework's prediction that sustained low $\alpha$ generates escalating friction (H4). Yet the Chartist movement's failure to secure immediate reform also illustrates scope conditions: friction alone does not guarantee incorporation when elite interests oppose expansion and repression costs are manageable.
+
+\textbf{Women's suffrage friction.} The women's suffrage movement generated friction through multiple channels: petition campaigns (1866 petition with 1,499 signatures initiating the parliamentary suffrage campaign; subsequent petitions escalating to hundreds of thousands of signatures by the 1900s), public demonstrations (the ``Mud March'' of 1907 drawing 3,000 participants; the 1908 Hyde Park rally attracting an estimated 250,000--500,000), and militancy. \citet{pankhurst1914} documents the escalation of the Women's Social and Political Union (WSPU) from constitutional methods to window-smashing, arson, and hunger strikes---a friction trajectory consistent with H3's prediction that sustained exclusion produces escalation when institutional channels prove inadequate.
+
+The suffragette militancy represents an important theoretical case: friction escalation beyond petition and protest into property destruction and bodily sacrifice (hunger strikes, forcible feeding). The framework interprets this as threshold-crossing behavior: when $\alpha = 0$ persists despite mounting constitutionalist friction, some fraction of the excluded population escalates to higher-cost, higher-visibility friction forms. \citet{mason1912} provides contemporary documentation of this escalation logic from within the movement itself.
+
+\textbf{American suffrage friction.} The American suffrage movement generated friction through state-by-state campaigns (over 480 campaigns to get suffrage referenda on ballots between 1868 and 1920), demonstrations (the 1913 Washington suffrage parade involving 5,000--8,000 marchers), and civil disobedience (the 1917 White House pickets and the ``Night of Terror'' at Occoquan Workhouse). The suffrage movement also deployed \textit{proxy friction}---enlisting enfranchised male allies to pressure legislators---demonstrating that friction can be channeled through existing consent-holders when direct institutional access is blocked.
+
+\citet{higginson1859} represents an early articulation of the exclusion logic underlying suffrage friction: the argument that denying women education and political participation was self-reinforcing, as the resulting demonstrated incapacity was then used to justify continued exclusion. In framework terms, this identifies a feedback loop where low $\alpha$ suppresses the capacity required to generate the friction necessary to raise $\alpha$.
+
+Table~\ref{tab:suffrage-friction} summarizes the major friction events across the suffrage cases, documenting the escalation pattern the framework predicts.
+
+\begin{table}[htbp]
+\centering
+\caption{Selected friction events in the suffrage domain}
+\label{tab:suffrage-friction}
+\begin{tabular}{@{}lllr@{}}
+\toprule
+Country & Year & Event & Scale indicator \\
+\midrule
+UK & 1839 & Chartist petition (1st) & 1.3M signatures \\
+UK & 1842 & Chartist petition (2nd) & 3.3M signatures \\
+UK & 1866 & Women's suffrage petition & 1,499 signatures \\
+UK & 1907 & ``Mud March'' demonstration & 3,000 marchers \\
+UK & 1908 & Hyde Park rally & 250,000--500,000 \\
+UK & 1909--14 & WSPU militancy campaign & 1,000+ arrests \\
+US & 1848 & Seneca Falls Convention & 300 attendees \\
+US & 1913 & Washington suffrage parade & 5,000--8,000 \\
+US & 1917 & White House pickets/Night of Terror & 218 arrests \\
+France & 1848 & Revolutionary demands & Mass mobilization \\
+NZ & 1891--93 & Petition campaigns & 31,872 signatures (1893) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The table reveals the escalation dynamic across both time and mode. British friction began with constitutionalist petitioning (millions of signatures in the Chartist period), continued through mass demonstration (the 1908 rally remains one of the largest political gatherings in British history), and escalated to militancy when constitutional methods proved insufficient. The WSPU's campaign of property destruction---1,500 windows smashed in a single coordinated action in March 1912, letter-box arson, cutting of telegraph wires, and bombing of the Chancellor's unoccupied residence---represents the framework's threshold-crossing prediction in its most dramatic form.
+
+\subsection{Alpha--Friction Dynamics}
+\label{subsec:suffrage-dynamics}
+
+The co-evolution of $\alpha$ and $F$ in the suffrage domain provides systematic evidence for four of the framework's five hypotheses.
+
+\textbf{H1 (Alignment--Friction Relationship).} The British trajectory demonstrates the predicted inverse relationship. The pre-1832 period combined $\hat{\alpha} \approx 0.05$ with sustained friction (radicalism, petitioning, occasional riot). Each franchise extension---1832, 1867, 1884---was followed by declining friction from the newly incorporated group, though friction from still-excluded populations continued. The 1867 Reform Act's incorporation of urban working men reduced Chartist-style class friction but left women's suffrage friction untouched. After 1928, when $\hat{\alpha}$ reached near-universal levels, suffrage-specific friction effectively disappeared. \citet{berlinski2010extension} provides econometric evidence that the Second Reform Act shifted political behavior in newly enfranchised constituencies, consistent with $\alpha$ expansion reducing friction through incorporation.
+
+\textbf{H3 (Threshold Effects).} The dynamics exhibit clear threshold behavior. Long periods of low $\alpha$ with rising friction (UK 1790s--1832, US 1850s--1870 for Black suffrage, UK 1860s--1918 for women's suffrage) alternate with rapid $\alpha$ jumps when accumulated friction exceeds institutional tolerance. The UK's 1918 Representation of the People Act exemplifies this: the combination of women's wartime contributions (demonstrating capacity), suffragette militancy (imposing friction costs), and the need to re-enfranchise soldiers returning from the trenches created a political window where the costs of continued exclusion exceeded the costs of incorporation.
+
+\textbf{H4 (Temporal Dynamics---Reform Pressure).} Persistent friction predicts future $\alpha$ increases with lags reflecting institutional accommodation speeds. British suffrage exhibits lags of approximately 15--40 years between the onset of sustained friction and franchise extension: Chartist mobilization (1838--1848) preceded the Second Reform Act (1867) by nearly two decades; organized women's suffrage campaigns (1860s--1910s) preceded the 1918 Act by approximately 50 years. The framework predicts these lags should shorten as the costs of repression rise and international demonstration effects lower elite resistance thresholds---a prediction broadly consistent with the acceleration of suffrage adoption globally documented by \citet{ramirez1997}.
+
+\textbf{H5 (Performance Interactions).} \citet{chapman2020extension} demonstrates that franchise extension in 19th-century Britain was followed by increased government expenditure on public goods---sanitation, education, infrastructure---benefiting newly enfranchised populations. \citet{batinti2022voting} find that suffrage extension across 15 European countries (1870--2010) improved population health outcomes, an effect operating through expanded public goods provision. These findings support H5's prediction indirectly: franchise expansion ($\alpha$ increase) improved governance performance ($P$ increase), which in turn reduced friction ($F$ decrease) below what $\alpha$ expansion alone would predict. The consent--performance nexus creates a virtuous cycle where incorporation improves both alignment and outcomes.
+
+\textbf{H2 (Stakes--Consent Covariance).} The suffrage case provides indirect support. Prior to franchise extension, the covariance between stakes and consent power was negative for excluded populations: women held high stakes in family law, property law, and employment regulation but zero consent power in these domains. Each franchise extension increased $\text{Cov}(s_i(d), C_{i,d})$ by bringing consent power into alignment with stakes distribution. The subsequent reduction in suffrage-specific friction---the dissolution of suffrage organizations following enfranchisement---is consistent with H2's prediction that increasing stakes--consent covariance reduces friction. The mechanism is straightforward: once a population can vote, it gains institutional channels for expressing preferences, reducing the need for extra-institutional friction.
+
+\textbf{International diffusion.} \citet{ramirez1997} document that women's suffrage adoption followed a diffusion pattern consistent with the framework's threshold dynamics: early adopters (New Zealand 1893, Australia 1902, Finland 1906) demonstrated feasibility, lowering the perceived costs of incorporation for later adopters. In framework terms, international demonstration effects reduced the tolerance threshold $\tau$ across countries: the fact that female suffrage did not produce the governance catastrophes opponents predicted lowered elite resistance to domestic reform. This creates a cross-national version of H4: friction in one country, combined with successful reform in another, accelerates reform adoption.
+
+\textbf{Counterfactual analysis.} The framework generates a specific counterfactual: had franchise extensions not occurred when they did, friction would have continued escalating, potentially producing revolutionary outcomes. The British case provides limited evidence for this counterfactual. The 1832 Reform Act was passed in the context of widespread unrest---the Bristol riots of 1831, agricultural laborer uprisings (the Swing riots), and explicit revolutionary rhetoric from reform societies. Contemporary observers, including the Duke of Wellington, assessed the risk of revolution as genuine. The framework interprets this as a case where friction approached the threshold at which institutional accommodation became urgent, and reform represented the less costly alternative to suppression. Whether actual revolution would have occurred absent reform is inherently unknowable, but the framework's prediction that the cost calculus favored accommodation over repression is supported by the legislative outcome.
+
+Figure~\ref{fig:alpha-suffrage} traces $\hat{\alpha}(d_{\text{suffrage}}, t)$ for five nations, documenting the stepwise expansion from narrow propertied-male franchise to near-universal adult suffrage. The trajectories' common shape---long plateaus punctuated by discrete jumps---illustrates the framework's prediction that consent alignment changes discontinuously through institutional reform rather than continuously through gradual social evolution.
+
+\subsection{Cross-Case Connections}
+\label{subsec:suffrage-connections}
+
+Suffrage connects to the other historical cases through three mechanisms. First, \textit{organizational overlap}: the American suffrage movement grew directly from abolitionist networks. The 1848 Seneca Falls Convention, where \citet{stanton1848} Declaration of Sentiments articulated women's political exclusion in the language of the Declaration of Independence, was organized by women radicalized through anti-slavery activism. Frederick Douglass attended and supported the suffrage resolution. This organizational linkage illustrates how friction mobilization in one domain ($d_{\text{slavery}}$) can catalyze mobilization in adjacent domains ($d_{\text{suffrage}}$) through shared organizational infrastructure and frame extension.
+
+Second, \textit{class vs. gender franchise}: suffrage expansion proceeded along two partially independent axes---economic (property requirements) and gender (sex restrictions). The British trajectory reveals that these axes interacted: the Third Reform Act (1884) extended the vote to agricultural laborers, incorporating the class dimension, while leaving the gender dimension unchanged for another 34 years. The framework accommodates this through multi-dimensional $\alpha$ decomposition: $\hat{\alpha}$ can be disaggregated by exclusion dimension to track which populations are incorporated at which rates.
+
+Third, \textit{formal vs. effective suffrage}: the American case---where the 15th Amendment (1870) and 19th Amendment (1920) nominally achieved near-universal franchise but Jim Crow suppression maintained effective Black exclusion until 1965---connects directly to the civil rights case study. This 95-year gap between formal and effective $\alpha$ expansion represents the framework's most important empirical challenge: accounting for the divergence between institutional consent structures and realized consent power. The consent-holding framework handles this through the effective voice construct, but the American case demonstrates that effective voice measurement requires attention to enforcement, intimidation, and institutional barriers that formal legal analysis alone cannot capture.
+
+Fourth, \textit{the franchise--public goods nexus}: suffrage expansion did not merely redistribute existing consent power; it changed what governance produced. \citet{chapman2020extension} demonstrates that 19th-century British franchise extensions were followed by substantial increases in public goods provision---sanitation, education, poor relief---targeted at the newly enfranchised populations. \citet{batinti2022voting} find parallel effects on health outcomes across 15 European countries. This nexus illustrates a feedback mechanism the framework captures through the performance variable $P(d,t)$: raising $\alpha$ improves $P$ (because governance becomes more responsive to a broader set of stakes), which in turn further reduces friction (because even those who did not gain voice benefit from improved public goods). The virtuous cycle of incorporation---higher $\alpha \rightarrow$ better $P \rightarrow$ lower $F \rightarrow$ reduced pressure for further reform---explains why franchise extensions, once achieved, proved remarkably stable: no Western democracy reversed universal suffrage once it was established (unlike abolition, where Reconstruction-era gains were reversed for nearly a century).
+
+
+%% ========================================================================
+%% SECTION 8: ABOLITION AND EMANCIPATION
+%% ========================================================================
+
+
+\section{Abolition and Emancipation: Maximum Stakes, Zero Consent (1780s--1870s)}
+\label{sec:abolition}
+
+If suffrage provides the framework's cleanest test case, abolition provides its most extreme. The domain combines existential stakes ($s_{\text{enslaved}}(d) = \text{maximal}$) with zero consent power ($C_{\text{enslaved}} = 0$ by legal definition), producing $\hat{\alpha}(d_{\text{slavery}}) \approx 0$---the theoretical floor. The framework predicts that this configuration generates unsustainable friction, and indeed the abolition of Atlantic slavery involved the most intense and prolonged friction dynamics of any case we examine: centuries of slave resistance, decades of organized abolitionism, and, in the American case, civil war.
+
+The abolition case also introduces a construct absent from simpler cases: \textit{proxy consent}. Enslaved persons, defined out of political personhood by the very system from which they sought liberation, could not directly exercise consent power in the domains governing their status. The friction that eventually raised $\alpha$ was generated partly through direct slave resistance and partly through proxy agents---abolitionists, sympathetic legislators, humanitarian organizations---who channeled moral friction on behalf of those without voice. This mechanism, where enfranchised agents represent the stakes of disenfranchised populations, is central to the framework's account of how $\alpha$ increases when the excluded population lacks the institutional capacity for self-representation.
+
+\subsection{Domain Definition}
+\label{subsec:abolition-domain}
+
+Define $d_{\text{slavery}}$ as the governance domain encompassing decisions over enslaved persons' legal status, bodily autonomy, labor conditions, family integrity, and physical security. The decision scope is comprehensive: slaveholders exercised near-total authority over enslaved persons' lives, and legislative bodies determined the legal framework permitting, regulating, or prohibiting enslavement.
+
+The affected set $S_d$ is stratified by stakes magnitude:
+
+\begin{itemize}
+  \item \textbf{Enslaved persons}: $s_{\text{enslaved}}(d) = \text{existential}$. Life, liberty, bodily autonomy, family integrity, and physical security were all at stake. By any reasonable stakes metric, enslaved persons held maximal stakes in the slavery domain.
+
+  \item \textbf{Slaveholders}: $s_{\text{slaveholders}}(d) = \text{economic}$. Enslaved labor constituted the primary capital asset in plantation economies. In the American South, the capital value of enslaved persons exceeded the combined value of all manufacturing, railroads, and other productive capital.
+
+  \item \textbf{Broader population}: $s_{\text{public}}(d) > 0$ through economic integration (slave-produced commodities, supply chains), moral implication (complicity in the slave system), and political consequences (the slavery question dominated Anglo-American politics for decades).
+\end{itemize}
+
+The consent-holder mapping $H_t(d_{\text{slavery}})$ placed decision power entirely with slaveholders (at the individual level) and with legislatures dominated by slaveholding interests (at the institutional level). Enslaved persons held $C_{\text{enslaved}} = 0$ not as an empirical approximation but as a definitional feature of the legal system: enslaved persons were classified as property, not persons, and thus had no legal standing to participate in decisions about their own status.
+
+This produces $\hat{\alpha}(d_{\text{slavery}}) \approx 0$ despite the affected population holding the highest conceivable stakes. The framework identifies this as the maximally misaligned configuration---the governance equivalent of a system under maximum structural stress.
+
+\subsection{Alpha Proxy: Legal Status Index}
+\label{subsec:abolition-alpha}
+
+We construct an ordinal $\hat{\alpha}$ index tracking the legal status of enslaved and formerly enslaved persons across four polities (Table~\ref{tab:alpha-abolition-scale}). The index captures the cumulative expansion of legal personhood, from complete denial to effective citizenship.
+
+\textbf{British Empire trajectory.} The British path from chattel slavery to emancipation proceeded through identifiable institutional stages: the Somerset ruling (1772, $\hat{\alpha} \approx 0.05$---slavery unenforceable in England proper, no effect on colonial slavery); the Slave Trade Act (1807, $\hat{\alpha} \approx 0.10$---prohibition of the trade, not the institution); the Slavery Abolition Act (1833, $\hat{\alpha} \approx 0.50$---emancipation with a six-year ``apprenticeship'' period); and full freedom (1838, $\hat{\alpha} \approx 0.75$---apprenticeship ended, though effective citizenship remained limited by economic marginalization and colonial governance structures).
+
+\textbf{American trajectory.} The American path was slower and more violent: the Northwest Ordinance (1787, $\hat{\alpha} \approx 0.05$---slavery prohibited in new northern territories, entrenched in the South); the ban on the international slave trade (1808, $\hat{\alpha} \approx 0.10$---limited impact given domestic slave breeding); the Emancipation Proclamation (1863, $\hat{\alpha} \approx 0.25$---limited to Confederate states, a war measure); the 13th Amendment (1865, $\hat{\alpha} \approx 0.50$---universal abolition); the 14th and 15th Amendments (1868--1870, $\hat{\alpha} \approx 0.75$---formal citizenship and voting rights); and the effective enforcement beginning with the Civil Rights Act and Voting Rights Act (1964--1965, $\hat{\alpha} \approx 0.90$---substantive citizenship protections, though full equality remains contested).
+
+The American trajectory illustrates a critical pattern: the gap between the 13th Amendment ($\hat{\alpha} \approx 0.50$ in 1865) and effective citizenship ($\hat{\alpha} \approx 0.90$ in 1965) spanned a full century. Reconstruction's brief $\alpha$ expansion (1865--1877) was reversed by Jim Crow, demonstrating that consent alignment gains can be rolled back when the institutional structures supporting them are dismantled. The framework predicts that such reversals generate renewed friction---a prediction confirmed by the subsequent century of Black resistance, from the Niagara Movement (1905) through the Civil Rights Movement (1950s--1960s).
+
+\textbf{Haitian trajectory.} Haiti represents the revolutionary path: $\hat{\alpha}$ jumped from approximately 0.00 to approximately 0.75 through armed revolution (1791--1804). The Haitian Revolution is the only case of enslaved persons directly overthrowing the slave system through military force, rather than relying on proxy consent mechanisms operating through the slaveholding polity's institutions. In framework terms, this represents the case where institutional accommodation capacity was zero---the colonial system provided no mechanisms for raising $\alpha$ incrementally---forcing extra-institutional resolution.
+
+\textbf{French trajectory.} France oscillated: the National Convention abolished slavery in 1794 ($\hat{\alpha}: 0.00 \rightarrow 0.50$), Napoleon re-established it in 1802 ($\hat{\alpha}: 0.50 \rightarrow 0.00$), and final abolition came in 1848 ($\hat{\alpha}: 0.00 \rightarrow 0.75$). The reversal under Napoleon demonstrates a distinctive failure mode: $\alpha$ expansion achieved through elite decision (metropolitan legislative action) without local institutional consolidation proved fragile when elite preferences shifted. The framework predicts that $\alpha$ gains driven by proxy consent rather than direct stakeholder mobilization are less durable, as they lack the friction-generating capacity to resist reversal.
+
+Table~\ref{tab:abolition-trajectories} summarizes the ordinal $\hat{\alpha}$ trajectories across the four polities, documenting both the diverse paths and the common destination.
+
+\begin{table}[htbp]
+\centering
+\caption{Ordinal $\hat{\alpha}(d_{\text{slavery}}, t)$ trajectories across four polities}
+\label{tab:abolition-trajectories}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & \multicolumn{6}{c}{$\hat{\alpha}$ at key institutional moments} \\
+\cmidrule(l){2-7}
+Polity & Chattel & Amelioration & Trade ban & Emancipation & Citizenship & Effective \\
+\midrule
+British Empire & 0.00 & 0.05 (1772) & 0.10 (1807) & 0.50 (1833) & 0.75 (1838) & --- \\
+United States & 0.00 & 0.05 (1787) & 0.10 (1808) & 0.50 (1865) & 0.75 (1870) & 0.90 (1965) \\
+Haiti & 0.00 & --- & --- & 0.75 (1804) & 0.75 (1804) & --- \\
+France & 0.00 & --- & 0.50 (1794) & 0.00 (1802) & 0.75 (1848) & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The table reveals several patterns. First, gradual trajectories (British, American) passed through intermediate $\alpha$ states while revolutionary trajectories (Haitian) jumped directly from 0.00 to 0.75. Second, the French reversal ($0.50 \rightarrow 0.00$ under Napoleon) is unique among the four cases and supports the framework's prediction about the fragility of proxy-driven $\alpha$ gains. Third, the American trajectory exhibits the longest gap between formal citizenship (1870) and effective citizenship (1965), reflecting the most sustained institutional resistance to $\alpha$ consolidation.
+
+\subsection{Friction Proxy: Resistance and Abolition Mobilization}
+\label{subsec:abolition-friction}
+
+The abolition domain generated friction through two distinct channels: direct resistance by enslaved persons and organized mobilization by abolitionist networks. We construct separate friction proxies for each.
+
+\textbf{Direct resistance.} Slave rebellions provide count-based friction data, though the historical record is incomplete (many small-scale acts of resistance---work slowdowns, sabotage, flight---went unrecorded or were suppressed from official accounts). Major rebellions constitute friction spikes visible in the historical record:
+
+\begin{itemize}
+  \item \textit{Haiti} (1791--1804): The largest and most successful slave rebellion in history. Beginning with the August 1791 uprising involving an estimated 100,000 enslaved persons, the revolution destroyed the most profitable colony in the Caribbean and established the first Black republic. In framework terms, this represents friction at a scale exceeding the system's accommodation capacity, resulting in complete $\alpha$ restructuring through revolutionary means.
+
+  \item \textit{Jamaica} (1831--1832): The ``Baptist War'' or Christmas Rebellion, involving an estimated 60,000 enslaved persons, destroyed property worth approximately \pounds1.1 million. \citet{blackburn1988} documents how this rebellion directly accelerated parliamentary abolition: the destruction demonstrated that maintaining slavery imposed escalating costs---exactly the friction mechanism the framework predicts.
+
+  \item \textit{Nat Turner's Rebellion} (1831): Though smaller in scale (approximately 70 enslaved persons), Turner's rebellion in Virginia demonstrated the vulnerability of slaveholding society to organized resistance and generated intense fear-based friction among slaveholders, paradoxically leading to both ameliorative discussion and repressive backlash.
+\end{itemize}
+
+Everyday resistance constituted a lower-intensity but continuous friction source: malingering, tool-breaking, feigned illness, running away, and maintaining cultural practices prohibited by slaveholders. The scale of flight alone was substantial: an estimated 100,000 enslaved persons escaped via the Underground Railroad between 1810 and 1860, and the Fugitive Slave Act of 1850---requiring Northern states to assist in recapturing escaped slaves---generated its own friction cycle, as Northern populations confronted the slavery system's operational demands directly. This ``infrapolitics'' of resistance \citep{drescher1987} represents the chronic friction the framework predicts under sustained low $\alpha$---too diffuse to generate institutional reform directly but contributing to the slave system's operational costs and moral delegitimation.
+
+The economic dimension of slave resistance as friction deserves emphasis. Each act of resistance---from work slowdowns to rebellion---imposed costs on slaveholders: lost labor, property damage, suppression expenditures, insurance costs, militia maintenance. These costs constituted an ongoing ``friction tax'' on the slave system, eroding its economic efficiency relative to free labor alternatives. \citet{blackburn1988} argues that this friction tax, combined with the growing recognition that free labor was more productive in industrial settings, contributed to the political calculations enabling abolition. In framework terms, rising friction costs shifted the elite cost--benefit analysis: when the costs of maintaining $\alpha \approx 0$ (rebellion suppression, moral opprobrium, economic inefficiency) exceeded the costs of $\alpha$ expansion (lost slave labor, compensation payments), institutional accommodation became rational.
+
+\textbf{Abolition mobilization.} The organized abolitionist movement, operating primarily within the metropolitan polities of slaveholding empires, generated friction through institutional channels. The \citet{abolitionsociety1787} Society for the Abolition of the Slave Trade, founded in London with twelve members, grew into a mass movement generating petition campaigns of unprecedented scale:
+
+\begin{itemize}
+  \item 1788: Over 100 petitions to Parliament against the slave trade
+  \item 1792: 519 petitions with an estimated 390,000 signatures (approximately 13\% of the adult male population)
+  \item 1814: 800 petitions following the Congress of Vienna
+  \item 1833: Massive petition campaign accompanying the Abolition Act, with over 1.3 million signatures on a single petition (the largest petition in British history to that date)
+\end{itemize}
+
+\citet{clarkson1808} documents the systematic evidence-gathering that undergirded abolitionist friction: collecting testimony from sailors, surgeons, and merchants; procuring physical artifacts (shackles, branding irons, the Brooks slave ship diagram); and conducting investigations at slave-trading ports. This constitutes what we might call \textit{informational friction}---making visible the consequences of zero-$\alpha$ governance to populations with the institutional capacity to demand change.
+
+\citet{wilberforce1807} speeches in Parliament transformed grassroots friction into legislative pressure through sustained advocacy spanning nearly two decades of parliamentary defeats before achieving the Slave Trade Act (1807) and contributing to the momentum that produced abolition in 1833. The parliamentary record is instructive: Wilberforce introduced abolition motions annually from 1789 to 1807, losing repeatedly before succeeding. Each defeat, however, narrowed the margin and expanded the coalition. In 1791, the motion to abolish the slave trade was defeated 163--88; by 1796, the margin had narrowed to 74--70; and in 1807, the Slave Trade Act passed 283--16. This trajectory---repeated friction inputs producing diminishing institutional resistance until a threshold is crossed---exemplifies H4's temporal dynamics at the legislative level.
+
+\citet{equiano1789} narrative---the first widely read autobiography by a formerly enslaved person---operated as a friction transmission mechanism, converting the experiential reality of enslavement into moral and political pressure on the metropolitan public. Equiano's \textit{Interesting Narrative} went through nine editions in his lifetime, was translated into multiple languages, and directly influenced parliamentary debates. In framework terms, the narrative served as a technology for transmitting the lived reality of $\alpha \approx 0$ governance to populations with the institutional capacity to generate effective friction. This represents a generalizable mechanism: when directly affected populations lack institutional access, their experiences must be transmitted to proxy agents through narrative, testimony, and documentation---what we might formalize as a friction transmission function mapping experiential stakes into observable proxy friction.
+
+The sugar boycott of the 1790s represents a distinctive friction channel: consumer activism. An estimated 300,000--400,000 British households boycotted slave-produced sugar, reducing consumption by approximately one-third. This constitutes economic friction---directly reducing the profitability of slave labor---channeled through consumer decisions rather than political institutions. The boycott demonstrates that friction can operate through market mechanisms as well as political ones, a pattern that recurs in the platform governance case (advertiser boycotts) and corporate governance case (divestment campaigns).
+
+\subsection{Alpha--Friction Dynamics}
+\label{subsec:abolition-dynamics}
+
+The abolition case illuminates the framework's predictions under extreme conditions---what happens when $\alpha \approx 0$ for the population with maximal stakes.
+
+\textbf{H1 (Alignment--Friction Relationship).} The case provides strong support: $\alpha \approx 0$ over centuries generated sustained friction in every slaveholding society. No slave system achieved durable stability; all faced continuous resistance and mounting opposition. The framework predicts this: existential stakes combined with zero consent power produce the maximum possible preference--outcome deviation, generating correspondingly intense mobilization pressure. The comparative evidence is unambiguous: no polity maintained $\alpha \approx 0$ in a domain with existential stakes indefinitely. The Atlantic slave system lasted approximately 350 years (1500s--1880s in its fullest extent, counting Brazil's abolition in 1888), but its entire duration was marked by resistance, rebellion, and mounting moral and political opposition---the framework would characterize this as three and a half centuries of unsustainable friction under an $\alpha \approx 0$ regime.
+
+The comparative intensity of friction across cases supports H1's directional prediction. Abolition generated higher-intensity friction than suffrage (rebellions, civil war vs. petitions, demonstrations), consistent with the prediction that higher stakes amplify friction: $s_{\text{enslaved}}(d) = \text{existential}$ versus $s_{\text{disenfranchised women}}(d) = \text{political}$. This stakes-friction proportionality is a second-order prediction of H1 that the historical record broadly supports.
+
+\textbf{H3 (Threshold Effects).} The transition dynamics exhibit threshold behavior. In the British case, petition campaigns, sugar boycotts, and parliamentary advocacy accumulated over decades without producing institutional change, then generated rapid $\alpha$ expansion in the 1807--1838 window. The Jamaican rebellion of 1831--1832 appears to have been the threshold-crossing event: it demonstrated that the costs of maintaining slavery (property destruction, military deployment, moral opprobrium) exceeded the costs of compensated emancipation. In framework terms, cumulative friction crossed the tolerance threshold $\tau$, triggering institutional accommodation.
+
+The chronology supports this interpretation precisely. The Jamaica rebellion occurred in December 1831--January 1832. The parliamentary Select Committee on the Extinction of Slavery was established in 1832. The Abolition Act passed in August 1833. The causal proximity is tight: a major rebellion followed by institutional reform within 20 months, after decades of petition-based friction that produced only incremental legislative responses (the 1807 trade ban, the 1823 amelioration resolution). The rebellion did not introduce a new argument---the moral case had been made for decades---but it altered the cost calculus by demonstrating that the slave system's maintenance costs were escalating beyond what compensated emancipation would cost.
+
+The American case shows what happens when institutional accommodation mechanisms are blocked. The constitutional structure---specifically the three-fifths compromise, the Senate's equal representation of slave and free states, and the fugitive slave clause---prevented the kind of gradual $\alpha$ expansion that occurred in Britain. Friction accumulated without institutional outlet until it produced the most destructive conflict in American history. The framework predicts that systems lacking institutional channels for $\alpha$ adjustment face binary outcomes: either friction is suppressed indefinitely (requiring escalating repression costs) or it produces extra-institutional rupture. The American Civil War is the paradigmatic case of the latter.
+
+The American trajectory also reveals a compound failure: not only were institutional channels blocked for the enslaved population ($C_{\text{enslaved}} = 0$), but the enfranchised population was divided between slaveholding and non-slaveholding interests, preventing even proxy consent from operating effectively within the constitutional framework. The Missouri Compromise (1820), the Compromise of 1850, and the Kansas-Nebraska Act (1854) represent successive failed attempts to manage friction through territorial accommodation rather than $\alpha$ expansion. Each compromise generated new friction (``Bleeding Kansas,'' the Dred Scott backlash, John Brown's raid) rather than resolving it, consistent with the framework's prediction that accommodations short of genuine $\alpha$ expansion produce temporary friction reduction followed by renewed escalation.
+
+\textbf{H4 (Temporal Dynamics).} Persistent friction predicted future $\alpha$ increases with varying lags: British abolition required approximately 46 years from organized abolitionist mobilization (1787) to emancipation (1833); American abolition required approximately 78 years from the founding debates (1787) to the 13th Amendment (1865). The Haitian case compressed this to 13 years (1791--1804) through revolutionary intensity that bypassed gradual institutional accommodation entirely.
+
+The comparative lags are theoretically informative. British institutional channels (Parliament, petitioning, the free press) permitted friction to be expressed and accumulated peacefully, enabling gradual accommodation. American institutional channels were blocked by slaveholder veto points in the constitutional structure, producing a longer lag and violent resolution. The framework predicts that institutional channel availability---what \citet{tilly2007} terms the ``opportunity structure'' for contentious politics---moderates the lag between friction accumulation and $\alpha$ expansion.
+
+The lag structure also reveals an important asymmetry between H1 and H4. H1 (low $\alpha$ generates friction) operates relatively quickly---enslaved populations resisted from the beginning of their enslavement, not after some delay. H4 (friction generates $\alpha$ increases) operates with substantial and variable lags, because the translation of friction into institutional reform requires overcoming collective action problems, building coalition capacity, and waiting for political windows. This asymmetry---fast H1, slow H4---produces the characteristic pattern of long periods of low $\alpha$ with rising friction punctuated by rapid $\alpha$ transitions, visible in both the suffrage and abolition cases. The asymmetry is not a deficiency of the framework but a prediction about the differential speeds of preference expression versus institutional change.
+
+\textbf{The proxy consent mechanism.} The abolition case introduces a theoretical construct that recurs in subsequent case studies: proxy consent. Enslaved persons, denied all institutional standing, could not represent themselves in the governance decisions affecting their status. The friction that ultimately raised $\alpha$ was generated substantially through proxy agents---abolitionists, humanitarian organizations, sympathetic legislators---who channeled the moral weight of enslaved persons' existential stakes into institutional friction. \citet{drescher1987} documents how British abolition succeeded through a combination of parliamentary lobbying, mass petition campaigns, and sustained moral pressure---effectively raising $\alpha$ through proxy consent mechanisms before legal emancipation occurred.
+
+The proxy consent mechanism has both strengths and limitations. Its strength is that it enables $\alpha$ expansion even when the directly affected population lacks institutional access. Its limitation is that proxy agents' preferences may diverge from those they claim to represent. British abolitionists advocated compensated emancipation---compensating slaveholders, not the enslaved---a ``liberation'' that left formerly enslaved persons landless and economically marginalized. In framework terms, proxy consent raises $\alpha$ imperfectly: it incorporates the stakes of excluded populations into decision processes, but the mediation through proxy agents introduces distortion that keeps effective $\alpha$ below what direct representation would achieve.
+
+\textbf{The fiction of consent problem.} The abolition case raises the framework's deepest challenge: how does $\alpha$ expand for populations that cannot participate in the process of their own liberation? The answer---through proxy consent, through direct resistance generating friction that others translate into institutional pressure, through narratives like \citet{equiano1789} that transmit the experiential reality of exclusion to enfranchised audiences---is empirically adequate but theoretically uncomfortable. It means that the most extreme cases of low $\alpha$, where the framework's predictions about friction are strongest, are also the cases where $\alpha$ expansion depends on the very populations whose exclusion defines the problem.
+
+This paradox has a structural resolution within the framework. The consent-holding necessity theorem (T1) establishes that someone must hold decision authority; it does not require that the decision-maker be the affected party. Proxy consent mechanisms are second-best: they raise $\alpha$ above zero by incorporating affected parties' stakes indirectly, through representatives who have institutional access. The abolition case demonstrates both the power and the limitations of this mechanism. Proxy consent enabled peaceful British abolition, but the proxies' preferences (compensated emancipation, maintaining colonial governance structures) diverged from the enslaved population's preferences (immediate freedom, land redistribution, self-governance). Effective $\alpha$ under proxy consent remained well below what direct consent would produce---a systematic distortion that the framework should theorize more precisely in future work.
+
+\textbf{Self-citation connection.} The proxy consent mechanism connects to the broader research program's analysis of structural exclusion. \citet{farzulla2025stakes} develops the concept of ``stakes without voice''---populations bearing consequences of decisions in which they have no effective participation---as a general theoretical construct. The abolition case provides the extreme historical instance: maximum stakes, zero voice, and the resulting reliance on proxy mechanisms that inevitably distort the consent they claim to represent. The formal treatment in \citet{farzulla2025aoc} models the friction dynamics of such exclusion through axioms governing multi-agent coordination under consent constraints, providing the mathematical foundations for the empirical patterns documented here.
+
+\subsection{Cross-Case Connections}
+\label{subsec:abolition-connections}
+
+The abolition case connects to other historical domains through three mechanisms with significant implications for the framework's general applicability.
+
+First, \textit{movement overlap and organizational inheritance}. The abolition and suffrage movements were deeply intertwined in both Britain and America. Abolitionist networks provided organizational infrastructure, rhetorical templates, and activist cadres for the women's suffrage movement. The \citet{stanton1848} Declaration of Sentiments at Seneca Falls consciously modeled its structure and language on the Declaration of Independence, extending the exclusion logic from race to gender. In framework terms, friction mobilization in $d_{\text{slavery}}$ generated organizational spillovers that reduced the mobilization costs in $d_{\text{suffrage}}$---a cross-domain friction transmission mechanism not captured by single-domain analysis.
+
+This cross-domain linkage also created tensions. After the Civil War, the question of whether to prioritize Black male suffrage or universal suffrage (including women) split the movement: Stanton and Anthony opposed the 15th Amendment because it enfranchised Black men but not women, while Douglass and others argued that this was ``the Negro's hour.'' The framework interprets this as a domain-priority conflict: with institutional accommodation capacity limited, actors disagreed about whether $\alpha$ expansion in $d_{\text{racial suffrage}}$ or $d_{\text{gender suffrage}}$ should take precedence. The resulting organizational split---the American Equal Rights Association fractured into the National Woman Suffrage Association and the American Woman Suffrage Association---illustrates how coalition fragmentation under constrained accommodation capacity can delay $\alpha$ expansion in both domains.
+
+Second, \textit{the incomplete $\alpha$ expansion problem}. American emancipation (1865) did not resolve the underlying consent misalignment---it transformed it. The abolition of slavery raised $\hat{\alpha}(d_{\text{slavery}})$ from approximately 0.00 to approximately 0.50 (legal freedom without full citizenship), but the broader domain of racial governance---civil rights, political participation, economic opportunity---maintained $\alpha$ levels well below threshold for another century. The framework predicts that partial $\alpha$ expansion in one domain generates friction in adjacent domains where exclusion persists, as newly incorporated populations discover the limits of their incorporation. This is precisely what occurred: emancipation was followed by the Reconstruction Amendments, their systematic nullification, and ultimately the Civil Rights Movement---a century-long effort to extend the $\alpha$ expansion from formal freedom to effective citizenship.
+
+Third, \textit{the mode of transition}. The British (peaceful), American (civil war), and Haitian (revolution) paths to abolition represent three distinct modes of $\alpha$ expansion that the framework should account for. The key differentiating variable appears to be the availability and capacity of institutional accommodation mechanisms. Britain's parliamentary system, combined with the geographic separation between metropole and colonies, permitted gradual $\alpha$ expansion through proxy consent mechanisms operating within existing institutions. America's constitutional structure, which gave slaveholders effective veto power, blocked gradual accommodation, producing violent rupture. Haiti's colonial system provided no accommodation mechanisms at all, making revolution the only available path. The framework's research agenda should develop formal models predicting transition mode as a function of institutional accommodation capacity and friction intensity---a project with direct implications for understanding contemporary governance transitions.
+
+Fourth, \textit{compensated versus uncompensated transition}. Britain's compensated emancipation (1833) allocated \pounds20 million---approximately 40\% of annual government expenditure---to slaveholders, while the American transition involved no compensation (the 13th Amendment simply abolished the institution). The framework does not directly predict the compensation mechanism, but it illuminates the political economy: British slaveholders, facing mounting friction costs and declining relative economic returns, accepted compensation as a face-saving exit. American slaveholders, facing the same friction pressures, refused compromise because the constitutional structure gave them sufficient veto power to block legislative accommodation---until the war itself eliminated their institutional capacity to resist. The compensation question reveals how the distribution of consent power among the currently enfranchised (slaveholders' veto power) determines whether $\alpha$ expansion proceeds through negotiated settlement or violent rupture.
+
+Figure~\ref{fig:alpha-abolition} shows the ordinal $\hat{\alpha}$ trajectory for four polities, documenting the diverse paths from $\alpha \approx 0$ (chattel slavery) to $\alpha \geq 0.75$ (legal citizenship). The trajectories' divergence---particularly the Haitian revolutionary jump versus the British gradualist path versus the American violent rupture---illustrates that the framework's prediction of eventual $\alpha$ expansion under unsustainable friction is robust, while the mode and timing of expansion depend on institutional parameters the framework identifies but does not yet formally model.
+
+Taken together, the suffrage and abolition cases establish the framework's descriptive adequacy for the most fundamental consent realignments in modern political history. Both cases confirm the core prediction that sustained low $\alpha$ with high stakes generates escalating friction (H1, H4), and both reveal the mechanism through which friction translates into institutional reform: by raising the costs of exclusion above the costs of incorporation. The cases diverge in their friction intensities (proportional to stakes, as the framework predicts), their transition modes (gradual vs. violent, determined by institutional accommodation capacity), and their completeness ($\alpha$ expansion in suffrage was more complete and durable than in abolition, where the gap between formal and effective citizenship persisted for generations). These patterns carry forward into the subsequent cases---labor rights, civil rights, and corporate governance---where the same dynamics operate at different scales and through different institutional channels.
